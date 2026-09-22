@@ -1,0 +1,111 @@
+{
+  "test_type": "synthetic OCR smoke check",
+  "real_document_validation": false,
+  "capabilities": {
+    "python": "3.12.14",
+    "libraries": {
+      "fitz": true,
+      "PIL": true,
+      "docx": true,
+      "reportlab": true
+    },
+    "executables": {
+      "tesseract": "/usr/bin/tesseract",
+      "pdftotext": "/usr/bin/pdftotext",
+      "soffice": "/opt/codex/runtimes/codex-primary-runtime/dependencies/bin/override/soffice"
+    },
+    "network_required": false,
+    "note": "Availability is not an OCR accuracy or Xactimate compatibility test."
+  },
+  "samples": [
+    {
+      "sample": "clean_image",
+      "methods": [
+        "local_ocr"
+      ],
+      "expected_numeric_strings": [
+        "25",
+        "450",
+        "11250.00",
+        "80",
+        "800.00",
+        "350.00",
+        "12400.00"
+      ],
+      "found_by_literal_smoke_check": {
+        "25": true,
+        "450": true,
+        "11250.00": true,
+        "80": true,
+        "800.00": true,
+        "350.00": true,
+        "12400.00": true
+      },
+      "found_count": 7,
+      "denominator": 7,
+      "verified_line_mapping": false,
+      "transcription": "SYNTHETIC EXAMPLE - NOT A CLIENT CLAIM\nMeasured area and duplicate flashing correction\nPROPOSED v1 | 2026-09-21 | direct pre-tax USD\nItem Qty Unit Rate Total\nShingle installation 25 sQ 450 11250.00\nFlashing replacement 80 LF 10 800.00\nDebris handling 1 EA 350 350.00\nDirect subtotal: 12400.00\nAll quantities, observations and rates are fictional test assumptions.\nTaxes, general overhead/profit, coverage and payment are not determined."
+    },
+    {
+      "sample": "scan_pdf",
+      "methods": [
+        "local_ocr"
+      ],
+      "expected_numeric_strings": [
+        "25",
+        "450",
+        "11250.00",
+        "80",
+        "800.00",
+        "350.00",
+        "12400.00"
+      ],
+      "found_by_literal_smoke_check": {
+        "25": true,
+        "450": true,
+        "11250.00": true,
+        "80": true,
+        "800.00": true,
+        "350.00": true,
+        "12400.00": true
+      },
+      "found_count": 7,
+      "denominator": 7,
+      "verified_line_mapping": false,
+      "transcription": "SYNTHETIC EXAMPLE - NOT A CLIENT CLAIM\nMeasured area and duplicate flashing correction\nPROPOSED v1 | 2026-09-21 | direct pre-tax USD\nItem Qty Unit Rate Total\nShingle installation 25 sQ 450 11250.00\nFlashing replacement 80 LF 10 800.00\nDebris handling 1 EA 350 350.00\nDirect subtotal: 12400.00\nAll quantities, observations and rates are fictional test assumptions.\nTaxes, general overhead/profit, coverage and payment are not determined."
+    },
+    {
+      "sample": "degraded_image",
+      "methods": [
+        "local_ocr"
+      ],
+      "expected_numeric_strings": [
+        "25",
+        "450",
+        "11250.00",
+        "80",
+        "800.00",
+        "350.00",
+        "12400.00"
+      ],
+      "found_by_literal_smoke_check": {
+        "25": false,
+        "450": false,
+        "11250.00": false,
+        "80": false,
+        "800.00": false,
+        "350.00": false,
+        "12400.00": true
+      },
+      "found_count": 1,
+      "denominator": 7,
+      "verified_line_mapping": false,
+      "transcription": "SYNTHETIC EXAMPLE - NOT A CLIENT CLAIM\nMeasured arga and duplicate flashing correction\nPROPOSED v1 {2026-09-21 | direct pretax USO\non cy Un Rate To\ns 0 \u00a9 1123000\now en0.00\neons nang 7 =\u00bb\u2122 \u201c\nrect subtotal: 12400.00\nsa qertnn servant aenanpOs\neae overneuto, cowrage apa ee"
+    }
+  ],
+  "limitations": [
+    "Literal presence can match an unrelated occurrence; these are smoke checks, not digit-level precision/recall.",
+    "No automatic semantic table extraction or human verification is claimed.",
+    "All samples derive from one generated estimate; no real scanner, phone capture or client document was evaluated."
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "schema_version": "xr-report/1.0",
+  "case_id": "SYN-CORE-1",
+  "synthetic": true,
+  "status": "blocked",
+  "release_allowed": false,
+  "issues": [
+    {
+      "code": "E_LOCATION",
+      "ref": "C-001",
+      "message": "Mapped line roof location differs from group.",
+      "severity": "error"
+    },
+    {
+      "code": "E_LOCATION",
+      "ref": "C-001",
+      "message": "Mapped line roof location differs from group.",
+      "severity": "error"
+    }
+  ],
+  "groups": [
+    {
+      "claim_id": "C-001",
+      "baseline": [
+        "B-1"
+      ],
+      "proposed": [
+        "P-1"
+      ],
+      "roof_location": "other-roof",
+      "baseline_direct": null,
+      "proposed_direct": null,
+      "delta": null,
+      "components": null,
+      "action": null,
+      "disposition": "candidate_change",
+      "source_ids": [
+        "EV-ROOF"
+      ],
+      "coverage_status": "unknown",
+      "counterargument": "Measurement should be independently reviewed.",
+      "mapping_rationale": "Same specification and work component.",
+      "status": "held",
+      "scope_status": "supported",
+      "held_line_ids": [],
+      "hold_reasons": [
+        "case_hard_error"
+      ]
+    }
+  ],
+  "totals": null,
+  "partial_totals": {
+    "supported_delta": null,
+    "is_complete": false
+  },
+  "unmapped_lines": [],
+  "financial_bridge": {
+    "baseline": {
+      "direct": null,
+      "adjustments_specified": false,
+      "basis_status": "no_adjustments_specified_not_verified_zero",
+      "adjustments": [],
+      "total": null,
+      "status": "held"
+    },
+    "proposed": {
+      "direct": null,
+      "adjustments_specified": false,
+      "basis_status": "no_adjustments_specified_not_verified_zero",
+      "adjustments": [],
+      "total": null,
+      "status": "held"
+    },
+    "payment_scenario": null,
+    "net_payable": null
+  },
+  "source_checks": [
+    {
+      "doc_id": "DOC-B",
+      "sha256": "1ccafb559f2cdb4b0330a4188059d7dab26433290f4b490959417cedca5c1c17",
+      "match": true
+    },
+    {
+      "doc_id": "DOC-P",
+      "sha256": "4d5a19a19f7e09b5855e1009818c4e25ed9af556ce205aaad20166ec8f5e4ead",
+      "match": true
+    },
+    {
+      "doc_id": "DOC-E",
+      "sha256": "d3885e54ecfd4fab4af895b48aef0e242c698124080c4d275bf126f38169c0b0",
+      "match": true
+    },
+    {
+      "doc_id": "DOC-PL",
+      "sha256": "e8e3f3d7b9393a4fe61fee14cd6dea31614526e0d9b205327b415e24bbdb2f26",
+      "match": true
+    }
+  ],
+  "review_summary": {
+    "required": [
+      "document:DOC-B:reported_direct_total",
+      "document:DOC-P:reported_direct_total",
+      "line:B-1:quantity",
+      "line:B-1:reported_total",
+      "line:B-1:unit_price",
+      "line:P-1:quantity",
+      "line:P-1:reported_total",
+      "line:P-1:unit_price"
+    ],
+    "human_confirmed": [],
+    "ai_confirmed": [],
+    "synthetic_confirmed": [],
+    "pending_subjects": [
+      "document:DOC-B:reported_direct_total",
+      "document:DOC-P:reported_direct_total",
+      "line:B-1:quantity",
+      "line:B-1:reported_total",
+      "line:B-1:unit_price",
+      "line:P-1:quantity",
+      "line:P-1:reported_total",
+      "line:P-1:unit_price"
+    ],
+    "stale_subjects": []
+  },
+  "limitations": [
+    "Draft calculation only; release is never authorized by this engine.",
+    "Coverage and payment entitlement are not inferred.",
+    "Price context is recorded but never used to select a price.",
+    "Review receipts are assertions and do not authenticate identity."
+  ]
+}

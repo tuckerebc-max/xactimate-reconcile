@@ -1,0 +1,364 @@
+{
+  "schema_version": "xr-crosswalk/1.0",
+  "categories": [
+    {
+      "category_id": "A-O01",
+      "argument_ids": [
+        "B-I02"
+      ],
+      "shared_checks": [
+        "B-I01",
+        "B-I23",
+        "B-I24"
+      ],
+      "process_options": [
+        "B-I19",
+        "B-I20",
+        "B-I21",
+        "B-I22"
+      ]
+    },
+    {
+      "category_id": "A-O02",
+      "argument_ids": [
+        "B-I11"
+      ],
+      "shared_checks": [
+        "B-I01",
+        "B-I23",
+        "B-I24"
+      ],
+      "process_options": [
+        "B-I19",
+        "B-I20",
+        "B-I21",
+        "B-I22"
+      ]
+    },
+    {
+      "category_id": "A-O03",
+      "argument_ids": [
+        "B-I05",
+        "B-I10",
+        "B-I12"
+      ],
+      "shared_checks": [
+        "B-I01",
+        "B-I23",
+        "B-I24"
+      ],
+      "process_options": [
+        "B-I19",
+        "B-I20",
+        "B-I21",
+        "B-I22"
+      ]
+    },
+    {
+      "category_id": "A-O04",
+      "argument_ids": [
+        "B-I04",
+        "B-I05",
+        "B-I06",
+        "B-I07"
+      ],
+      "shared_checks": [
+        "B-I01",
+        "B-I23",
+        "B-I24"
+      ],
+      "process_options": [
+        "B-I19",
+        "B-I20",
+        "B-I21",
+        "B-I22"
+      ]
+    },
+    {
+      "category_id": "A-O05",
+      "argument_ids": [
+        "B-I03",
+        "B-I06"
+      ],
+      "shared_checks": [
+        "B-I01",
+        "B-I23",
+        "B-I24"
+      ],
+      "process_options": [
+        "B-I19",
+        "B-I20",
+        "B-I21",
+        "B-I22"
+      ]
+    },
+    {
+      "category_id": "A-O06",
+      "argument_ids": [
+        "B-I10",
+        "B-I04"
+      ],
+      "shared_checks": [
+        "B-I01",
+        "B-I23",
+        "B-I24"
+      ],
+      "process_options": [
+        "B-I19",
+        "B-I20",
+        "B-I21",
+        "B-I22"
+      ]
+    },
+    {
+      "category_id": "A-O07",
+      "argument_ids": [
+        "B-I05",
+        "B-I11"
+      ],
+      "shared_checks": [
+        "B-I01",
+        "B-I23",
+        "B-I24"
+      ],
+      "process_options": [
+        "B-I19",
+        "B-I20",
+        "B-I21",
+        "B-I22"
+      ]
+    },
+    {
+      "category_id": "A-O08",
+      "argument_ids": [
+        "B-I06"
+      ],
+      "shared_checks": [
+        "B-I01",
+        "B-I23",
+        "B-I24"
+      ],
+      "process_options": [
+        "B-I19",
+        "B-I20",
+        "B-I21",
+        "B-I22"
+      ]
+    },
+    {
+      "category_id": "A-O09",
+      "argument_ids": [
+        "B-I10",
+        "B-I08"
+      ],
+      "shared_checks": [
+        "B-I01",
+        "B-I23",
+        "B-I24"
+      ],
+      "process_options": [
+        "B-I19",
+        "B-I20",
+        "B-I21",
+        "B-I22"
+      ]
+    },
+    {
+      "category_id": "A-O10",
+      "argument_ids": [
+        "B-I10"
+      ],
+      "shared_checks": [
+        "B-I01",
+        "B-I23",
+        "B-I24"
+      ],
+      "process_options": [
+        "B-I19",
+        "B-I20",
+        "B-I21",
+        "B-I22"
+      ]
+    },
+    {
+      "category_id": "A-O11",
+      "argument_ids": [
+        "B-I03",
+        "B-I08",
+        "B-I09"
+      ],
+      "shared_checks": [
+        "B-I01",
+        "B-I23",
+        "B-I24"
+      ],
+      "process_options": [
+        "B-I19",
+        "B-I20",
+        "B-I21",
+        "B-I22"
+      ]
+    },
+    {
+      "category_id": "A-O12",
+      "argument_ids": [
+        "B-I10",
+        "B-I08",
+        "B-I09"
+      ],
+      "shared_checks": [
+        "B-I01",
+        "B-I23",
+        "B-I24"
+      ],
+      "process_options": [
+        "B-I19",
+        "B-I20",
+        "B-I21",
+        "B-I22"
+      ]
+    },
+    {
+      "category_id": "A-O13",
+      "argument_ids": [
+        "B-I03",
+        "B-I06"
+      ],
+      "shared_checks": [
+        "B-I01",
+        "B-I23",
+        "B-I24"
+      ],
+      "process_options": [
+        "B-I19",
+        "B-I20",
+        "B-I21",
+        "B-I22"
+      ]
+    },
+    {
+      "category_id": "A-O14",
+      "argument_ids": [
+        "B-I12"
+      ],
+      "shared_checks": [
+        "B-I01",
+        "B-I23",
+        "B-I24"
+      ],
+      "process_options": [
+        "B-I19",
+        "B-I20",
+        "B-I21",
+        "B-I22"
+      ]
+    },
+    {
+      "category_id": "A-O15",
+      "argument_ids": [
+        "B-I03",
+        "B-I12"
+      ],
+      "shared_checks": [
+        "B-I01",
+        "B-I23",
+        "B-I24"
+      ],
+      "process_options": [
+        "B-I19",
+        "B-I20",
+        "B-I21",
+        "B-I22"
+      ]
+    },
+    {
+      "category_id": "A-O16",
+      "argument_ids": [
+        "B-I14"
+      ],
+      "shared_checks": [
+        "B-I01",
+        "B-I23",
+        "B-I24"
+      ],
+      "process_options": [
+        "B-I19",
+        "B-I20",
+        "B-I21",
+        "B-I22"
+      ]
+    },
+    {
+      "category_id": "A-O17",
+      "argument_ids": [
+        "B-I12"
+      ],
+      "shared_checks": [
+        "B-I01",
+        "B-I23",
+        "B-I24"
+      ],
+      "process_options": [
+        "B-I19",
+        "B-I20",
+        "B-I21",
+        "B-I22"
+      ]
+    },
+    {
+      "category_id": "A-O18",
+      "argument_ids": [
+        "B-I12"
+      ],
+      "shared_checks": [
+        "B-I01",
+        "B-I23",
+        "B-I24"
+      ],
+      "process_options": [
+        "B-I19",
+        "B-I20",
+        "B-I21",
+        "B-I22"
+      ]
+    },
+    {
+      "category_id": "A-O19",
+      "argument_ids": [
+        "B-I13",
+        "B-I14"
+      ],
+      "shared_checks": [
+        "B-I01",
+        "B-I23",
+        "B-I24"
+      ],
+      "process_options": [
+        "B-I19",
+        "B-I20",
+        "B-I21",
+        "B-I22"
+      ]
+    },
+    {
+      "category_id": "A-O20",
+      "argument_ids": [
+        "B-I16",
+        "B-I17",
+        "B-I18"
+      ],
+      "shared_checks": [
+        "B-I01",
+        "B-I23",
+        "B-I24"
+      ],
+      "process_options": [
+        "B-I19",
+        "B-I20",
+        "B-I21",
+        "B-I22"
+      ]
+    }
+  ],
+  "additional_issue": "B-I15 emergency mitigation remains a distinct conditional issue, with overlap checks against permanent repair."
+}

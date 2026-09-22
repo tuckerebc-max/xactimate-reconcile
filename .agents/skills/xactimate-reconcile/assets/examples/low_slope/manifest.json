@@ -1,0 +1,151 @@
+{
+  "schema_version": "xr-manifest/1.0",
+  "case_id": "SYN-LOW-SLOPE",
+  "documents": [
+    {
+      "id": "D-4b7a6e9057262960-baseline",
+      "role": "baseline",
+      "path": "originals/D-4b7a6e9057262960-baseline.pdf",
+      "sha256": "4b7a6e905726296064accdcc04e3109ea6db6579d4fff1cf5cff55cb144b0331",
+      "page_count": 1,
+      "received_pages": [
+        1
+      ],
+      "version": "v1",
+      "date": "2026-09-22",
+      "kind": "estimate",
+      "estimate_complete": true,
+      "synthetic": true,
+      "reported_direct_total": null,
+      "pages": [
+        {
+          "page": 1,
+          "width": 1224,
+          "height": 1584,
+          "image_path": "derived/D-4b7a6e9057262960-baseline/page-001.png",
+          "image_sha256": "334d61e6de9b02730e99f5043c52043310485ebc0cc0919cb2e53eb6e3f956fa",
+          "text_path": "derived/D-4b7a6e9057262960-baseline/page-001.txt",
+          "words_path": "derived/D-4b7a6e9057262960-baseline/page-001.words.json",
+          "method": "native_text",
+          "coordinate_space": "pixels",
+          "transform": {
+            "kind": "pdf_render",
+            "scale": 2.0,
+            "original_space": "PDF points",
+            "rotation": 0
+          }
+        }
+      ],
+      "original_name": "low_slope-baseline.pdf",
+      "mime_type": "application/pdf",
+      "receipt_time": "2026-09-22T00:12:21.790431+00:00",
+      "inspection_limits": "File page count verified; a person must confirm the full intended document was supplied."
+    },
+    {
+      "id": "D-ba2174ea0c6eca22-proposed",
+      "role": "proposed",
+      "path": "originals/D-ba2174ea0c6eca22-proposed.pdf",
+      "sha256": "ba2174ea0c6eca2264d288c2907981ac4d136e133f9005bbde5ae03396e2aeb0",
+      "page_count": 1,
+      "received_pages": [
+        1
+      ],
+      "version": "v1",
+      "date": "2026-09-22",
+      "kind": "estimate",
+      "estimate_complete": true,
+      "synthetic": true,
+      "reported_direct_total": null,
+      "pages": [
+        {
+          "page": 1,
+          "width": 1224,
+          "height": 1584,
+          "image_path": "derived/D-ba2174ea0c6eca22-proposed/page-001.png",
+          "image_sha256": "4016a6d918570a7c96ed1819072563773b1ad2768b0ff7e810e00b2efcaba955",
+          "text_path": "derived/D-ba2174ea0c6eca22-proposed/page-001.txt",
+          "words_path": "derived/D-ba2174ea0c6eca22-proposed/page-001.words.json",
+          "method": "native_text",
+          "coordinate_space": "pixels",
+          "transform": {
+            "kind": "pdf_render",
+            "scale": 2.0,
+            "original_space": "PDF points",
+            "rotation": 0
+          }
+        }
+      ],
+      "original_name": "low_slope-proposed.pdf",
+      "mime_type": "application/pdf",
+      "receipt_time": "2026-09-22T00:12:21.826693+00:00",
+      "inspection_limits": "File page count verified; a person must confirm the full intended document was supplied."
+    },
+    {
+      "id": "D-cfe89c3bb604fd9b-evidence",
+      "role": "evidence",
+      "path": "originals/D-cfe89c3bb604fd9b-evidence.txt",
+      "sha256": "cfe89c3bb604fd9bcbd437506cf0d606f7f05a0db79d049d2c229f99e17fff3b",
+      "page_count": 1,
+      "received_pages": [
+        1
+      ],
+      "version": "v1",
+      "date": "2026-09-22",
+      "kind": "evidence",
+      "estimate_complete": true,
+      "synthetic": true,
+      "reported_direct_total": null,
+      "pages": [
+        {
+          "page": 1,
+          "width": 1,
+          "height": 1,
+          "text_path": "derived/D-cfe89c3bb604fd9b-evidence/page-001.txt",
+          "image_path": null,
+          "method": "native_text",
+          "coordinate_space": "pixels",
+          "note": "Text exhibit; not a source image for monetary verification."
+        }
+      ],
+      "original_name": "low_slope-notes.txt",
+      "mime_type": "text/plain",
+      "receipt_time": "2026-09-22T00:12:21.863937+00:00",
+      "inspection_limits": "File page count verified; a person must confirm the full intended document was supplied."
+    }
+  ],
+  "events": [
+    {
+      "at": "2026-09-22T00:12:21.790433+00:00",
+      "action": "intake",
+      "document_id": "D-4b7a6e9057262960-baseline"
+    },
+    {
+      "at": "2026-09-22T00:12:21.824361+00:00",
+      "action": "extract",
+      "document_id": "D-4b7a6e9057262960-baseline",
+      "ocr": "off"
+    },
+    {
+      "at": "2026-09-22T00:12:21.826695+00:00",
+      "action": "intake",
+      "document_id": "D-ba2174ea0c6eca22-proposed"
+    },
+    {
+      "at": "2026-09-22T00:12:21.862926+00:00",
+      "action": "extract",
+      "document_id": "D-ba2174ea0c6eca22-proposed",
+      "ocr": "off"
+    },
+    {
+      "at": "2026-09-22T00:12:21.863939+00:00",
+      "action": "intake",
+      "document_id": "D-cfe89c3bb604fd9b-evidence"
+    },
+    {
+      "at": "2026-09-22T00:12:21.864554+00:00",
+      "action": "extract",
+      "document_id": "D-cfe89c3bb604fd9b-evidence",
+      "ocr": "off"
+    }
+  ]
+}

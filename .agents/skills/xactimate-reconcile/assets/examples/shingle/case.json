@@ -1,0 +1,1035 @@
+{
+  "schema_version": "xr-case/1.0",
+  "synthetic": true,
+  "case_id": "SYN-SHINGLE",
+  "title": "Measured area and duplicate flashing correction",
+  "roof_type": "shingle",
+  "as_of": "2026-09-21",
+  "currency": "USD",
+  "rounding": "ROUND_HALF_UP",
+  "financial_basis": "direct_pre_tax",
+  "baseline_label": "Carrier estimate",
+  "proposed_label": "Contractor estimate",
+  "author_role": "Technical estimate preparation",
+  "price_context": {
+    "list": null,
+    "month": null,
+    "location": "Synthetic Phoenix setting; no market prices supplied"
+  },
+  "jurisdiction": {
+    "country": "US",
+    "state": "AZ",
+    "municipality": "Phoenix",
+    "verified": true
+  },
+  "sender": {
+    "name": "Synthetic estimator",
+    "role": "contractor",
+    "authority_status": "unverified",
+    "authority_evidence_ids": []
+  },
+  "documents": [
+    {
+      "id": "D-0a8cdb16803b6342-baseline",
+      "role": "baseline",
+      "path": "originals/D-0a8cdb16803b6342-baseline.pdf",
+      "sha256": "0a8cdb16803b6342cc112ea1c7c2e85ece4a2861d8ae14ebe7e55feebe398eec",
+      "page_count": 1,
+      "received_pages": [
+        1
+      ],
+      "version": "v1",
+      "date": "2026-09-22",
+      "kind": "estimate",
+      "estimate_complete": true,
+      "synthetic": true,
+      "reported_direct_total": {
+        "value": "9350.00",
+        "raw_text": "9350.00",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-0a8cdb16803b6342-baseline",
+          "page": 1,
+          "bbox": [
+            88,
+            618,
+            1140,
+            662
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "pages": [
+        {
+          "page": 1,
+          "width": 1224,
+          "height": 1584,
+          "image_path": "derived/D-0a8cdb16803b6342-baseline/page-001.png",
+          "image_sha256": "16abd6a241514080034b30cfa423e6008895a7f2f770110874e0256775304237",
+          "text_path": "derived/D-0a8cdb16803b6342-baseline/page-001.txt",
+          "words_path": "derived/D-0a8cdb16803b6342-baseline/page-001.words.json",
+          "method": "native_text",
+          "coordinate_space": "pixels",
+          "transform": {
+            "kind": "pdf_render",
+            "scale": 2.0,
+            "original_space": "PDF points",
+            "rotation": 0
+          }
+        }
+      ],
+      "original_name": "shingle-baseline.pdf",
+      "mime_type": "application/pdf",
+      "receipt_time": "2026-09-22T00:12:21.629249+00:00",
+      "inspection_limits": "File page count verified; a person must confirm the full intended document was supplied."
+    },
+    {
+      "id": "D-0369cd31be69d411-proposed",
+      "role": "proposed",
+      "path": "originals/D-0369cd31be69d411-proposed.pdf",
+      "sha256": "0369cd31be69d411d6c2d252254fe4cad2c3d81914782f3f92cd2f466fcf2c9d",
+      "page_count": 1,
+      "received_pages": [
+        1
+      ],
+      "version": "v1",
+      "date": "2026-09-22",
+      "kind": "estimate",
+      "estimate_complete": true,
+      "synthetic": true,
+      "reported_direct_total": {
+        "value": "12400.00",
+        "raw_text": "12400.00",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-0369cd31be69d411-proposed",
+          "page": 1,
+          "bbox": [
+            88,
+            618,
+            1140,
+            662
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "pages": [
+        {
+          "page": 1,
+          "width": 1224,
+          "height": 1584,
+          "image_path": "derived/D-0369cd31be69d411-proposed/page-001.png",
+          "image_sha256": "a55398d39e02efdcaa07a78e405b811ecca660ff20858a3c906af2e7df20177d",
+          "text_path": "derived/D-0369cd31be69d411-proposed/page-001.txt",
+          "words_path": "derived/D-0369cd31be69d411-proposed/page-001.words.json",
+          "method": "native_text",
+          "coordinate_space": "pixels",
+          "transform": {
+            "kind": "pdf_render",
+            "scale": 2.0,
+            "original_space": "PDF points",
+            "rotation": 0
+          }
+        }
+      ],
+      "original_name": "shingle-proposed.pdf",
+      "mime_type": "application/pdf",
+      "receipt_time": "2026-09-22T00:12:21.676233+00:00",
+      "inspection_limits": "File page count verified; a person must confirm the full intended document was supplied."
+    },
+    {
+      "id": "D-7430ff3e312257b9-evidence",
+      "role": "evidence",
+      "path": "originals/D-7430ff3e312257b9-evidence.txt",
+      "sha256": "7430ff3e312257b9311ecdcc3b87d55224d694892f346725044dcdbc5fd69545",
+      "page_count": 1,
+      "received_pages": [
+        1
+      ],
+      "version": "v1",
+      "date": "2026-09-22",
+      "kind": "evidence",
+      "estimate_complete": true,
+      "synthetic": true,
+      "reported_direct_total": null,
+      "pages": [
+        {
+          "page": 1,
+          "width": 1,
+          "height": 1,
+          "text_path": "derived/D-7430ff3e312257b9-evidence/page-001.txt",
+          "image_path": null,
+          "method": "native_text",
+          "coordinate_space": "pixels",
+          "note": "Text exhibit; not a source image for monetary verification."
+        }
+      ],
+      "original_name": "shingle-notes.txt",
+      "mime_type": "text/plain",
+      "receipt_time": "2026-09-22T00:12:21.712681+00:00",
+      "inspection_limits": "File page count verified; a person must confirm the full intended document was supplied."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E-BASE",
+      "doc_id": "D-0a8cdb16803b6342-baseline",
+      "page": 1,
+      "description": "Synthetic baseline estimate"
+    },
+    {
+      "id": "E-PROP",
+      "doc_id": "D-0369cd31be69d411-proposed",
+      "page": 1,
+      "description": "Synthetic proposed estimate"
+    },
+    {
+      "id": "E-NOTES",
+      "doc_id": "D-7430ff3e312257b9-evidence",
+      "page": 1,
+      "description": "Fictional scenario premises and limitations"
+    }
+  ],
+  "lines": [
+    {
+      "id": "B1",
+      "side": "baseline",
+      "description": "Shingle installation",
+      "specification": "synthetic-same-assembly",
+      "roof_location": "main-roof",
+      "quantity": {
+        "value": "20",
+        "raw_text": "20",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-0a8cdb16803b6342-baseline",
+          "page": 1,
+          "bbox": [
+            88,
+            314,
+            1140,
+            354
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "unit": "SQ",
+      "unit_price": {
+        "value": "400",
+        "raw_text": "400",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-0a8cdb16803b6342-baseline",
+          "page": 1,
+          "bbox": [
+            88,
+            314,
+            1140,
+            354
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "reported_total": {
+        "value": "8000.00",
+        "raw_text": "8000.00",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-0a8cdb16803b6342-baseline",
+          "page": 1,
+          "bbox": [
+            88,
+            314,
+            1140,
+            354
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "financial_basis": "direct_pre_tax",
+      "area_basis": "roof_surface",
+      "geometry": {
+        "slope_included": true,
+        "waste_included": false,
+        "apply_slope": false,
+        "apply_waste": false
+      },
+      "work_components": [
+        "installation"
+      ],
+      "quote_inclusions": [],
+      "source": {
+        "doc_id": "D-0a8cdb16803b6342-baseline",
+        "page": 1,
+        "bbox": [
+          88,
+          314,
+          1140,
+          354
+        ],
+        "coordinate_space": "pixels",
+        "image_size": [
+          1224,
+          1584
+        ],
+        "method": "manual_synthetic"
+      },
+      "kind": "work"
+    },
+    {
+      "id": "P1",
+      "side": "proposed",
+      "description": "Shingle installation",
+      "specification": "synthetic-same-assembly",
+      "roof_location": "main-roof",
+      "quantity": {
+        "value": "25",
+        "raw_text": "25",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-0369cd31be69d411-proposed",
+          "page": 1,
+          "bbox": [
+            88,
+            314,
+            1140,
+            354
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "unit": "SQ",
+      "unit_price": {
+        "value": "450",
+        "raw_text": "450",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-0369cd31be69d411-proposed",
+          "page": 1,
+          "bbox": [
+            88,
+            314,
+            1140,
+            354
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "reported_total": {
+        "value": "11250.00",
+        "raw_text": "11250.00",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-0369cd31be69d411-proposed",
+          "page": 1,
+          "bbox": [
+            88,
+            314,
+            1140,
+            354
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "financial_basis": "direct_pre_tax",
+      "area_basis": "roof_surface",
+      "geometry": {
+        "slope_included": true,
+        "waste_included": false,
+        "apply_slope": false,
+        "apply_waste": false
+      },
+      "work_components": [
+        "installation"
+      ],
+      "quote_inclusions": [],
+      "source": {
+        "doc_id": "D-0369cd31be69d411-proposed",
+        "page": 1,
+        "bbox": [
+          88,
+          314,
+          1140,
+          354
+        ],
+        "coordinate_space": "pixels",
+        "image_size": [
+          1224,
+          1584
+        ],
+        "method": "manual_synthetic"
+      },
+      "kind": "work"
+    },
+    {
+      "id": "B2",
+      "side": "baseline",
+      "description": "Flashing replacement",
+      "specification": "synthetic-same-assembly",
+      "roof_location": "main-roof",
+      "quantity": {
+        "value": "100",
+        "raw_text": "100",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-0a8cdb16803b6342-baseline",
+          "page": 1,
+          "bbox": [
+            88,
+            404,
+            1140,
+            444
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "unit": "LF",
+      "unit_price": {
+        "value": "10",
+        "raw_text": "10",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-0a8cdb16803b6342-baseline",
+          "page": 1,
+          "bbox": [
+            88,
+            404,
+            1140,
+            444
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "reported_total": {
+        "value": "1000.00",
+        "raw_text": "1000.00",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-0a8cdb16803b6342-baseline",
+          "page": 1,
+          "bbox": [
+            88,
+            404,
+            1140,
+            444
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "financial_basis": "direct_pre_tax",
+      "area_basis": "not_area",
+      "geometry": {
+        "slope_included": false,
+        "waste_included": false,
+        "apply_slope": false,
+        "apply_waste": false
+      },
+      "work_components": [
+        "flashing"
+      ],
+      "quote_inclusions": [],
+      "source": {
+        "doc_id": "D-0a8cdb16803b6342-baseline",
+        "page": 1,
+        "bbox": [
+          88,
+          404,
+          1140,
+          444
+        ],
+        "coordinate_space": "pixels",
+        "image_size": [
+          1224,
+          1584
+        ],
+        "method": "manual_synthetic"
+      },
+      "kind": "work"
+    },
+    {
+      "id": "P2",
+      "side": "proposed",
+      "description": "Flashing replacement",
+      "specification": "synthetic-same-assembly",
+      "roof_location": "main-roof",
+      "quantity": {
+        "value": "80",
+        "raw_text": "80",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-0369cd31be69d411-proposed",
+          "page": 1,
+          "bbox": [
+            88,
+            404,
+            1140,
+            444
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "unit": "LF",
+      "unit_price": {
+        "value": "10",
+        "raw_text": "10",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-0369cd31be69d411-proposed",
+          "page": 1,
+          "bbox": [
+            88,
+            404,
+            1140,
+            444
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "reported_total": {
+        "value": "800.00",
+        "raw_text": "800.00",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-0369cd31be69d411-proposed",
+          "page": 1,
+          "bbox": [
+            88,
+            404,
+            1140,
+            444
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "financial_basis": "direct_pre_tax",
+      "area_basis": "not_area",
+      "geometry": {
+        "slope_included": false,
+        "waste_included": false,
+        "apply_slope": false,
+        "apply_waste": false
+      },
+      "work_components": [
+        "flashing"
+      ],
+      "quote_inclusions": [],
+      "source": {
+        "doc_id": "D-0369cd31be69d411-proposed",
+        "page": 1,
+        "bbox": [
+          88,
+          404,
+          1140,
+          444
+        ],
+        "coordinate_space": "pixels",
+        "image_size": [
+          1224,
+          1584
+        ],
+        "method": "manual_synthetic"
+      },
+      "kind": "work"
+    },
+    {
+      "id": "B3",
+      "side": "baseline",
+      "description": "Debris handling",
+      "specification": "synthetic-same-assembly",
+      "roof_location": "main-roof",
+      "quantity": {
+        "value": "1",
+        "raw_text": "1",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-0a8cdb16803b6342-baseline",
+          "page": 1,
+          "bbox": [
+            88,
+            494,
+            1140,
+            534
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "unit": "EA",
+      "unit_price": {
+        "value": "350",
+        "raw_text": "350",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-0a8cdb16803b6342-baseline",
+          "page": 1,
+          "bbox": [
+            88,
+            494,
+            1140,
+            534
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "reported_total": {
+        "value": "350.00",
+        "raw_text": "350.00",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-0a8cdb16803b6342-baseline",
+          "page": 1,
+          "bbox": [
+            88,
+            494,
+            1140,
+            534
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "financial_basis": "direct_pre_tax",
+      "area_basis": "not_area",
+      "geometry": {
+        "slope_included": false,
+        "waste_included": false,
+        "apply_slope": false,
+        "apply_waste": false
+      },
+      "work_components": [
+        "disposal"
+      ],
+      "quote_inclusions": [],
+      "source": {
+        "doc_id": "D-0a8cdb16803b6342-baseline",
+        "page": 1,
+        "bbox": [
+          88,
+          494,
+          1140,
+          534
+        ],
+        "coordinate_space": "pixels",
+        "image_size": [
+          1224,
+          1584
+        ],
+        "method": "manual_synthetic"
+      },
+      "kind": "work"
+    },
+    {
+      "id": "P3",
+      "side": "proposed",
+      "description": "Debris handling",
+      "specification": "synthetic-same-assembly",
+      "roof_location": "main-roof",
+      "quantity": {
+        "value": "1",
+        "raw_text": "1",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-0369cd31be69d411-proposed",
+          "page": 1,
+          "bbox": [
+            88,
+            494,
+            1140,
+            534
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "unit": "EA",
+      "unit_price": {
+        "value": "350",
+        "raw_text": "350",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-0369cd31be69d411-proposed",
+          "page": 1,
+          "bbox": [
+            88,
+            494,
+            1140,
+            534
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "reported_total": {
+        "value": "350.00",
+        "raw_text": "350.00",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-0369cd31be69d411-proposed",
+          "page": 1,
+          "bbox": [
+            88,
+            494,
+            1140,
+            534
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "financial_basis": "direct_pre_tax",
+      "area_basis": "not_area",
+      "geometry": {
+        "slope_included": false,
+        "waste_included": false,
+        "apply_slope": false,
+        "apply_waste": false
+      },
+      "work_components": [
+        "disposal"
+      ],
+      "quote_inclusions": [],
+      "source": {
+        "doc_id": "D-0369cd31be69d411-proposed",
+        "page": 1,
+        "bbox": [
+          88,
+          494,
+          1140,
+          534
+        ],
+        "coordinate_space": "pixels",
+        "image_size": [
+          1224,
+          1584
+        ],
+        "method": "manual_synthetic"
+      },
+      "kind": "work"
+    }
+  ],
+  "groups": [
+    {
+      "claim_id": "I-001",
+      "title": "Shingle installation",
+      "baseline": [
+        "B1"
+      ],
+      "proposed": [
+        "P1"
+      ],
+      "roof_location": "main-roof",
+      "change_type": "quantity_price",
+      "mapping_rationale": "The two lines describe the same synthetic operation, location and specification.",
+      "source_ids": [
+        "E-BASE",
+        "E-PROP",
+        "E-NOTES"
+      ],
+      "scope_support": {
+        "status": "supported",
+        "source_ids": [
+          "E-NOTES"
+        ]
+      },
+      "coverage": {
+        "status": "unknown",
+        "source_ids": [],
+        "reviewer": null
+      },
+      "counterargument": "The aerial report may already include pitch or waste.",
+      "disposition": "candidate_change",
+      "absence_verified": false,
+      "requested_action": "Correct measured surface area and the documented unit price.",
+      "observation": "The synthetic measurement record establishes 25 SQ; the first estimate used 20 SQ.",
+      "necessity": "The measured surface is already slope-adjusted. The rate comparison uses the same fictional specification and excludes taxes and general O&P.",
+      "reply": "Use the face-by-face synthetic takeoff and check that neither slope nor waste is added twice.",
+      "category_ids": [
+        "A-O01",
+        "A-O18",
+        "B-I02",
+        "B-I12"
+      ]
+    },
+    {
+      "claim_id": "I-002",
+      "title": "Flashing replacement",
+      "baseline": [
+        "B2"
+      ],
+      "proposed": [
+        "P2"
+      ],
+      "roof_location": "main-roof",
+      "change_type": "quantity_price",
+      "mapping_rationale": "The two lines describe the same synthetic operation, location and specification.",
+      "source_ids": [
+        "E-BASE",
+        "E-PROP",
+        "E-NOTES"
+      ],
+      "scope_support": {
+        "status": "supported",
+        "source_ids": [
+          "E-NOTES"
+        ]
+      },
+      "coverage": {
+        "status": "unknown",
+        "source_ids": [],
+        "reviewer": null
+      },
+      "counterargument": "The second entry could describe a different location.",
+      "disposition": "candidate_change",
+      "absence_verified": false,
+      "requested_action": "Reduce the flashing allowance to 80 LF.",
+      "observation": "The fixture includes a 20 LF segment twice in the baseline takeoff.",
+      "necessity": "The two entries describe the same physical segment, so the revision removes that overlap.",
+      "reply": "The synthetic location map assigns both entries to the same segment; a distinct field location would change this conclusion.",
+      "category_ids": [
+        "A-O10",
+        "B-I10"
+      ]
+    },
+    {
+      "claim_id": "I-003",
+      "title": "Debris handling",
+      "baseline": [
+        "B3"
+      ],
+      "proposed": [
+        "P3"
+      ],
+      "roof_location": "main-roof",
+      "change_type": "quantity_price",
+      "mapping_rationale": "The two lines describe the same synthetic operation, location and specification.",
+      "source_ids": [
+        "E-BASE",
+        "E-PROP",
+        "E-NOTES"
+      ],
+      "scope_support": {
+        "status": "supported",
+        "source_ids": [
+          "E-NOTES"
+        ]
+      },
+      "coverage": {
+        "status": "unknown",
+        "source_ids": [],
+        "reviewer": null
+      },
+      "counterargument": "A separate dumpster charge may overlap the removal price.",
+      "disposition": "retain",
+      "absence_verified": false,
+      "requested_action": "Retain the existing debris allowance.",
+      "observation": "The fictional allowance covers the complete documented disposal scope.",
+      "necessity": "No additional disposal operation is supported.",
+      "reply": "Retain this allowance and do not add a second charge for the same disposal.",
+      "category_ids": [
+        "A-O16",
+        "B-I14"
+      ]
+    }
+  ],
+  "financial_adjustments": {
+    "baseline": [],
+    "proposed": []
+  },
+  "payment_scenario": null,
+  "notes": "Scenario premise: a 25 SQ roof surface, 80 LF of unique flashing and one disposal operation. All conditions and prices are fictional test data. No policy or market quote is supplied."
+}

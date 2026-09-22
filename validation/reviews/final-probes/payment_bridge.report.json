@@ -1,0 +1,168 @@
+{
+  "schema_version": "xr-report/1.0",
+  "case_id": "SYN-CORE-1",
+  "synthetic": true,
+  "status": "partial",
+  "release_allowed": false,
+  "issues": [
+    {
+      "code": "R_NUMERIC_UNKNOWN",
+      "ref": "payment:deductible:amount",
+      "message": "Missing or ambiguous number is held and never zero-filled.",
+      "severity": "review"
+    }
+  ],
+  "groups": [
+    {
+      "claim_id": "C-001",
+      "baseline": [
+        "B-1"
+      ],
+      "proposed": [
+        "P-1"
+      ],
+      "roof_location": "main-roof",
+      "baseline_direct": "100.00",
+      "proposed_direct": "132.00",
+      "delta": "32.00",
+      "components": {
+        "quantity": "20.00",
+        "price": "12.00",
+        "scope": "0.00",
+        "specification_bundle": "0.00",
+        "bundle": "0.00",
+        "rounding": "0.00"
+      },
+      "action": "increase",
+      "disposition": "candidate_change",
+      "source_ids": [
+        "EV-ROOF"
+      ],
+      "coverage_status": "unknown",
+      "counterargument": "Measurement should be independently reviewed.",
+      "mapping_rationale": "Same specification and work component.",
+      "status": "computed",
+      "scope_status": "supported",
+      "held_line_ids": [],
+      "hold_reasons": []
+    }
+  ],
+  "totals": {
+    "baseline_direct": "100.00",
+    "proposed_direct": "132.00",
+    "delta_direct": "32.00",
+    "upward_changes": "32.00",
+    "downward_changes": "0.00",
+    "unchanged_groups": 0
+  },
+  "partial_totals": {
+    "supported_delta": "32.00",
+    "is_complete": true
+  },
+  "unmapped_lines": [],
+  "financial_bridge": {
+    "baseline": {
+      "direct": "100.00",
+      "adjustments_specified": false,
+      "basis_status": "no_adjustments_specified_not_verified_zero",
+      "adjustments": [],
+      "total": "100.00",
+      "status": "direct_only"
+    },
+    "proposed": {
+      "direct": "132.00",
+      "adjustments_specified": false,
+      "basis_status": "no_adjustments_specified_not_verified_zero",
+      "adjustments": [],
+      "total": "132.00",
+      "status": "direct_only"
+    },
+    "payment_scenario": {
+      "label": "Explicit test scenario",
+      "start": "1000.00",
+      "steps": [
+        {
+          "id": "deductible",
+          "label": "Unknown deductible",
+          "operation": "subtract",
+          "amount": null,
+          "before": "1000.00",
+          "after": null
+        },
+        {
+          "id": "later-known-deduction",
+          "label": "Known later deduction",
+          "operation": "subtract",
+          "amount": "100.00",
+          "before": null,
+          "after": null
+        }
+      ],
+      "result": null,
+      "net_payable": null,
+      "status": "held",
+      "reason": "Payment scenario has unresolved inputs or policy evidence."
+    },
+    "net_payable": null
+  },
+  "source_checks": [
+    {
+      "doc_id": "DOC-B",
+      "sha256": "1ccafb559f2cdb4b0330a4188059d7dab26433290f4b490959417cedca5c1c17",
+      "match": true
+    },
+    {
+      "doc_id": "DOC-P",
+      "sha256": "4d5a19a19f7e09b5855e1009818c4e25ed9af556ce205aaad20166ec8f5e4ead",
+      "match": true
+    },
+    {
+      "doc_id": "DOC-E",
+      "sha256": "d3885e54ecfd4fab4af895b48aef0e242c698124080c4d275bf126f38169c0b0",
+      "match": true
+    },
+    {
+      "doc_id": "DOC-PL",
+      "sha256": "e8e3f3d7b9393a4fe61fee14cd6dea31614526e0d9b205327b415e24bbdb2f26",
+      "match": true
+    }
+  ],
+  "review_summary": {
+    "required": [
+      "document:DOC-B:reported_direct_total",
+      "document:DOC-P:reported_direct_total",
+      "line:B-1:quantity",
+      "line:B-1:reported_total",
+      "line:B-1:unit_price",
+      "line:P-1:quantity",
+      "line:P-1:reported_total",
+      "line:P-1:unit_price",
+      "payment:deductible:amount",
+      "payment:later-known-deduction:amount",
+      "payment:start"
+    ],
+    "human_confirmed": [],
+    "ai_confirmed": [],
+    "synthetic_confirmed": [],
+    "pending_subjects": [
+      "document:DOC-B:reported_direct_total",
+      "document:DOC-P:reported_direct_total",
+      "line:B-1:quantity",
+      "line:B-1:reported_total",
+      "line:B-1:unit_price",
+      "line:P-1:quantity",
+      "line:P-1:reported_total",
+      "line:P-1:unit_price",
+      "payment:deductible:amount",
+      "payment:later-known-deduction:amount",
+      "payment:start"
+    ],
+    "stale_subjects": []
+  },
+  "limitations": [
+    "Draft calculation only; release is never authorized by this engine.",
+    "Coverage and payment entitlement are not inferred.",
+    "Price context is recorded but never used to select a price.",
+    "Review receipts are assertions and do not authenticate identity."
+  ]
+}

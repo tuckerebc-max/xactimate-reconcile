@@ -1,0 +1,180 @@
+{
+  "schema_version": "c-prototype/0.1",
+  "status": "draft",
+  "release_allowed": false,
+  "release_reason": "Synthetic research prototype; human and licensed-software verification outstanding.",
+  "issues": [],
+  "groups": [
+    {
+      "claim_id": "C-001",
+      "baseline": [
+        "B1"
+      ],
+      "proposed": [
+        "P1"
+      ],
+      "roof_location": "main-roof",
+      "baseline_direct": "3000.00",
+      "proposed_direct": "3840.00",
+      "delta": "840.00",
+      "components": {
+        "quantity": "600.00",
+        "price": "240.00",
+        "scope": "0.00",
+        "specification_bundle": "0.00",
+        "bundle": "0.00",
+        "rounding": "0.00"
+      },
+      "action": "increase",
+      "disposition": "candidate_change",
+      "source_ids": [
+        "EX-001",
+        "EX-002",
+        "EX-003"
+      ],
+      "coverage_status": "unknown",
+      "counterargument": "Carrier could require an actual measurement report and current local price support.",
+      "mapping_rationale": "Same installation and surface basis; synthetic measured quantity and supplied unit price differ."
+    },
+    {
+      "claim_id": "C-002",
+      "baseline": [
+        "B2"
+      ],
+      "proposed": [
+        "P2"
+      ],
+      "roof_location": "main-roof",
+      "baseline_direct": "1000.00",
+      "proposed_direct": "800.00",
+      "delta": "-200.00",
+      "components": {
+        "quantity": "-200.00",
+        "price": "0.00",
+        "scope": "0.00",
+        "specification_bundle": "0.00",
+        "bundle": "0.00",
+        "rounding": "0.00"
+      },
+      "action": "reduce",
+      "disposition": "candidate_change",
+      "source_ids": [
+        "EX-001",
+        "EX-002",
+        "EX-003"
+      ],
+      "coverage_status": "unknown",
+      "counterargument": "Check whether the second segment is a distinct location before reducing.",
+      "mapping_rationale": "Remove duplicated 20 LF; retain the supplied unit price."
+    },
+    {
+      "claim_id": "C-003",
+      "baseline": [
+        "B3"
+      ],
+      "proposed": [
+        "P3"
+      ],
+      "roof_location": "main-roof",
+      "baseline_direct": "450.00",
+      "proposed_direct": "450.00",
+      "delta": "0.00",
+      "components": {
+        "quantity": "0.00",
+        "price": "0.00",
+        "scope": "0.00",
+        "specification_bundle": "0.00",
+        "bundle": "0.00",
+        "rounding": "0.00"
+      },
+      "action": "retain_baseline",
+      "disposition": "repair_feasible",
+      "source_ids": [
+        "EX-001",
+        "EX-002",
+        "EX-003"
+      ],
+      "coverage_status": "unknown",
+      "counterargument": "Hidden damage could change scope; none is supplied.",
+      "mapping_rationale": "Localized repair is feasible per synthetic review notes."
+    },
+    {
+      "claim_id": "C-004",
+      "baseline": [
+        "B4"
+      ],
+      "proposed": [
+        "P4a",
+        "P4b"
+      ],
+      "roof_location": "main-roof",
+      "baseline_direct": "200.00",
+      "proposed_direct": "200.00",
+      "delta": "0.00",
+      "components": {
+        "quantity": "0.00",
+        "price": "0.00",
+        "scope": "0.00",
+        "specification_bundle": "0.00",
+        "bundle": "0.00",
+        "rounding": "0.00"
+      },
+      "action": "retain_baseline",
+      "disposition": "carrier_correct",
+      "source_ids": [
+        "EX-001",
+        "EX-002",
+        "EX-003"
+      ],
+      "coverage_status": "unknown",
+      "counterargument": "Confirm the vent identities and avoid billing all three lines.",
+      "mapping_rationale": "Combined two-vent line maps to separately listed vents A and B."
+    }
+  ],
+  "totals": {
+    "baseline_direct": "4650.00",
+    "proposed_direct": "5290.00",
+    "delta_direct": "640.00",
+    "upward_changes": "840.00",
+    "downward_changes": "-200.00",
+    "unchanged_groups": 2
+  },
+  "unmapped_lines": [],
+  "financial_bridge": {
+    "taxes": null,
+    "general_overhead": null,
+    "general_profit": null,
+    "RCV": null,
+    "depreciation": null,
+    "recoverable_depreciation": null,
+    "ACV": null,
+    "deductible": null,
+    "limits": null,
+    "prior_payments": null,
+    "net_payable": null,
+    "direct_costs": "5290.00"
+  },
+  "source_checks": [
+    {
+      "doc_id": "D-baseline",
+      "sha256": "2a69d30eaed3856272c0deadeb75e8f1c7350005fc1d49d050cd6ac3dd61537d",
+      "match": true
+    },
+    {
+      "doc_id": "D-proposed",
+      "sha256": "2c2a7944fe91579dfeb5ec9be07c5e64bbcc6c5d93211981f228e728251d14fd",
+      "match": true
+    },
+    {
+      "doc_id": "D-review",
+      "sha256": "95dc019783478d4741c40cec5a7e40629c19f397ceaee0f25d2d132c6db533e8",
+      "match": true
+    }
+  ],
+  "limitations": [
+    "Direct pre-tax costs only.",
+    "Duplicates detected only through declared work components.",
+    "Source review metadata is not authenticated human approval.",
+    "No Xactimate estimate generated."
+  ]
+}

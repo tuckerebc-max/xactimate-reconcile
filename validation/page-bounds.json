@@ -1,0 +1,328 @@
+{
+  "pages_checked": 46,
+  "all_text_within_page": true,
+  "pages": [
+    {
+      "case": "shingle",
+      "format": "docx",
+      "document": "cover_letter",
+      "page": 1,
+      "text_within_page": true
+    },
+    {
+      "case": "shingle",
+      "format": "docx",
+      "document": "reconciliation_memo",
+      "page": 1,
+      "text_within_page": true
+    },
+    {
+      "case": "shingle",
+      "format": "docx",
+      "document": "reconciliation_memo",
+      "page": 2,
+      "text_within_page": true
+    },
+    {
+      "case": "shingle",
+      "format": "docx",
+      "document": "operator_checklist",
+      "page": 1,
+      "text_within_page": true
+    },
+    {
+      "case": "shingle",
+      "format": "docx",
+      "document": "evidence_appendix",
+      "page": 1,
+      "text_within_page": true
+    },
+    {
+      "case": "shingle",
+      "format": "docx",
+      "document": "evidence_appendix",
+      "page": 2,
+      "text_within_page": true
+    },
+    {
+      "case": "shingle",
+      "format": "docx",
+      "document": "evidence_appendix",
+      "page": 3,
+      "text_within_page": true
+    },
+    {
+      "case": "shingle",
+      "format": "pdf",
+      "document": "cover_letter",
+      "page": 1,
+      "text_within_page": true
+    },
+    {
+      "case": "shingle",
+      "format": "pdf",
+      "document": "reconciliation_memo",
+      "page": 1,
+      "text_within_page": true
+    },
+    {
+      "case": "shingle",
+      "format": "pdf",
+      "document": "reconciliation_memo",
+      "page": 2,
+      "text_within_page": true
+    },
+    {
+      "case": "shingle",
+      "format": "pdf",
+      "document": "operator_checklist",
+      "page": 1,
+      "text_within_page": true
+    },
+    {
+      "case": "shingle",
+      "format": "pdf",
+      "document": "operator_checklist",
+      "page": 2,
+      "text_within_page": true
+    },
+    {
+      "case": "shingle",
+      "format": "pdf",
+      "document": "evidence_appendix",
+      "page": 1,
+      "text_within_page": true
+    },
+    {
+      "case": "shingle",
+      "format": "pdf",
+      "document": "evidence_appendix",
+      "page": 2,
+      "text_within_page": true
+    },
+    {
+      "case": "shingle",
+      "format": "pdf",
+      "document": "evidence_appendix",
+      "page": 3,
+      "text_within_page": true
+    },
+    {
+      "case": "tile",
+      "format": "docx",
+      "document": "cover_letter",
+      "page": 1,
+      "text_within_page": true
+    },
+    {
+      "case": "tile",
+      "format": "docx",
+      "document": "reconciliation_memo",
+      "page": 1,
+      "text_within_page": true
+    },
+    {
+      "case": "tile",
+      "format": "docx",
+      "document": "reconciliation_memo",
+      "page": 2,
+      "text_within_page": true
+    },
+    {
+      "case": "tile",
+      "format": "docx",
+      "document": "operator_checklist",
+      "page": 1,
+      "text_within_page": true
+    },
+    {
+      "case": "tile",
+      "format": "docx",
+      "document": "evidence_appendix",
+      "page": 1,
+      "text_within_page": true
+    },
+    {
+      "case": "tile",
+      "format": "docx",
+      "document": "evidence_appendix",
+      "page": 2,
+      "text_within_page": true
+    },
+    {
+      "case": "tile",
+      "format": "docx",
+      "document": "evidence_appendix",
+      "page": 3,
+      "text_within_page": true
+    },
+    {
+      "case": "tile",
+      "format": "pdf",
+      "document": "cover_letter",
+      "page": 1,
+      "text_within_page": true
+    },
+    {
+      "case": "tile",
+      "format": "pdf",
+      "document": "reconciliation_memo",
+      "page": 1,
+      "text_within_page": true
+    },
+    {
+      "case": "tile",
+      "format": "pdf",
+      "document": "reconciliation_memo",
+      "page": 2,
+      "text_within_page": true
+    },
+    {
+      "case": "tile",
+      "format": "pdf",
+      "document": "operator_checklist",
+      "page": 1,
+      "text_within_page": true
+    },
+    {
+      "case": "tile",
+      "format": "pdf",
+      "document": "operator_checklist",
+      "page": 2,
+      "text_within_page": true
+    },
+    {
+      "case": "tile",
+      "format": "pdf",
+      "document": "evidence_appendix",
+      "page": 1,
+      "text_within_page": true
+    },
+    {
+      "case": "tile",
+      "format": "pdf",
+      "document": "evidence_appendix",
+      "page": 2,
+      "text_within_page": true
+    },
+    {
+      "case": "tile",
+      "format": "pdf",
+      "document": "evidence_appendix",
+      "page": 3,
+      "text_within_page": true
+    },
+    {
+      "case": "low_slope",
+      "format": "docx",
+      "document": "cover_letter",
+      "page": 1,
+      "text_within_page": true
+    },
+    {
+      "case": "low_slope",
+      "format": "docx",
+      "document": "reconciliation_memo",
+      "page": 1,
+      "text_within_page": true
+    },
+    {
+      "case": "low_slope",
+      "format": "docx",
+      "document": "reconciliation_memo",
+      "page": 2,
+      "text_within_page": true
+    },
+    {
+      "case": "low_slope",
+      "format": "docx",
+      "document": "operator_checklist",
+      "page": 1,
+      "text_within_page": true
+    },
+    {
+      "case": "low_slope",
+      "format": "docx",
+      "document": "evidence_appendix",
+      "page": 1,
+      "text_within_page": true
+    },
+    {
+      "case": "low_slope",
+      "format": "docx",
+      "document": "evidence_appendix",
+      "page": 2,
+      "text_within_page": true
+    },
+    {
+      "case": "low_slope",
+      "format": "docx",
+      "document": "evidence_appendix",
+      "page": 3,
+      "text_within_page": true
+    },
+    {
+      "case": "low_slope",
+      "format": "pdf",
+      "document": "cover_letter",
+      "page": 1,
+      "text_within_page": true
+    },
+    {
+      "case": "low_slope",
+      "format": "pdf",
+      "document": "reconciliation_memo",
+      "page": 1,
+      "text_within_page": true
+    },
+    {
+      "case": "low_slope",
+      "format": "pdf",
+      "document": "reconciliation_memo",
+      "page": 2,
+      "text_within_page": true
+    },
+    {
+      "case": "low_slope",
+      "format": "pdf",
+      "document": "operator_checklist",
+      "page": 1,
+      "text_within_page": true
+    },
+    {
+      "case": "low_slope",
+      "format": "pdf",
+      "document": "operator_checklist",
+      "page": 2,
+      "text_within_page": true
+    },
+    {
+      "case": "low_slope",
+      "format": "pdf",
+      "document": "evidence_appendix",
+      "page": 1,
+      "text_within_page": true
+    },
+    {
+      "case": "low_slope",
+      "format": "pdf",
+      "document": "evidence_appendix",
+      "page": 2,
+      "text_within_page": true
+    },
+    {
+      "case": "low_slope",
+      "format": "pdf",
+      "document": "evidence_appendix",
+      "page": 3,
+      "text_within_page": true
+    },
+    {
+      "case": "low_slope",
+      "format": "pdf",
+      "document": "evidence_appendix",
+      "page": 4,
+      "text_within_page": true
+    }
+  ]
+}

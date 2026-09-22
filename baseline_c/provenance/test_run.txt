@@ -1,0 +1,53 @@
+test_empty_source_root_cannot_pass (test_boundaries.BoundaryTests.test_empty_source_root_cannot_pass) ... ok
+test_malformed_geometry_is_refused_without_exception (test_boundaries.BoundaryTests.test_malformed_geometry_is_refused_without_exception) ... ok
+test_scope_removal_requires_verified_absence (test_boundaries.BoundaryTests.test_scope_removal_requires_verified_absence) ... ok
+test_source_root_output_is_refused (test_boundaries.BoundaryTests.test_source_root_output_is_refused) ... ok
+test_unknown_property_is_refused (test_boundaries.BoundaryTests.test_unknown_property_is_refused) ... ok
+test_blocked_input_cannot_make_a_request_letter (test_outputs.OutputTests.test_blocked_input_cannot_make_a_request_letter) ... ok
+test_cli_and_all_three_outputs (test_outputs.OutputTests.test_cli_and_all_three_outputs) ... ok
+test_duplicate_json_key_refused (test_outputs.OutputTests.test_duplicate_json_key_refused) ... ok
+test_blurry_digit_is_unknown (test_reconcile.ReconciliationTests.test_blurry_digit_is_unknown) ... ok
+test_carrier_correct_and_repair_feasible (test_reconcile.ReconciliationTests.test_carrier_correct_and_repair_feasible) ... ok
+test_contractor_too_high_reduction (test_reconcile.ReconciliationTests.test_contractor_too_high_reduction) ... ok
+test_declared_incomplete_estimate (test_reconcile.ReconciliationTests.test_declared_incomplete_estimate) ... ok
+test_double_slope (test_reconcile.ReconciliationTests.test_double_slope) ... ok
+test_double_waste (test_reconcile.ReconciliationTests.test_double_waste) ... ok
+test_duplicate_work (test_reconcile.ReconciliationTests.test_duplicate_work) ... ok
+test_financial_basis_mismatch (test_reconcile.ReconciliationTests.test_financial_basis_mismatch) ... ok
+test_footer_disagrees (test_reconcile.ReconciliationTests.test_footer_disagrees) ... ok
+test_half_up_line_rounding (test_reconcile.ReconciliationTests.test_half_up_line_rounding) ... ok
+test_high_ocr_confidence_cannot_replace_review (test_reconcile.ReconciliationTests.test_high_ocr_confidence_cannot_replace_review) ... ok
+test_incompatible_units (test_reconcile.ReconciliationTests.test_incompatible_units) ... ok
+test_input_is_not_mutated (test_reconcile.ReconciliationTests.test_input_is_not_mutated) ... ok
+test_insufficient_scope_evidence (test_reconcile.ReconciliationTests.test_insufficient_scope_evidence) ... ok
+test_line_reused_in_two_groups (test_reconcile.ReconciliationTests.test_line_reused_in_two_groups) ... ok
+test_many_to_one_group (test_reconcile.ReconciliationTests.test_many_to_one_group) ... ok
+test_missing_counterargument (test_reconcile.ReconciliationTests.test_missing_counterargument) ... ok
+test_missing_mapping_rationale (test_reconcile.ReconciliationTests.test_missing_mapping_rationale) ... ok
+test_missing_pages (test_reconcile.ReconciliationTests.test_missing_pages) ... ok
+test_missing_required_structure (test_reconcile.ReconciliationTests.test_missing_required_structure) ... ok
+test_nonfinite_float_exponent_and_boolean_rejected (test_reconcile.ReconciliationTests.test_nonfinite_float_exponent_and_boolean_rejected) ... ok
+test_one_to_many_group (test_reconcile.ReconciliationTests.test_one_to_many_group) ... ok
+test_plan_area_not_roof_surface (test_reconcile.ReconciliationTests.test_plan_area_not_roof_surface) ... ok
+test_positive_negative_and_unchanged_hand_calculated (test_reconcile.ReconciliationTests.test_positive_negative_and_unchanged_hand_calculated) ... ok
+test_quote_includes_separately_billed_work (test_reconcile.ReconciliationTests.test_quote_includes_separately_billed_work) ... ok
+test_reference_crop_outside_image (test_reconcile.ReconciliationTests.test_reference_crop_outside_image) ... ok
+test_reference_page_out_of_range (test_reconcile.ReconciliationTests.test_reference_page_out_of_range) ... ok
+test_resolved_alternatives_retained (test_reconcile.ReconciliationTests.test_resolved_alternatives_retained) ... ok
+test_sf_sq_100_fold_error (test_reconcile.ReconciliationTests.test_sf_sq_100_fold_error) ... ok
+test_sf_sq_equivalence (test_reconcile.ReconciliationTests.test_sf_sq_equivalence) ... ok
+test_source_hash_mismatch (test_reconcile.ReconciliationTests.test_source_hash_mismatch) ... ok
+test_source_traversal_refused (test_reconcile.ReconciliationTests.test_source_traversal_refused) ... ok
+test_synthetic_only (test_reconcile.ReconciliationTests.test_synthetic_only) ... ok
+test_unit_price_line_total_disagree (test_reconcile.ReconciliationTests.test_unit_price_line_total_disagree) ... ok
+test_unknown_coverage_stays_unknown (test_reconcile.ReconciliationTests.test_unknown_coverage_stays_unknown) ... ok
+test_unknown_evidence_id (test_reconcile.ReconciliationTests.test_unknown_evidence_id) ... ok
+test_unknown_schema_version (test_reconcile.ReconciliationTests.test_unknown_schema_version) ... ok
+test_unmapped_line_preserved (test_reconcile.ReconciliationTests.test_unmapped_line_preserved) ... ok
+test_unresolved_alternatives_block (test_reconcile.ReconciliationTests.test_unresolved_alternatives_block) ... ok
+test_unsupported_coverage_blocked (test_reconcile.ReconciliationTests.test_unsupported_coverage_blocked) ... ok
+
+----------------------------------------------------------------------
+Ran 48 tests in 0.212s
+
+OK

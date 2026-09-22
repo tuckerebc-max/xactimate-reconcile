@@ -1,0 +1,695 @@
+[
+  {
+    "issue_id": "B-I01",
+    "proposition": "Attribute each requested repair to a claimed event and an applicable coverage before requesting insurance recognition.",
+    "rule_or_policy_text_needed": "Entire policy, declarations, insuring clause, wind/hail provisions, exclusions, concurrent-cause language, resulting-loss exceptions and endorsements.",
+    "facts_needed": [
+      "Loss date",
+      "Location",
+      "Policy term",
+      "Damage chronology",
+      "Carrier accepted/disputed causation"
+    ],
+    "evidence_needed": [
+      "Dated roof map/photos",
+      "Pre-loss maintenance records",
+      "Weather evidence with station/time/distance limits",
+      "Inspection and engineering findings"
+    ],
+    "calculation_dependency": "Allocate line costs among accepted loss, disputed loss and unrelated work; never count the same repair twice.",
+    "requested_change": "Identify accepted scope and request itemized reconsideration of specifically documented additional event-related damage.",
+    "strongest_carrier_response": "Wear, faulty installation, prior loss or another excluded cause explains the condition.",
+    "supported_reply": "Compare physical findings, chronology and alternative causes; request the exact exclusion and factual basis. Keggi supplies a general burden framework, not proof that this loss is covered.",
+    "concession_or_failure_condition": "No event linkage, exclusion applies, or policy period unconfirmed: keep amount unasserted and seek qualified review.",
+    "source_ids": [
+      "B-S16",
+      "B-S17",
+      "B-S08"
+    ],
+    "status": "CONDITIONAL_NEEDS_CLAIM_EVIDENCE",
+    "record_type": "claim_argument"
+  },
+  {
+    "issue_id": "B-I02",
+    "proposition": "Correct measurable geometry and quantity errors independently of unresolved coverage.",
+    "rule_or_policy_text_needed": "Relevant estimate line definitions, scope basis, policy valuation clause.",
+    "facts_needed": [
+      "Facet IDs",
+      "Slope",
+      "Area basis",
+      "Units",
+      "Openings and deductions"
+    ],
+    "evidence_needed": [
+      "Measured sketch",
+      "Measurement report with method/date",
+      "Dimension photographs",
+      "Carrier estimate version"
+    ],
+    "calculation_dependency": "delta_base = round(q_requested * unit_price_requested,2) - round(q_carrier * unit_price_carrier,2); SF/SQ conversion must be explicit.",
+    "requested_change": "Revise named quantities and carry only resulting supported changes through estimate totals.",
+    "strongest_carrier_response": "Measurements differ because one is plan area, includes pitch/waste, or measures excluded surfaces.",
+    "supported_reply": "Reconcile the same surface, unit and included operations; show arithmetic and measurement uncertainty.",
+    "concession_or_failure_condition": "No compatible measurement basis or already-included quantity: narrow or withdraw.",
+    "source_ids": [
+      "B-S04",
+      "B-S16"
+    ],
+    "status": "CONDITIONAL_NEEDS_CLAIM_EVIDENCE",
+    "record_type": "claim_argument"
+  },
+  {
+    "issue_id": "B-I03",
+    "proposition": "Add an omitted damaged component only when its condition, location and repair need are documented.",
+    "rule_or_policy_text_needed": "Covered-property definition, direct physical loss provision and relevant exclusions.",
+    "facts_needed": [
+      "Component ID",
+      "Condition",
+      "Repair needed",
+      "Existing allowance"
+    ],
+    "evidence_needed": [
+      "Close and context photos",
+      "Dated observation log",
+      "Estimate crosswalk"
+    ],
+    "calculation_dependency": "Additional component cost less any overlapping allowance; no unsupported zero carrier allowance.",
+    "requested_change": "Add or revise the exact line with cross-referenced exhibit and dollar delta.",
+    "strongest_carrier_response": "Condition is cosmetic, pre-existing, or already paid under another line.",
+    "supported_reply": "Show function affected, timing and where the proposed operation differs from the existing allowance.",
+    "concession_or_failure_condition": "No physical support or duplication: omit the increment.",
+    "source_ids": [
+      "B-S04",
+      "B-S16",
+      "B-S12"
+    ],
+    "status": "CONDITIONAL_NEEDS_CLAIM_EVIDENCE",
+    "record_type": "claim_argument"
+  },
+  {
+    "issue_id": "B-I04",
+    "proposition": "A shingle replacement request should establish why a bounded compliant repair cannot restore the documented damaged area.",
+    "rule_or_policy_text_needed": "Repair/replacement valuation language, cosmetic limits, relevant manufacturer instructions and applicable local code.",
+    "facts_needed": [
+      "Shingle identification/age",
+      "Damaged units/facets",
+      "Fastening/seal condition",
+      "Repair access"
+    ],
+    "evidence_needed": [
+      "Qualified repairability evaluation",
+      "Authorized representative test documentation where appropriate",
+      "Manufacturer detail",
+      "Repair alternative estimate"
+    ],
+    "calculation_dependency": "Compare localized repair, facet replacement and wider replacement on a common scope; replacement is an alternative, not additive to repair.",
+    "requested_change": "Revise to the smallest supported feasible scope or request joint reinspection.",
+    "strongest_carrier_response": "Age/brittleness alone is unrelated deterioration; individual units can be repaired.",
+    "supported_reply": "Explain observed failure mechanism and limits of any test; isolate weather damage from aging and show why the alternative fails.",
+    "concession_or_failure_condition": "Repair succeeds, test is unrepresentative, or expanded scope lacks policy support: retain repair or mark disputed.",
+    "source_ids": [
+      "B-S16",
+      "B-S12",
+      "B-S13"
+    ],
+    "status": "CONDITIONAL_NEEDS_CLAIM_EVIDENCE",
+    "record_type": "claim_argument"
+  },
+  {
+    "issue_id": "B-I05",
+    "proposition": "Discontinued tile supports a documented availability/compatibility investigation, not automatic whole-roof payment.",
+    "rule_or_policy_text_needed": "Like-kind/quality wording, undamaged-property matching endorsement, repair clause and actual code/manufacturer criteria.",
+    "facts_needed": [
+      "Tile manufacturer/profile",
+      "Needed number",
+      "Condition of salvage",
+      "Compatible replacement options"
+    ],
+    "evidence_needed": [
+      "Product identification",
+      "Dated supplier/manufacturer responses",
+      "Sample dimensions/interlock evidence",
+      "Salvage sourcing log",
+      "Repair method"
+    ],
+    "calculation_dependency": "Cost feasible repair sourcing and limited alternatives; include freight only once and justify quantity.",
+    "requested_change": "Recognize the documented feasible scope or identify a technically compatible available alternative.",
+    "strongest_carrier_response": "Usable salvage or compatible tile is available; matching undamaged property is excluded.",
+    "supported_reply": "Separate functional incompatibility from appearance; assess carrier-proposed sources and acknowledge an applicable matching exclusion.",
+    "concession_or_failure_condition": "Compatible available material enables repair or claim rests solely on excluded appearance: narrow request.",
+    "source_ids": [
+      "B-S14",
+      "B-S15",
+      "B-S16"
+    ],
+    "status": "CONDITIONAL_NEEDS_CLAIM_EVIDENCE",
+    "record_type": "claim_argument"
+  },
+  {
+    "issue_id": "B-I06",
+    "proposition": "Low-slope roofing scope requires system-specific evidence for repair, coating, recover or replacement.",
+    "rule_or_policy_text_needed": "Covered-peril/exclusion provisions; identified system manufacturer repair details; applicable code and limits.",
+    "facts_needed": [
+      "System type",
+      "Assembly layers",
+      "Damage distribution",
+      "Moisture extent",
+      "Prior repairs"
+    ],
+    "evidence_needed": [
+      "Qualified survey",
+      "Mapped moisture readings with limitations",
+      "Authorized sampling if needed",
+      "Photos of seams/penetrations/drains",
+      "System repair instructions"
+    ],
+    "calculation_dependency": "Compare bounded repair and replacement alternatives; separate dry/undamaged areas, tear-off layers, insulation and deck quantities.",
+    "requested_change": "Revise only supported system components or request further inspection.",
+    "strongest_carrier_response": "Ponding, maintenance or deterioration causes the problem; repair/recoat is feasible.",
+    "supported_reply": "Tie scope to documented event-related conditions and explain the alternatives and uncertainty.",
+    "concession_or_failure_condition": "Unknown system or unsupported extent/causation: hold expanded scope.",
+    "source_ids": [
+      "B-S16",
+      "B-S12",
+      "B-S13"
+    ],
+    "status": "CONDITIONAL_NEEDS_CLAIM_EVIDENCE",
+    "record_type": "claim_argument"
+  },
+  {
+    "issue_id": "B-I07",
+    "proposition": "A cosmetic matching request remains policy-specific and legally unresolved until the full endorsement record is reviewed.",
+    "rule_or_policy_text_needed": "Matching/undamaged-property exclusions; like-kind/quality wording; notices and renewal endorsements.",
+    "facts_needed": [
+      "Actual mismatch",
+      "Affected view/facet",
+      "Endorsement delivery",
+      "HOA requirement and applicability"
+    ],
+    "evidence_needed": [
+      "Controlled comparison photos",
+      "Actual HOA written rule/decision if relied on",
+      "Complete renewal/notice record",
+      "Product availability evidence"
+    ],
+    "calculation_dependency": "Keep any undamaged-area matching increment separate from required physical repair and code cost.",
+    "requested_change": "Request a written policy position on a separately priced matching increment.",
+    "strongest_carrier_response": "Clear matching exclusion bars replacement of undamaged material, including discontinued products.",
+    "supported_reply": "Address the actual wording and notice evidence; Hanks and Trudel demonstrate fact-sensitive disputes, not guaranteed success. Counsel owns any enforceability argument.",
+    "concession_or_failure_condition": "Applicable exclusion or no policy basis: no matching entitlement asserted; HOA preference alone does not establish coverage.",
+    "source_ids": [
+      "B-S14",
+      "B-S15",
+      "B-S16"
+    ],
+    "status": "POLICY_AND_LEGAL_REVIEW_REQUIRED",
+    "record_type": "claim_argument"
+  },
+  {
+    "issue_id": "B-I08",
+    "proposition": "A code-based scope request must identify the authority having jurisdiction and the precise triggered requirement.",
+    "rule_or_policy_text_needed": "Adopted code edition, local amendment, roof section, permit/transition rule and applicability to this work.",
+    "facts_needed": [
+      "Parcel jurisdiction",
+      "Permit/application date",
+      "Existing assembly",
+      "Repair scope threshold"
+    ],
+    "evidence_needed": [
+      "Official adoption record",
+      "Exact code text",
+      "Written building-official interpretation when disputed",
+      "Permit quote"
+    ],
+    "calculation_dependency": "Incremental necessary code work only; avoid including the same upgrade in base repair and ordinance/law schedules.",
+    "requested_change": "Add the specific required construction operation subject to coverage analysis.",
+    "strongest_carrier_response": "Wrong municipality/edition, repair exception, or requirement not triggered.",
+    "supported_reply": "Provide jurisdiction/date/section/application chain; Phoenix adoption alone does not establish a roof-specific obligation.",
+    "concession_or_failure_condition": "No verified applicable code trigger: classify as optional upgrade, not mandated cost.",
+    "source_ids": [
+      "B-S13",
+      "B-S16"
+    ],
+    "status": "CONDITIONAL_NEEDS_CLAIM_EVIDENCE",
+    "record_type": "claim_argument"
+  },
+  {
+    "issue_id": "B-I09",
+    "proposition": "Construction-code compliance and insurer payment under ordinance/law coverage are separate questions.",
+    "rule_or_policy_text_needed": "Ordinance/law insuring provision, exclusions, endorsement, sublimit and incurred-cost conditions.",
+    "facts_needed": [
+      "Required upgrade",
+      "Base damage cost",
+      "Actual or planned work",
+      "Available sublimit"
+    ],
+    "evidence_needed": [
+      "B-I08 code evidence",
+      "Policy pages",
+      "Itemized upgrade quote/invoice"
+    ],
+    "calculation_dependency": "Separate base covered repair from incremental code cost; track ordinance/law sublimit and payments independently.",
+    "requested_change": "Request a distinct ordinance/law determination and estimate allocation.",
+    "strongest_carrier_response": "Coverage absent, limited, not incurred, or upgrade not caused by covered repair.",
+    "supported_reply": "Match each incremental operation to verified code trigger and exact policy grant; show remaining sublimit.",
+    "concession_or_failure_condition": "Coverage/condition absent: disclose owner-funded or unresolved amount rather than relabeling it base repair.",
+    "source_ids": [
+      "B-S13",
+      "B-S16"
+    ],
+    "status": "CONDITIONAL_NEEDS_CLAIM_EVIDENCE",
+    "record_type": "claim_argument"
+  },
+  {
+    "issue_id": "B-I10",
+    "proposition": "Underlayment, flashing and accessories must be supported by their actual replacement or detach/reset need.",
+    "rule_or_policy_text_needed": "Loss settlement scope, manufacturer instructions and applicable code.",
+    "facts_needed": [
+      "Assembly",
+      "Accessible condition",
+      "Reuse feasibility",
+      "What current line price includes"
+    ],
+    "evidence_needed": [
+      "Detail photos",
+      "Manufacturer instructions",
+      "Material breakdown",
+      "Existing item definitions"
+    ],
+    "calculation_dependency": "Deduct quantities already included in tear-off, roofing or component prices; distinguish detach/reset from replacement.",
+    "requested_change": "Correct specifically omitted necessary operations.",
+    "strongest_carrier_response": "Accessories can be reused or are bundled into other prices.",
+    "supported_reply": "Show physical condition and inclusion/exclusion of each proposed operation.",
+    "concession_or_failure_condition": "Safe compliant reuse or bundled cost demonstrated: remove duplicate.",
+    "source_ids": [
+      "B-S04",
+      "B-S16"
+    ],
+    "status": "CONDITIONAL_NEEDS_CLAIM_EVIDENCE",
+    "record_type": "claim_argument"
+  },
+  {
+    "issue_id": "B-I11",
+    "proposition": "Waste and collateral breakage should follow measured geometry and a documented method.",
+    "rule_or_policy_text_needed": "Estimate item definitions and applicable repair/replacement wording.",
+    "facts_needed": [
+      "Roof geometry",
+      "Layout",
+      "Product dimensions",
+      "Expected versus actual breakage"
+    ],
+    "evidence_needed": [
+      "Cut/layout calculation",
+      "Supplier packaging",
+      "Authorized work record",
+      "Representative repair evidence"
+    ],
+    "calculation_dependency": "Installed quantity + supported waste minus included waste; distinguish event damage from unavoidable repair collateral and contractor-caused damage.",
+    "requested_change": "Use supported waste/breakage allowance or reserve a documented supplement.",
+    "strongest_carrier_response": "Flat percentage inflated, already included, or reflects avoidable workmanship loss.",
+    "supported_reply": "Explain calculation and assumptions; replace assumptions with actual evidence when available.",
+    "concession_or_failure_condition": "No support or double counting: reduce; do not claim a universal percentage.",
+    "source_ids": [
+      "B-S04",
+      "B-S16"
+    ],
+    "status": "CONDITIONAL_NEEDS_CLAIM_EVIDENCE",
+    "record_type": "claim_argument"
+  },
+  {
+    "issue_id": "B-I12",
+    "proposition": "A local unit-price revision requires comparable dated market evidence.",
+    "rule_or_policy_text_needed": "Policy reasonable repair cost wording and applicable estimate assumptions.",
+    "facts_needed": [
+      "Loss/repair/pricing dates",
+      "ZIP/market",
+      "Product/spec",
+      "Labor task and access"
+    ],
+    "evidence_needed": [
+      "Dated supplier quotes",
+      "Comparable contractor/subcontractor pricing",
+      "Price-list name/month",
+      "Item component breakdown"
+    ],
+    "calculation_dependency": "Recalculate quantity × supported rate; isolate taxes, freight, equipment and labor already included.",
+    "requested_change": "Revise named rates with a transparent market/date basis.",
+    "strongest_carrier_response": "Database price is adequate; quote is premium specification, stale or includes extras.",
+    "supported_reply": "Normalize specifications, date and inclusions; identify why quoted work is necessary and obtainable at that price.",
+    "concession_or_failure_condition": "Noncomparable quote or unsupported premium: retain supported rate. No authority found making either estimate database conclusive.",
+    "source_ids": [
+      "B-S16"
+    ],
+    "status": "CONDITIONAL_NEEDS_CLAIM_EVIDENCE",
+    "record_type": "claim_argument"
+  },
+  {
+    "issue_id": "B-I13",
+    "proposition": "Overhead and profit must be justified under the policy and actual repair organization.",
+    "rule_or_policy_text_needed": "Loss settlement wording, estimate inclusions and relevant coverage position.",
+    "facts_needed": [
+      "Coordination need",
+      "Trades actually needed",
+      "Contractor business model",
+      "Existing markup"
+    ],
+    "evidence_needed": [
+      "Project schedule",
+      "Trade scopes",
+      "Bid inclusions",
+      "Markup calculation"
+    ],
+    "calculation_dependency": "Apply only supported percentages or dollars to the stated eligible base; show sequential versus common-base calculation; prevent double markup.",
+    "requested_change": "Recognize substantiated general contracting cost or provide itemized reason for exclusion.",
+    "strongest_carrier_response": "Single-trade project or embedded overhead/profit already accounts for it.",
+    "supported_reply": "Explain actual coordination and cost structure; do not claim an automatic three-trade or 10-and-10 rule.",
+    "concession_or_failure_condition": "No need, duplicate cost, or incompatible policy language: narrow or withdraw.",
+    "source_ids": [
+      "B-S16",
+      "B-S12"
+    ],
+    "status": "CONDITIONAL_NEEDS_CLAIM_EVIDENCE",
+    "record_type": "claim_argument"
+  },
+  {
+    "issue_id": "B-I14",
+    "proposition": "Tax, permit and disposal corrections need the correct taxable/chargeable base and actual local evidence.",
+    "rule_or_policy_text_needed": "Applicable policy terms; verified tax treatment, municipal fee schedule and vendor charges.",
+    "facts_needed": [
+      "Work classification",
+      "Jurisdiction",
+      "Materials/labor bases",
+      "Included fees"
+    ],
+    "evidence_needed": [
+      "Applicable tax guidance reviewed by qualified person",
+      "Permit fee estimate",
+      "Disposal quote/receipt",
+      "Bid breakdown"
+    ],
+    "calculation_dependency": "Do not tax all labor automatically; separately calculate verified bases and rates, then remove embedded or duplicate charges.",
+    "requested_change": "Revise specific supported cost components.",
+    "strongest_carrier_response": "Tax classification or rate is wrong, or fee already included.",
+    "supported_reply": "Supply the actual applicable authority and arithmetic; this run establishes no Arizona tax rate or project tax classification.",
+    "concession_or_failure_condition": "Missing tax/fee verification: hold amount as unresolved.",
+    "source_ids": [
+      "B-S13",
+      "B-S16"
+    ],
+    "status": "SPECIALIST_INPUT_REQUIRED",
+    "record_type": "claim_argument"
+  },
+  {
+    "issue_id": "B-I15",
+    "proposition": "Emergency mitigation should be documented separately from permanent repair and coverage assurances.",
+    "rule_or_policy_text_needed": "Duties after loss, reasonable protection/temporary repair coverage and post-storm restrictions.",
+    "facts_needed": [
+      "Immediate threat",
+      "Work date",
+      "Scope",
+      "Approval/denial chronology"
+    ],
+    "evidence_needed": [
+      "Before/after photos",
+      "Itemized work log/invoice",
+      "Owner permission",
+      "Removed-material preservation log"
+    ],
+    "calculation_dependency": "Reasonable emergency cost less overlapping permanent repair allowance and prior payment.",
+    "requested_change": "Recognize supported mitigation or ask for a coverage determination.",
+    "strongest_carrier_response": "Work unnecessary, excessive, destructive of evidence or unrelated.",
+    "supported_reply": "Show immediate risk, limited intervention, charges and preserved evidence; emergency work permission is not insurance coverage.",
+    "concession_or_failure_condition": "Unnecessary or unsupported work: do not describe it as insured mitigation.",
+    "source_ids": [
+      "B-S04",
+      "B-S16"
+    ],
+    "status": "CONDITIONAL_NEEDS_CLAIM_EVIDENCE",
+    "record_type": "claim_argument"
+  },
+  {
+    "issue_id": "B-I16",
+    "proposition": "Review labor depreciation against the actual ACV wording and applicable Walker analysis.",
+    "rule_or_policy_text_needed": "ACV/depreciation definitions, roof schedule and all amendments; exact labor/material breakout.",
+    "facts_needed": [
+      "Labor depreciation charged",
+      "Policy form",
+      "Date/condition assumptions"
+    ],
+    "evidence_needed": [
+      "Carrier component depreciation table",
+      "Policy pages",
+      "Item-level calculations"
+    ],
+    "calculation_dependency": "Compare carrier ACV with a policy-consistent recalculation; distinguish future repair labor from value embedded in pre-loss property.",
+    "requested_change": "Request reversal or explanation of identified labor depreciation only if the policy/authority analysis supports it.",
+    "strongest_carrier_response": "Different endorsement expressly addresses labor or different valuation method controls.",
+    "supported_reply": "Compare the actual contract to Walker ¶¶ 4, 23–29; obtain counsel review of material differences.",
+    "concession_or_failure_condition": "No labor depreciation, materially different controlling wording, or unclear components: hold legal conclusion.",
+    "source_ids": [
+      "B-S10",
+      "B-S16"
+    ],
+    "status": "POLICY_AND_LEGAL_REVIEW_REQUIRED",
+    "record_type": "claim_argument"
+  },
+  {
+    "issue_id": "B-I17",
+    "proposition": "Recoverable depreciation is conditional and must remain separate from nonrecoverable depreciation.",
+    "rule_or_policy_text_needed": "Replacement-cost eligibility, repair completion/notice deadlines, actual expenditure cap, roof settlement schedule.",
+    "facts_needed": [
+      "Completed work",
+      "Costs incurred",
+      "Prior depreciation released",
+      "Deadline/extension record"
+    ],
+    "evidence_needed": [
+      "Invoices and payment evidence",
+      "Completion photos/permits",
+      "Carrier settlement explanation",
+      "Policy pages"
+    ],
+    "calculation_dependency": "Remaining recoverable holdback = approved recoverable depreciation minus prior release, further constrained by actual policy terms; never release nonrecoverable amounts by arithmetic alone.",
+    "requested_change": "Request eligible release or clarification of the outstanding condition and amount.",
+    "strongest_carrier_response": "Repair not completed, deadline unmet, costs lower, or roof endorsement settles at ACV.",
+    "supported_reply": "Provide actual completion/cost/extension evidence and distinguish disputed condition from mathematical error.",
+    "concession_or_failure_condition": "Conditions unmet or amount nonrecoverable: no present payment demand for that holdback.",
+    "source_ids": [
+      "B-S10",
+      "B-S16"
+    ],
+    "status": "CONDITIONAL_NEEDS_CLAIM_EVIDENCE",
+    "record_type": "claim_argument"
+  },
+  {
+    "issue_id": "B-I18",
+    "proposition": "Reconcile gross scope, coverage valuation, deductible, limits and payments in separate ledgers.",
+    "rule_or_policy_text_needed": "Deductible amount/basis, coverage limits/sublimits, settlement formula and allocation of payments.",
+    "facts_needed": [
+      "Accepted/disputed lines",
+      "Deductible",
+      "Prior gross/net payments",
+      "Payment reversals",
+      "Limits"
+    ],
+    "evidence_needed": [
+      "Declarations",
+      "Carrier statements",
+      "Check/EFT ledger",
+      "Revised estimate totals"
+    ],
+    "calculation_dependency": "Gross estimate delta is not net payment. Determine policy-consistent entitlement before subtracting applicable prior payments once; order of deductible and limit operations is policy-specific.",
+    "requested_change": "Correct the settlement worksheet only after the gross scope and policy inputs are reconciled.",
+    "strongest_carrier_response": "Prior payment, separate coverage or deductible already accounts for the requested amount.",
+    "supported_reply": "Crosswalk every payment to coverage/date/gross-versus-net basis; show residual uncertainty explicitly.",
+    "concession_or_failure_condition": "Missing statements, negative/unexplained balance, or no coverage: no amount owed asserted.",
+    "source_ids": [
+      "B-S16",
+      "B-S10",
+      "B-S11"
+    ],
+    "status": "CONDITIONAL_NEEDS_CLAIM_EVIDENCE",
+    "record_type": "claim_argument"
+  },
+  {
+    "issue_id": "B-I19",
+    "proposition": "A handling inquiry should identify the exact trigger and requested response without inventing a payment deadline.",
+    "rule_or_policy_text_needed": "R20-6-801(E), (F), (G)(1); relevant loss payment clause.",
+    "facts_needed": [
+      "Receipt date",
+      "Communication type",
+      "Proper proof-of-loss status",
+      "Extension reasons"
+    ],
+    "evidence_needed": [
+      "Delivery record",
+      "Claim log",
+      "Proof of loss",
+      "Carrier acknowledgments/extension letters"
+    ],
+    "calculation_dependency": "No automatic dollar increase; 10/15 working-day and 30/45 day tracking require separate event fields.",
+    "requested_change": "Ask for an itemized response, investigation status or written coverage explanation.",
+    "strongest_carrier_response": "Communication did not reasonably require reply, proof was incomplete, or more investigation is reasonably needed.",
+    "supported_reply": "Supply receipt/trigger evidence and request identified missing information; acknowledge permitted extensions and limitations.",
+    "concession_or_failure_condition": "Trigger unproved or exception applies: do not allege breach or use suggested dates as legal deadlines.",
+    "source_ids": [
+      "B-S08",
+      "B-S09"
+    ],
+    "status": "CONDITIONAL_NEEDS_CLAIM_EVIDENCE",
+    "record_type": "claim_argument"
+  },
+  {
+    "issue_id": "B-I20",
+    "proposition": "A joint reinspection can resolve identified physical disagreements while preserving competing positions.",
+    "rule_or_policy_text_needed": "Policy inspection/cooperation provisions and role/permission limits.",
+    "facts_needed": [
+      "Disputed locations",
+      "Attendees and roles",
+      "Safe access",
+      "Evidence at risk"
+    ],
+    "evidence_needed": [
+      "Annotated roof map",
+      "Prior photos",
+      "Inspection protocol",
+      "Owner authorization"
+    ],
+    "calculation_dependency": "No immediate monetary demand; resulting findings map to line deltas in the next revision.",
+    "requested_change": "Schedule a joint inspection focused on listed issues, preserving originals and proposed tests.",
+    "strongest_carrier_response": "No new evidence, access unavailable, or destructive test unacceptable.",
+    "supported_reply": "Explain the unanswered observation and proposed non-destructive approach; obtain informed permission for any separate testing.",
+    "concession_or_failure_condition": "Unsafe access or unauthorized testing: stop inspection step and use qualified personnel.",
+    "source_ids": [
+      "B-S04",
+      "B-S09",
+      "B-S16"
+    ],
+    "status": "CONDITIONAL_NEEDS_CLAIM_EVIDENCE",
+    "record_type": "claim_argument"
+  },
+  {
+    "issue_id": "B-I21",
+    "proposition": "Appraisal is a policy-governed valuation option whose scope must preserve unresolved coverage issues.",
+    "rule_or_policy_text_needed": "Actual appraisal clause, demand conditions, deadlines, appraiser qualifications, cost allocation and submission agreement.",
+    "facts_needed": [
+      "Nature of dispute",
+      "Accepted cause/scope",
+      "Prior demands",
+      "Potential waiver/deadline issues"
+    ],
+    "evidence_needed": [
+      "Policy clause",
+      "Itemized accepted/disputed scope",
+      "Correspondence",
+      "Professional advice"
+    ],
+    "calculation_dependency": "Itemize valuation by coverage-disputed and undisputed category; award does not automatically equal net insurer payment.",
+    "requested_change": "Have homeowner and qualified adviser assess appraisal; consider an itemized submission.",
+    "strongest_carrier_response": "Dispute concerns excluded causes/coverage or demand is untimely or waived.",
+    "supported_reply": "Hanson limits authority; Chew illustrates itemization preserving coverage questions, subject to actual clause and facts.",
+    "concession_or_failure_condition": "No appraisal clause, unresolved scope/legal issue or unsuitable cost: do not issue automatic demand.",
+    "source_ids": [
+      "B-S11",
+      "B-S12",
+      "B-S16"
+    ],
+    "status": "POLICY_AND_LEGAL_REVIEW_REQUIRED",
+    "record_type": "claim_argument"
+  },
+  {
+    "issue_id": "B-I22",
+    "proposition": "Administrative complaint and legal remedies should follow a documented issue, without promises of recovery.",
+    "rule_or_policy_text_needed": "A.R.S. § 20-461(A), (D); current DIFI procedure to be independently verified; policy suit limits.",
+    "facts_needed": [
+      "Conduct complained of",
+      "Chronology",
+      "Existing proceedings",
+      "Owner objective"
+    ],
+    "evidence_needed": [
+      "Factual correspondence record",
+      "Policy excerpts",
+      "Issue/exhibit index",
+      "Receipt log"
+    ],
+    "calculation_dependency": "No damages calculation or promised regulator award; distinguish disputed estimate amount from alleged statutory remedy.",
+    "requested_change": "Owner may seek regulatory review of documented handling and consult counsel for rights, deadlines and remedies.",
+    "strongest_carrier_response": "Complaint concerns a legitimate factual/coverage disagreement rather than regulatory misconduct.",
+    "supported_reply": "Identify the specific handling concern fairly and attach both positions; acknowledge regulator and court roles differ.",
+    "concession_or_failure_condition": "No supported misconduct or unresolved procedure: seek clarification; no bad-faith label or threat.",
+    "source_ids": [
+      "B-S08",
+      "B-S09",
+      "B-S20"
+    ],
+    "status": "LEGAL_REVIEW_AND_CURRENT_PROCESS_CHECK_REQUIRED",
+    "record_type": "claim_argument"
+  },
+  {
+    "issue_id": "B-I23",
+    "proposition": "Contractor communication requires a role, permission and compensation check before a packet is released.",
+    "rule_or_policy_text_needed": "§§ 20-321, 20-321.01, 20-321.02 and 32-1158.02(L); current legal-practice rules.",
+    "facts_needed": [
+      "Actual tasks",
+      "Owner permission",
+      "All fees/referrals/contingencies",
+      "Repair involvement",
+      "Licensure",
+      "Communication date"
+    ],
+    "evidence_needed": [
+      "Signed factual-communication authorization",
+      "Contract and compensation terms",
+      "License verification",
+      "Reviewer designation"
+    ],
+    "calculation_dependency": "No claim amount; communication compensation must not be hidden in a contingent fee or unexplained markup.",
+    "requested_change": "Use a technical estimate explanation within verified authority; route settlement/legal positions to the owner or authorized professional.",
+    "strongest_carrier_response": "Preparer is negotiating for compensation or combining adjusting with repairs.",
+    "supported_reply": "Show actual limited conduct and permission; an unsupported label or zero separate fee does not resolve indirect compensation or conflict concerns.",
+    "concession_or_failure_condition": "Unresolved authority, compensated communication or forbidden repair/adjuster overlap: no contractor-authored settlement position.",
+    "source_ids": [
+      "B-S01",
+      "B-S02",
+      "B-S03",
+      "B-S04",
+      "B-S19"
+    ],
+    "status": "ROLE_REVIEW_REQUIRED",
+    "record_type": "workflow_gate"
+  },
+  {
+    "issue_id": "B-I24",
+    "proposition": "Apply the correct statutory version to the relevant events and preserve post-storm contract protections.",
+    "rule_or_policy_text_needed": "2026 Ch. 157; general effective date; § 1-244; §§ 32-1158 and 32-1158.02.",
+    "facts_needed": [
+      "Loss date",
+      "Contract date",
+      "Communication/adjusting dates",
+      "Repair dates",
+      "Insurer area designation",
+      "Owner occupancy intent"
+    ],
+    "evidence_needed": [
+      "Dated contract",
+      "Storm designation evidence",
+      "Authority version record",
+      "Written changes/cancellations"
+    ],
+    "calculation_dependency": "Separate contract sums, insurance amounts, refundable payments and supported emergency charges; never use a deductible rebate to balance the ledger.",
+    "requested_change": "Complete applicable disclosures/role controls and obtain review of any older-claim/new-conduct transition.",
+    "strongest_carrier_response": "Special statutory scope or effective-date condition is not established.",
+    "supported_reply": "Document each trigger; do not treat every storm as insurer-designated catastrophic or apply 2026 amendments retroactively by default.",
+    "concession_or_failure_condition": "Missing triggering dates or scope: flag statutory applicability unresolved and follow conservative role controls pending review.",
+    "source_ids": [
+      "B-S04",
+      "B-S05",
+      "B-S06",
+      "B-S07",
+      "B-S18"
+    ],
+    "status": "DATE_AND_SCOPE_REVIEW_REQUIRED",
+    "record_type": "workflow_gate"
+  }
+]

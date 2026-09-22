@@ -1,0 +1,27 @@
+SYNTHETIC EXAMPLE - NOT A CLIENT CLAIM
+
+Bounded low-slope correction with concealed work held
+
+BASELINE v1 | 2026-09-21 | direct pre-tax USD
+
+
+Item                                               Qty      Unit     Rate            Total
+
+Compatible membrane repair                            4      SQ      250            1000.00
+
+
+Drain flashing repair                                   1      EA      180            180.00
+
+
+Concealed substrate work                              1      EA      100            100.00
+
+
+
+Direct subtotal: 1280.00
+
+
+
+
+
+All quantities, observations and rates are fictional test assumptions.
+Taxes, general overhead/profit, coverage and payment are not determined.

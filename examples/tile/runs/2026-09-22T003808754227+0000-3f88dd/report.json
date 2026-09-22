@@ -1,0 +1,221 @@
+{
+  "schema_version": "xr-report/1.0",
+  "case_id": "SYN-TILE",
+  "synthetic": true,
+  "status": "draft",
+  "release_allowed": false,
+  "issues": [],
+  "groups": [
+    {
+      "claim_id": "I-001",
+      "baseline": [
+        "B1"
+      ],
+      "proposed": [
+        "P1"
+      ],
+      "roof_location": "main-roof",
+      "baseline_direct": "3600.00",
+      "proposed_direct": "3600.00",
+      "delta": "0.00",
+      "components": {
+        "quantity": "0.00",
+        "price": "0.00",
+        "scope": "0.00",
+        "specification_bundle": "0.00",
+        "bundle": "0.00",
+        "rounding": "0.00"
+      },
+      "action": "retain_baseline",
+      "disposition": "retain",
+      "source_ids": [
+        "E-BASE",
+        "E-PROP",
+        "E-NOTES"
+      ],
+      "coverage_status": "unknown",
+      "counterargument": "Widespread handling damage could prevent reuse.",
+      "mapping_rationale": "The two lines describe the same synthetic operation, location and specification.",
+      "status": "computed",
+      "scope_status": "supported",
+      "held_line_ids": [],
+      "hold_reasons": []
+    },
+    {
+      "claim_id": "I-002",
+      "baseline": [
+        "B2"
+      ],
+      "proposed": [
+        "P2"
+      ],
+      "roof_location": "main-roof",
+      "baseline_direct": "300.00",
+      "proposed_direct": "300.00",
+      "delta": "0.00",
+      "components": {
+        "quantity": "0.00",
+        "price": "0.00",
+        "scope": "0.00",
+        "specification_bundle": "0.00",
+        "bundle": "0.00",
+        "rounding": "0.00"
+      },
+      "action": "retain_baseline",
+      "disposition": "retain",
+      "source_ids": [
+        "E-BASE",
+        "E-PROP",
+        "E-NOTES"
+      ],
+      "coverage_status": "unknown",
+      "counterargument": "Discontinued products can be unavailable or incompatible.",
+      "mapping_rationale": "The two lines describe the same synthetic operation, location and specification.",
+      "status": "computed",
+      "scope_status": "supported",
+      "held_line_ids": [],
+      "hold_reasons": []
+    },
+    {
+      "claim_id": "I-003",
+      "baseline": [
+        "B3"
+      ],
+      "proposed": [
+        "P3"
+      ],
+      "roof_location": "main-roof",
+      "baseline_direct": "2700.00",
+      "proposed_direct": "3150.00",
+      "delta": "450.00",
+      "components": {
+        "quantity": "0.00",
+        "price": "450.00",
+        "scope": "0.00",
+        "specification_bundle": "0.00",
+        "bundle": "0.00",
+        "rounding": "0.00"
+      },
+      "action": "increase",
+      "disposition": "candidate_change",
+      "source_ids": [
+        "E-BASE",
+        "E-PROP",
+        "E-NOTES"
+      ],
+      "coverage_status": "unknown",
+      "counterargument": "The higher quote may include an upgrade or work already counted.",
+      "mapping_rationale": "The two lines describe the same synthetic operation, location and specification.",
+      "status": "computed",
+      "scope_status": "supported",
+      "held_line_ids": [],
+      "hold_reasons": []
+    }
+  ],
+  "totals": {
+    "baseline_direct": "6600.00",
+    "proposed_direct": "7050.00",
+    "delta_direct": "450.00",
+    "upward_changes": "450.00",
+    "downward_changes": "0.00",
+    "unchanged_groups": 2
+  },
+  "partial_totals": {
+    "supported_delta": "450.00",
+    "is_complete": true
+  },
+  "unmapped_lines": [],
+  "financial_bridge": {
+    "baseline": {
+      "direct": "6600.00",
+      "adjustments_specified": false,
+      "basis_status": "no_adjustments_specified_not_verified_zero",
+      "adjustments": [],
+      "total": "6600.00",
+      "status": "direct_only"
+    },
+    "proposed": {
+      "direct": "7050.00",
+      "adjustments_specified": false,
+      "basis_status": "no_adjustments_specified_not_verified_zero",
+      "adjustments": [],
+      "total": "7050.00",
+      "status": "direct_only"
+    },
+    "payment_scenario": null,
+    "net_payable": null
+  },
+  "source_checks": [
+    {
+      "doc_id": "D-520dd659127de253-baseline",
+      "sha256": "520dd659127de2534b579985043cc481516c203675da42c1e9196734c203ea17",
+      "match": true
+    },
+    {
+      "doc_id": "D-4be3da93eee26df5-proposed",
+      "sha256": "4be3da93eee26df5638e4320cf32f059875e8712778a283dc4d85dc7efe3b9bd",
+      "match": true
+    },
+    {
+      "doc_id": "D-5f56f76c6579984c-evidence",
+      "sha256": "5f56f76c6579984c51aab73e5134d1950ed5dc8365f4ad28b17b82a48f2f3850",
+      "match": true
+    }
+  ],
+  "review_summary": {
+    "required": [
+      "document:D-4be3da93eee26df5-proposed:reported_direct_total",
+      "document:D-520dd659127de253-baseline:reported_direct_total",
+      "line:B1:quantity",
+      "line:B1:reported_total",
+      "line:B1:unit_price",
+      "line:B2:quantity",
+      "line:B2:reported_total",
+      "line:B2:unit_price",
+      "line:B3:quantity",
+      "line:B3:reported_total",
+      "line:B3:unit_price",
+      "line:P1:quantity",
+      "line:P1:reported_total",
+      "line:P1:unit_price",
+      "line:P2:quantity",
+      "line:P2:reported_total",
+      "line:P2:unit_price",
+      "line:P3:quantity",
+      "line:P3:reported_total",
+      "line:P3:unit_price"
+    ],
+    "human_confirmed": [],
+    "ai_confirmed": [],
+    "synthetic_confirmed": [],
+    "pending_subjects": [
+      "document:D-4be3da93eee26df5-proposed:reported_direct_total",
+      "document:D-520dd659127de253-baseline:reported_direct_total",
+      "line:B1:quantity",
+      "line:B1:reported_total",
+      "line:B1:unit_price",
+      "line:B2:quantity",
+      "line:B2:reported_total",
+      "line:B2:unit_price",
+      "line:B3:quantity",
+      "line:B3:reported_total",
+      "line:B3:unit_price",
+      "line:P1:quantity",
+      "line:P1:reported_total",
+      "line:P1:unit_price",
+      "line:P2:quantity",
+      "line:P2:reported_total",
+      "line:P2:unit_price",
+      "line:P3:quantity",
+      "line:P3:reported_total",
+      "line:P3:unit_price"
+    ],
+    "stale_subjects": []
+  },
+  "limitations": [
+    "Draft calculation only; release is never authorized by this engine.",
+    "Coverage and payment entitlement are not inferred.",
+    "Price context is recorded but never used to select a price.",
+    "Review receipts are assertions and do not authenticate identity."
+  ]
+}

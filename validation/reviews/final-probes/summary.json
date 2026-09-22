@@ -1,0 +1,138 @@
+{
+  "engine_sha256": "bdabda93a923e98dba1eb2941c21ee8fd6c73d11e1c3d585c2fbd08a2ce5c09f",
+  "probes": {
+    "payment_bridge": {
+      "checks": {
+        "held": true,
+        "result_null": true,
+        "first_after_null": true,
+        "next_before_null": true,
+        "next_after_null": true
+      },
+      "passed": true,
+      "scenario": {
+        "label": "Explicit test scenario",
+        "start": "1000.00",
+        "steps": [
+          {
+            "id": "deductible",
+            "label": "Unknown deductible",
+            "operation": "subtract",
+            "amount": null,
+            "before": "1000.00",
+            "after": null
+          },
+          {
+            "id": "later-known-deduction",
+            "label": "Known later deduction",
+            "operation": "subtract",
+            "amount": "100.00",
+            "before": null,
+            "after": null
+          }
+        ],
+        "result": null,
+        "net_payable": null,
+        "status": "held",
+        "reason": "Payment scenario has unresolved inputs or policy evidence."
+      }
+    },
+    "source_hash_changed": {
+      "checks": {
+        "blocked": true,
+        "totals_null": true,
+        "group_held": true,
+        "delta_null": true,
+        "supported_delta_null": true
+      },
+      "passed": true,
+      "issues": [
+        {
+          "code": "E_SOURCE_HASH",
+          "ref": "DOC-P",
+          "message": "Original bytes differ from the recorded hash.",
+          "severity": "error"
+        }
+      ],
+      "hold_reasons": [
+        "case_hard_error"
+      ]
+    },
+    "group_location_mismatch": {
+      "checks": {
+        "blocked": true,
+        "totals_null": true,
+        "group_held": true,
+        "delta_null": true,
+        "supported_delta_null": true
+      },
+      "passed": true,
+      "issues": [
+        {
+          "code": "E_LOCATION",
+          "ref": "C-001",
+          "message": "Mapped line roof location differs from group.",
+          "severity": "error"
+        },
+        {
+          "code": "E_LOCATION",
+          "ref": "C-001",
+          "message": "Mapped line roof location differs from group.",
+          "severity": "error"
+        }
+      ],
+      "hold_reasons": [
+        "case_hard_error"
+      ]
+    },
+    "unknown_scope_source": {
+      "checks": {
+        "blocked": true,
+        "totals_null": true,
+        "group_held": true,
+        "delta_null": true,
+        "supported_delta_null": true
+      },
+      "passed": true,
+      "issues": [
+        {
+          "code": "E_SOURCE_REF",
+          "ref": "C-001",
+          "message": "Scope support names unknown evidence.",
+          "severity": "error"
+        }
+      ],
+      "hold_reasons": [
+        "case_hard_error"
+      ]
+    },
+    "different_dimension": {
+      "checks": {
+        "blocked": true,
+        "totals_null": true,
+        "group_held": true,
+        "delta_null": true,
+        "supported_delta_null": true
+      },
+      "passed": true,
+      "issues": [
+        {
+          "code": "E_UNIT",
+          "ref": "C-001",
+          "message": "Mapped units have incompatible dimensions.",
+          "severity": "error"
+        },
+        {
+          "code": "E_AREA_BASIS",
+          "ref": "C-001",
+          "message": "Mapped lines use different area bases.",
+          "severity": "error"
+        }
+      ],
+      "hold_reasons": [
+        "case_hard_error"
+      ]
+    }
+  },
+  "all_passed": true
+}

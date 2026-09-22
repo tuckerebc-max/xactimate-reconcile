@@ -1,0 +1,563 @@
+{
+  "schema_version": "xr-case/1.0",
+  "synthetic": true,
+  "case_id": "SYN-CORE-1",
+  "title": "Synthetic core fixture",
+  "roof_type": "shingle",
+  "as_of": "2026-09-21",
+  "jurisdiction": {
+    "country": "US",
+    "state": "AZ",
+    "municipality": "Phoenix",
+    "verified": true
+  },
+  "sender": {
+    "name": "Fixture Author",
+    "role": "estimator",
+    "authority_status": "synthetic",
+    "authority_evidence_ids": []
+  },
+  "currency": "USD",
+  "rounding": "ROUND_HALF_UP",
+  "financial_basis": "direct_pre_tax",
+  "baseline_label": "Synthetic baseline",
+  "proposed_label": "Synthetic proposed",
+  "author_role": "synthetic fixture",
+  "price_context": {
+    "list": null,
+    "month": null,
+    "location": "Phoenix synthetic"
+  },
+  "documents": [
+    {
+      "id": "DOC-B",
+      "role": "baseline",
+      "path": "originals/baseline.txt",
+      "sha256": "1ccafb559f2cdb4b0330a4188059d7dab26433290f4b490959417cedca5c1c17",
+      "page_count": 1,
+      "received_pages": [
+        1
+      ],
+      "pages": [
+        {
+          "page": 1,
+          "width": 100,
+          "height": 100
+        }
+      ],
+      "version": "v1",
+      "date": "2026-09-20",
+      "kind": "synthetic_source",
+      "estimate_complete": true,
+      "synthetic": true,
+      "reported_direct_total": {
+        "value": "100.00",
+        "raw_text": "100.00",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "fixture_author",
+        "reviewed_at": "2026-09-21T12:00:00Z",
+        "source": {
+          "doc_id": "DOC-B",
+          "page": 1,
+          "bbox": [
+            10,
+            10,
+            90,
+            30
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            100,
+            100
+          ],
+          "method": "manual_synthetic"
+        },
+        "ocr_confidence": null
+      }
+    },
+    {
+      "id": "DOC-P",
+      "role": "proposed",
+      "path": "originals/proposed.txt",
+      "sha256": "4d5a19a19f7e09b5855e1009818c4e25ed9af556ce205aaad20166ec8f5e4ead",
+      "page_count": 1,
+      "received_pages": [
+        1
+      ],
+      "pages": [
+        {
+          "page": 1,
+          "width": 100,
+          "height": 100
+        }
+      ],
+      "version": "v1",
+      "date": "2026-09-20",
+      "kind": "synthetic_source",
+      "estimate_complete": true,
+      "synthetic": true,
+      "reported_direct_total": {
+        "value": "132.00",
+        "raw_text": "132.00",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "fixture_author",
+        "reviewed_at": "2026-09-21T12:00:00Z",
+        "source": {
+          "doc_id": "DOC-P",
+          "page": 1,
+          "bbox": [
+            10,
+            10,
+            90,
+            30
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            100,
+            100
+          ],
+          "method": "manual_synthetic"
+        },
+        "ocr_confidence": null
+      }
+    },
+    {
+      "id": "DOC-E",
+      "role": "evidence",
+      "path": "originals/evidence.txt",
+      "sha256": "d3885e54ecfd4fab4af895b48aef0e242c698124080c4d275bf126f38169c0b0",
+      "page_count": 1,
+      "received_pages": [
+        1
+      ],
+      "pages": [
+        {
+          "page": 1,
+          "width": 100,
+          "height": 100
+        }
+      ],
+      "version": "v1",
+      "date": "2026-09-20",
+      "kind": "synthetic_source",
+      "estimate_complete": false,
+      "synthetic": true,
+      "reported_direct_total": null
+    },
+    {
+      "id": "DOC-PL",
+      "role": "policy",
+      "path": "originals/policy.txt",
+      "sha256": "e8e3f3d7b9393a4fe61fee14cd6dea31614526e0d9b205327b415e24bbdb2f26",
+      "page_count": 1,
+      "received_pages": [
+        1
+      ],
+      "pages": [
+        {
+          "page": 1,
+          "width": 100,
+          "height": 100
+        }
+      ],
+      "version": "v1",
+      "date": "2026-09-20",
+      "kind": "synthetic_source",
+      "estimate_complete": false,
+      "synthetic": true,
+      "reported_direct_total": null
+    }
+  ],
+  "evidence": [
+    {
+      "id": "EV-ROOF",
+      "doc_id": "DOC-E",
+      "page": 1,
+      "description": "Synthetic roof observation"
+    },
+    {
+      "id": "EV-POLICY",
+      "doc_id": "DOC-PL",
+      "page": 1,
+      "description": "Synthetic policy evidence"
+    }
+  ],
+  "lines": [
+    {
+      "id": "B-1",
+      "side": "baseline",
+      "kind": "work",
+      "description": "Synthetic shingle work",
+      "specification": "laminated shingle",
+      "roof_location": "main-roof",
+      "quantity": {
+        "value": "10",
+        "raw_text": "10",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "fixture_author",
+        "reviewed_at": "2026-09-21T12:00:00Z",
+        "source": {
+          "doc_id": "DOC-B",
+          "page": 1,
+          "bbox": [
+            10,
+            10,
+            90,
+            30
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            100,
+            100
+          ],
+          "method": "manual_synthetic"
+        },
+        "ocr_confidence": null
+      },
+      "unit": "SQ",
+      "unit_price": {
+        "value": "10",
+        "raw_text": "10",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "fixture_author",
+        "reviewed_at": "2026-09-21T12:00:00Z",
+        "source": {
+          "doc_id": "DOC-B",
+          "page": 1,
+          "bbox": [
+            10,
+            10,
+            90,
+            30
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            100,
+            100
+          ],
+          "method": "manual_synthetic"
+        },
+        "ocr_confidence": null
+      },
+      "reported_total": {
+        "value": "100.00",
+        "raw_text": "100.00",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "fixture_author",
+        "reviewed_at": "2026-09-21T12:00:00Z",
+        "source": {
+          "doc_id": "DOC-B",
+          "page": 1,
+          "bbox": [
+            10,
+            10,
+            90,
+            30
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            100,
+            100
+          ],
+          "method": "manual_synthetic"
+        },
+        "ocr_confidence": null
+      },
+      "financial_basis": "direct_pre_tax",
+      "area_basis": "roof_surface",
+      "geometry": {
+        "slope_included": true,
+        "waste_included": false,
+        "apply_slope": false,
+        "apply_waste": false
+      },
+      "work_components": [
+        "shingle-install"
+      ],
+      "quote_inclusions": [],
+      "source": {
+        "doc_id": "DOC-B",
+        "page": 1,
+        "bbox": [
+          10,
+          10,
+          90,
+          30
+        ],
+        "coordinate_space": "pixels",
+        "image_size": [
+          100,
+          100
+        ],
+        "method": "manual_synthetic"
+      }
+    },
+    {
+      "id": "P-1",
+      "side": "proposed",
+      "kind": "work",
+      "description": "Synthetic shingle work",
+      "specification": "laminated shingle",
+      "roof_location": "main-roof",
+      "quantity": {
+        "value": "12",
+        "raw_text": "12",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "fixture_author",
+        "reviewed_at": "2026-09-21T12:00:00Z",
+        "source": {
+          "doc_id": "DOC-P",
+          "page": 1,
+          "bbox": [
+            10,
+            10,
+            90,
+            30
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            100,
+            100
+          ],
+          "method": "manual_synthetic"
+        },
+        "ocr_confidence": null
+      },
+      "unit": "SQ",
+      "unit_price": {
+        "value": "11",
+        "raw_text": "11",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "fixture_author",
+        "reviewed_at": "2026-09-21T12:00:00Z",
+        "source": {
+          "doc_id": "DOC-P",
+          "page": 1,
+          "bbox": [
+            10,
+            10,
+            90,
+            30
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            100,
+            100
+          ],
+          "method": "manual_synthetic"
+        },
+        "ocr_confidence": null
+      },
+      "reported_total": {
+        "value": "132.00",
+        "raw_text": "132.00",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "fixture_author",
+        "reviewed_at": "2026-09-21T12:00:00Z",
+        "source": {
+          "doc_id": "DOC-P",
+          "page": 1,
+          "bbox": [
+            10,
+            10,
+            90,
+            30
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            100,
+            100
+          ],
+          "method": "manual_synthetic"
+        },
+        "ocr_confidence": null
+      },
+      "financial_basis": "direct_pre_tax",
+      "area_basis": "roof_surface",
+      "geometry": {
+        "slope_included": true,
+        "waste_included": false,
+        "apply_slope": false,
+        "apply_waste": false
+      },
+      "work_components": [
+        "shingle-install"
+      ],
+      "quote_inclusions": [],
+      "source": {
+        "doc_id": "DOC-P",
+        "page": 1,
+        "bbox": [
+          10,
+          10,
+          90,
+          30
+        ],
+        "coordinate_space": "pixels",
+        "image_size": [
+          100,
+          100
+        ],
+        "method": "manual_synthetic"
+      }
+    }
+  ],
+  "groups": [
+    {
+      "claim_id": "C-001",
+      "title": "Shingle quantity and price",
+      "baseline": [
+        "B-1"
+      ],
+      "proposed": [
+        "P-1"
+      ],
+      "roof_location": "main-roof",
+      "change_type": "quantity_price",
+      "mapping_rationale": "Same specification and work component.",
+      "source_ids": [
+        "EV-ROOF"
+      ],
+      "scope_support": {
+        "status": "supported",
+        "source_ids": [
+          "EV-ROOF"
+        ]
+      },
+      "coverage": {
+        "status": "unknown",
+        "source_ids": [],
+        "reviewer": null
+      },
+      "counterargument": "Measurement should be independently reviewed.",
+      "disposition": "candidate_change",
+      "absence_verified": false
+    }
+  ],
+  "financial_adjustments": {
+    "baseline": [],
+    "proposed": []
+  },
+  "payment_scenario": {
+    "label": "Explicit test scenario",
+    "start": {
+      "value": "1000",
+      "raw_text": "1000",
+      "alternatives": [],
+      "resolution": null,
+      "verification": "synthetic_checked",
+      "reviewer": "fixture_author",
+      "reviewed_at": "2026-09-21T12:00:00Z",
+      "source": {
+        "doc_id": "DOC-PL",
+        "page": 1,
+        "bbox": [
+          10,
+          10,
+          90,
+          30
+        ],
+        "coordinate_space": "pixels",
+        "image_size": [
+          100,
+          100
+        ],
+        "method": "manual_synthetic"
+      },
+      "ocr_confidence": null
+    },
+    "evidence_ids": [
+      "EV-POLICY"
+    ],
+    "policy_evidence_ids": [
+      "EV-POLICY"
+    ],
+    "steps": [
+      {
+        "id": "deductible",
+        "label": "Unknown deductible",
+        "operation": "subtract",
+        "amount": {
+          "value": null,
+          "raw_text": null,
+          "alternatives": [],
+          "resolution": null,
+          "verification": "synthetic_checked",
+          "reviewer": "fixture_author",
+          "reviewed_at": "2026-09-21T12:00:00Z",
+          "source": {
+            "doc_id": "DOC-PL",
+            "page": 1,
+            "bbox": [
+              10,
+              10,
+              90,
+              30
+            ],
+            "coordinate_space": "pixels",
+            "image_size": [
+              100,
+              100
+            ],
+            "method": "manual_synthetic"
+          },
+          "ocr_confidence": null
+        },
+        "evidence_ids": [
+          "EV-POLICY"
+        ]
+      },
+      {
+        "id": "later-known-deduction",
+        "label": "Known later deduction",
+        "operation": "subtract",
+        "amount": {
+          "value": "100",
+          "raw_text": "100",
+          "alternatives": [],
+          "resolution": null,
+          "verification": "synthetic_checked",
+          "reviewer": "fixture_author",
+          "reviewed_at": "2026-09-21T12:00:00Z",
+          "source": {
+            "doc_id": "DOC-PL",
+            "page": 1,
+            "bbox": [
+              10,
+              10,
+              90,
+              30
+            ],
+            "coordinate_space": "pixels",
+            "image_size": [
+              100,
+              100
+            ],
+            "method": "manual_synthetic"
+          },
+          "ocr_confidence": null
+        },
+        "evidence_ids": [
+          "EV-POLICY"
+        ]
+      }
+    ]
+  },
+  "notes": "Synthetic data only."
+}

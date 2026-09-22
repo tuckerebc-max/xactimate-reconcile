@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-09-22T00:32:05.508428+00:00",
+  "structural_validation": "PASS",
+  "issues": 24,
+  "sources": 29,
+  "errors": [],
+  "file_sha256": {
+    "B_ARGUMENTS.json": "90e32e85a2c4e815c7a5bbfd95fc0264878d99bf0bfdbb189397eb05eb16b45a",
+    "B_CLAIMS_REVIEW.md": "0f7b37bfaec4acd2e9308595b11e372e4e51cd95661c890f293668a4b7a48216",
+    "B_LEGAL_REVIEW.md": "9f895d0ef77d8a70c92b9bd11ef157e4c20166fabb17db781f3e274b41a670b3",
+    "B_RESEARCH.md": "30ed02d36e1e1f9cbacc1aa0c7e28a5ad9cf6554d79503d72373a3a525f6f8bb",
+    "B_SOURCES.json": "5d01259e1fe4d9aafc3423b48e5a5b56f073bcc8504434e3b510777c9cddfab3",
+    "B_TEMPLATES.md": "9907c78d0f799acb00f18b6febc533c3895589e08b1a94c6336f770971ccebfc"
+  },
+  "limitations": [
+    "Checks required fields, identifier integrity, opened-source presence and conditional statuses.",
+    "Does not verify legal truth, source interpretation, live prices, roof conditions or claim arithmetic.",
+    "Does not authorize external use, professional practice or release of a claim packet."
+  ]
+}

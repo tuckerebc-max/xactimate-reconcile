@@ -1,0 +1,110 @@
+[
+  {
+    "skill": "writing-craft-family",
+    "path": "/root/.codex/skills/remote-skills/skill-6aa4a75723d081919d27822598edf7ca/SKILL.md",
+    "sha256": "dfb0b9d9f7b67313b60d2898483a84bc9456e0ce930e540ae1501be822996322",
+    "bytes": 5088,
+    "lines": 75,
+    "access": "installed complete local copy",
+    "upstream_commit": "not asserted"
+  },
+  {
+    "skill": "writing-craft-family",
+    "path": "/root/.codex/skills/remote-skills/skill-6aa4a75723d081919d27822598edf7ca/references/editorial-constitution.md",
+    "sha256": "29ce42942e18cf190c715ad95eaca7eddc130daa342ce8751e320092153b40d4",
+    "bytes": 3190,
+    "lines": 81,
+    "access": "installed complete local copy",
+    "upstream_commit": "not asserted"
+  },
+  {
+    "skill": "writing-craft-family",
+    "path": "/root/.codex/skills/remote-skills/skill-6aa4a75723d081919d27822598edf7ca/references/voice-calibration.md",
+    "sha256": "3937bed12013a5de6866f3ffcead309d1f773ff835faf6b833e50fbcfa4b6afa",
+    "bytes": 3719,
+    "lines": 94,
+    "access": "installed complete local copy",
+    "upstream_commit": "not asserted"
+  },
+  {
+    "skill": "writing-craft-family",
+    "path": "/root/.codex/skills/remote-skills/skill-6aa4a75723d081919d27822598edf7ca/references/sequence.md",
+    "sha256": "15c9f5454bb8735dbd641908628a085539b11302c93e99ede20a5ae01aa7a200",
+    "bytes": 3079,
+    "lines": 59,
+    "access": "installed complete local copy",
+    "upstream_commit": "not asserted"
+  },
+  {
+    "skill": "writing-craft-family",
+    "path": "/root/.codex/skills/remote-skills/skill-6aa4a75723d081919d27822598edf7ca/references/output-contract.md",
+    "sha256": "b118d3caf92cdfb9b8aa1703b0443a7f0ef3155a28583db8db891f7ccb620398",
+    "bytes": 2633,
+    "lines": 82,
+    "access": "installed complete local copy",
+    "upstream_commit": "not asserted"
+  },
+  {
+    "skill": "prose-craft",
+    "path": "/root/.codex/skills/remote-skills/skill-6aa4a7948df08191b9835895c5191fb2/SKILL.md",
+    "sha256": "573e7cca51d9abfc09ece733b4fd9bc93d4212bb112ec02a66a8e5598093e2ce",
+    "bytes": 19838,
+    "lines": 201,
+    "access": "installed complete local copy",
+    "upstream_commit": "not asserted"
+  },
+  {
+    "skill": "project-skill-audit-enhanced",
+    "path": "/root/.codex/skills/remote-skills/skill-6aa4a794e72081918a53958edae50e51/SKILL.md",
+    "sha256": "63a76c2505ade3de605a4d89d9910858cabd3901081745401a3f7f19dd17c7e4",
+    "bytes": 6867,
+    "lines": 77,
+    "access": "installed complete local copy",
+    "upstream_commit": "not asserted"
+  },
+  {
+    "skill": "project-skill-audit-enhanced",
+    "path": "/root/.codex/skills/remote-skills/skill-6aa4a794e72081918a53958edae50e51/references/audit-protocol.md",
+    "sha256": "0a7d3bfeff99f38b4206f1a6c9946f8c324688dccdeb87558aa8b659384f4aa4",
+    "bytes": 2794,
+    "lines": 61,
+    "access": "installed complete local copy",
+    "upstream_commit": "not asserted"
+  },
+  {
+    "skill": "writing-skills",
+    "path": "/root/.codex/skills/remote-skills/skill-6aa4a7947688819195564712befea100/SKILL.md",
+    "sha256": "697d918bfc06c385ac8710c7ede559dec1dc53db9498389df76756bb44349c6f",
+    "bytes": 26340,
+    "lines": 680,
+    "access": "installed complete local copy",
+    "upstream_commit": "not asserted"
+  },
+  {
+    "skill": "writing-skills",
+    "path": "/root/.codex/skills/remote-skills/skill-6aa4a7947688819195564712befea100/testing-skills-with-subagents.md",
+    "sha256": "c711346852c911b24a84aa161e0cff06a4cd7f4e2fa9e9c0a266cead5afcbade",
+    "bytes": 12558,
+    "lines": 384,
+    "access": "installed complete local copy",
+    "upstream_commit": "not asserted"
+  },
+  {
+    "skill": "test-driven-development",
+    "path": "/root/.codex/skills/remote-skills/skill-6aa4a79471b08191a6f0e28c55e3d7d1/SKILL.md",
+    "sha256": "14515306746976c07bbe6da6292e81f0992f43edc4d876ede83331e1973b7669",
+    "bytes": 9017,
+    "lines": 321,
+    "access": "installed complete local copy",
+    "upstream_commit": "not asserted"
+  },
+  {
+    "skill": "skill-creator",
+    "path": "/root/.codex/skills/oai/skill-creator/SKILL.md",
+    "sha256": "7224b7cfe4a76f5ddd366a728c621cfa04657de9e4dd8df46c97e73fb1964359",
+    "bytes": 32400,
+    "lines": 511,
+    "access": "environment installed copy",
+    "upstream_commit": "not asserted"
+  }
+]

@@ -1,0 +1,27 @@
+SYNTHETIC EXAMPLE - NOT A CLIENT CLAIM
+
+Feasible tile repair with a documented underlayment rate question
+
+BASELINE v1 | 2026-09-21 | direct pre-tax USD
+
+
+Item                                               Qty      Unit     Rate            Total
+
+Tile lift and reset                                      18     SQ      200            3600.00
+
+
+Compatible replacement tile                             10      EA      30             300.00
+
+
+Underlayment installation                               18     SQ      150            2700.00
+
+
+
+Direct subtotal: 6600.00
+
+
+
+
+
+All quantities, observations and rates are fictional test assumptions.
+Taxes, general overhead/profit, coverage and payment are not determined.

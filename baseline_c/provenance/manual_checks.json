@@ -1,0 +1,5 @@
+{
+  "malformed_json_renderer_refusal": "passed",
+  "executed_on": "2026-09-21",
+  "limitations": "One additional command smoke test; no OCR, Windows, Claude or Xactimate execution."
+}

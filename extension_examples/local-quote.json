@@ -1,0 +1,51 @@
+{
+  "schema_version": "xr-extension/1.0",
+  "id": "local-quote",
+  "version": "0.1.0",
+  "type": "pricing",
+  "title": "Draft supplier quote observation",
+  "jurisdiction": {
+    "country": "US",
+    "state": "AZ",
+    "municipality": "Phoenix"
+  },
+  "roof_types": [
+    "shingle",
+    "tile",
+    "low_slope"
+  ],
+  "effective_from": "2026-09-21",
+  "effective_to": null,
+  "review": {
+    "status": "draft",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  "sources": [
+    {
+      "id": "SUPPLIED-1",
+      "title": "Replace with actual source",
+      "url_or_document": "Private source document pending",
+      "accessed_date": "2026-09-22",
+      "limitation": "Template only; no source has been supplied or verified."
+    }
+  ],
+  "entries": [
+    {
+      "id": "ENTRY-1",
+      "title": "Draft supplier quote observation",
+      "kind": "cost_observation",
+      "content": "Fictional $1 template value only. Replace from an actual dated quote and identify all inclusions and exclusions before review.",
+      "source_ids": [
+        "SUPPLIED-1"
+      ],
+      "amount": "1.00",
+      "unit": "EA",
+      "currency": "USD",
+      "observed_at": "2026-09-22",
+      "expires_at": "2026-09-22",
+      "artifact_path": null,
+      "artifact_sha256": null
+    }
+  ]
+}

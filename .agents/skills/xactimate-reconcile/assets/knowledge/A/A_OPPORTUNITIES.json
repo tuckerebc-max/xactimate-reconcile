@@ -1,0 +1,593 @@
+[
+  {
+    "id": "A-O01",
+    "title": "Measured roof geometry and slopes",
+    "roof_types": [
+      "shingle",
+      "tile",
+      "low-slope/flat"
+    ],
+    "discrepancy": "Different surface area, face selection, pitch, overhang or length takeoffs.",
+    "calculation": "For a planar face only: plan area × sqrt(1+(rise/12)^2); sum verified faces. Delta = corrected quantity × matching rate minus existing allowance.",
+    "evidence": "Face-labelled sketch; field slope readings; aerial report limitations; perimeter/opening measurements.",
+    "carrier_counterargument": "Carrier used a reliable measurement report.",
+    "reply_when_supported": "Identify the specific face discrepancy and reproduce the measurement.",
+    "disqualifiers": "No verified discrepancy; surface area already slope-adjusted.",
+    "double_count_risk": "Applying slope factor twice; billing excluded/unaffected faces.",
+    "xactimate_action": "Correct Sketch by face; retain original and measurement notes.",
+    "source_ids": [
+      "A-S22",
+      "A-S03"
+    ],
+    "status": "REVIEW_CATEGORY_ONLY__CLAIM_EVIDENCE_REQUIRED",
+    "interpretation": "Source IDs support relevant workflow or technical context; the discrepancy, calculation, response and disqualifiers are proposed harness controls, not findings about a particular claim.",
+    "review_priority": 1,
+    "priority_rationale": "Measurement errors propagate across multiple area-based operations; verify early.",
+    "ranking_basis": "Analyst judgment of potential cost exposure and verification value; not measured frequency, expected recovery or a guaranteed increase.",
+    "claim_specific_amount": null,
+    "source_support_scope": "Source IDs support software mechanics, technical context or official guidance; they do not prove this discrepancy exists or is covered.",
+    "double_count_control": "Attribute each physical component/activity/location to one discrepancy. Subtract its existing allowance; do not sum overlapping category totals."
+  },
+  {
+    "id": "A-O02",
+    "title": "Waste, starter, ridge and accessory quantities",
+    "roof_types": [
+      "shingle",
+      "tile"
+    ],
+    "discrepancy": "Order quantity, layout loss or accessories differ from measured installation quantity.",
+    "calculation": "Derive layout/cut loss and product coverage; separate justified starter/ridge LF from field material; subtract existing included allowance.",
+    "evidence": "Roof layout; package coverage; cuts/valleys; accessory specification; waste setting capture.",
+    "carrier_counterargument": "Waste or accessories already included.",
+    "reply_when_supported": "Show a single auditable material takeoff and settings comparison.",
+    "disqualifiers": "Arbitrary percentage; ordering surplus unrelated to necessary work.",
+    "double_count_risk": "Manual formula plus auto waste; field shingles for ridge plus separate cap.",
+    "xactimate_action": "Audit manual/automatic waste and every accessory line.",
+    "source_ids": [
+      "A-S24",
+      "A-S05"
+    ],
+    "status": "REVIEW_CATEGORY_ONLY__CLAIM_EVIDENCE_REQUIRED",
+    "interpretation": "Source IDs support relevant workflow or technical context; the discrepancy, calculation, response and disqualifiers are proposed harness controls, not findings about a particular claim.",
+    "review_priority": 12,
+    "priority_rationale": "Waste/accessories recur widely; existing automatic allowances often reduce the net change.",
+    "ranking_basis": "Analyst judgment of potential cost exposure and verification value; not measured frequency, expected recovery or a guaranteed increase.",
+    "claim_specific_amount": null,
+    "source_support_scope": "Source IDs support software mechanics, technical context or official guidance; they do not prove this discrepancy exists or is covered.",
+    "double_count_control": "Attribute each physical component/activity/location to one discrepancy. Subtract its existing allowance; do not sum overlapping category totals."
+  },
+  {
+    "id": "A-O03",
+    "title": "Material identity, quality and assembly specification",
+    "roof_types": [
+      "shingle",
+      "tile",
+      "low-slope/flat"
+    ],
+    "discrepancy": "Carrier priced a different shingle grade, tile profile or low-slope assembly.",
+    "calculation": "Same supported quantity × verified like-kind unit-price difference; separate any elected upgrade.",
+    "evidence": "Labels; samples; dimensions; product identification; invoices; manufacturer system literature.",
+    "carrier_counterargument": "Higher-price item is an upgrade.",
+    "reply_when_supported": "Tie specification to existing material or applicable required replacement assembly.",
+    "disqualifiers": "Unidentified product; premium election; unsupported availability claim.",
+    "double_count_risk": "Material allowance plus all-inclusive supplier/installer quote.",
+    "xactimate_action": "Select item only after licensed detail confirms specification; attach identification.",
+    "source_ids": [
+      "A-S03",
+      "A-S21",
+      "A-S20"
+    ],
+    "status": "REVIEW_CATEGORY_ONLY__CLAIM_EVIDENCE_REQUIRED",
+    "interpretation": "Source IDs support relevant workflow or technical context; the discrepancy, calculation, response and disqualifiers are proposed harness controls, not findings about a particular claim.",
+    "review_priority": 3,
+    "priority_rationale": "An assembly/specification mismatch affects every unit priced.",
+    "ranking_basis": "Analyst judgment of potential cost exposure and verification value; not measured frequency, expected recovery or a guaranteed increase.",
+    "claim_specific_amount": null,
+    "source_support_scope": "Source IDs support software mechanics, technical context or official guidance; they do not prove this discrepancy exists or is covered.",
+    "double_count_control": "Attribute each physical component/activity/location to one discrepancy. Subtract its existing allowance; do not sum overlapping category totals."
+  },
+  {
+    "id": "A-O04",
+    "title": "Repairability and replacement boundary",
+    "roof_types": [
+      "shingle",
+      "tile",
+      "low-slope/flat"
+    ],
+    "discrepancy": "Localized repair versus slope/system replacement extent.",
+    "calculation": "Price documented repair method and documented necessary replacement alternative separately; compare complete scopes.",
+    "evidence": "Damage map; repair feasibility assessment; compatibility/availability evidence; condition; manufacturer guidance.",
+    "carrier_counterargument": "A durable localized repair is feasible.",
+    "reply_when_supported": "Explain the specific failed repair premise and narrower alternatives considered.",
+    "disqualifiers": "Age, appearance or isolated damage alone; destructive test without authorization.",
+    "double_count_risk": "Repair and replacement charged for same area; unrelated slopes.",
+    "xactimate_action": "Use separate scenarios; replace overlapping allowance only after scope support.",
+    "source_ids": [
+      "A-S18",
+      "A-S20"
+    ],
+    "status": "REVIEW_CATEGORY_ONLY__CLAIM_EVIDENCE_REQUIRED",
+    "interpretation": "Source IDs support relevant workflow or technical context; the discrepancy, calculation, response and disqualifiers are proposed harness controls, not findings about a particular claim.",
+    "review_priority": 2,
+    "priority_rationale": "Repair extent can change whole facets or systems, but demands strong feasibility evidence.",
+    "ranking_basis": "Analyst judgment of potential cost exposure and verification value; not measured frequency, expected recovery or a guaranteed increase.",
+    "claim_specific_amount": null,
+    "source_support_scope": "Source IDs support software mechanics, technical context or official guidance; they do not prove this discrepancy exists or is covered.",
+    "double_count_control": "Attribute each physical component/activity/location to one discrepancy. Subtract its existing allowance; do not sum overlapping category totals."
+  },
+  {
+    "id": "A-O05",
+    "title": "Tear-off, existing layers and substrate exposure",
+    "roof_types": [
+      "shingle",
+      "tile",
+      "low-slope/flat"
+    ],
+    "discrepancy": "Removal scope omits verified layers or assumes recover is suitable.",
+    "calculation": "Measured affected area × verified removal activity/layers; subtract base tear-off already included.",
+    "evidence": "Edge/cut observations; tear-off photos; documented layers; selected assembly instructions.",
+    "carrier_counterargument": "Removal is included or recover is feasible.",
+    "reply_when_supported": "Locate the extra operation and prove its layer/area.",
+    "disqualifiers": "Unverified layers; unnecessary removal; unrelated reroof upgrade.",
+    "double_count_risk": "Composite removal plus separate same removal; removed layer counted twice.",
+    "xactimate_action": "Inspect activity and component scope; distinguish base and additional removal.",
+    "source_ids": [
+      "A-S03",
+      "A-S04",
+      "A-S21"
+    ],
+    "status": "REVIEW_CATEGORY_ONLY__CLAIM_EVIDENCE_REQUIRED",
+    "interpretation": "Source IDs support relevant workflow or technical context; the discrepancy, calculation, response and disqualifiers are proposed harness controls, not findings about a particular claim.",
+    "review_priority": 9,
+    "priority_rationale": "Verified extra layers and tear-off alter removal effort and disposal.",
+    "ranking_basis": "Analyst judgment of potential cost exposure and verification value; not measured frequency, expected recovery or a guaranteed increase.",
+    "claim_specific_amount": null,
+    "source_support_scope": "Source IDs support software mechanics, technical context or official guidance; they do not prove this discrepancy exists or is covered.",
+    "double_count_control": "Attribute each physical component/activity/location to one discrepancy. Subtract its existing allowance; do not sum overlapping category totals."
+  },
+  {
+    "id": "A-O06",
+    "title": "Underlayment type, layers and integration",
+    "roof_types": [
+      "shingle",
+      "tile"
+    ],
+    "discrepancy": "Allowance differs from actual or applicable replacement underlayment system.",
+    "calculation": "Supported area and laps × matched assembly rate; isolate flashing/tie-in operations not included.",
+    "evidence": "Product/age identification; roof slope; opened-area photos; applicable instructions/evaluation report; AHJ trigger if relied upon.",
+    "carrier_counterargument": "Existing material can remain or repair; premium underlayment is optional.",
+    "reply_when_supported": "Demonstrate necessary removal/replacement and correct assembly at the documented slope.",
+    "disqualifiers": "Age-only maintenance; no observed damage or repair necessity; generic code claim.",
+    "double_count_risk": "Full barrier and felt on same area without assembly basis; laps included twice.",
+    "xactimate_action": "Use supported assembly and quantity; record included layers.",
+    "source_ids": [
+      "A-S19",
+      "A-S05"
+    ],
+    "status": "REVIEW_CATEGORY_ONLY__CLAIM_EVIDENCE_REQUIRED",
+    "interpretation": "Source IDs support relevant workflow or technical context; the discrepancy, calculation, response and disqualifiers are proposed harness controls, not findings about a particular claim.",
+    "review_priority": 5,
+    "priority_rationale": "Underlayment scope can affect broad areas and necessary access work.",
+    "ranking_basis": "Analyst judgment of potential cost exposure and verification value; not measured frequency, expected recovery or a guaranteed increase.",
+    "claim_specific_amount": null,
+    "source_support_scope": "Source IDs support software mechanics, technical context or official guidance; they do not prove this discrepancy exists or is covered.",
+    "double_count_control": "Attribute each physical component/activity/location to one discrepancy. Subtract its existing allowance; do not sum overlapping category totals."
+  },
+  {
+    "id": "A-O07",
+    "title": "Tile lift/reset, salvage and breakage",
+    "roof_types": [
+      "tile"
+    ],
+    "discrepancy": "Underlayment access labor, reusable tiles or evidenced unavoidable breakage omitted/misallocated.",
+    "calculation": "Lift/reset affected area plus documented replacement count; credit retained material and superseded repair work.",
+    "evidence": "Access plan; tile inventory; fastening method; pre-work condition; observed breakage log; matched replacement supply.",
+    "carrier_counterargument": "Tiles can be locally repaired; breakage allowance is speculative.",
+    "reply_when_supported": "Separate sound reusable tiles, pre-existing storm fractures and supported handling losses.",
+    "disqualifiers": "Blanket breakage rate; contractor-caused damage presented as storm damage; full replacement without proof.",
+    "double_count_risk": "Full tile replacement plus lift/reset on same tiles; breakage counted as waste and replacements.",
+    "xactimate_action": "Create distinct supported operations and contingent unresolved quantities.",
+    "source_ids": [
+      "A-S20",
+      "A-S19"
+    ],
+    "status": "REVIEW_CATEGORY_ONLY__CLAIM_EVIDENCE_REQUIRED",
+    "interpretation": "Source IDs support relevant workflow or technical context; the discrepancy, calculation, response and disqualifiers are proposed harness controls, not findings about a particular claim.",
+    "review_priority": 6,
+    "priority_rationale": "Tile access, salvage and reuse can materially alter labor and material quantities.",
+    "ranking_basis": "Analyst judgment of potential cost exposure and verification value; not measured frequency, expected recovery or a guaranteed increase.",
+    "claim_specific_amount": null,
+    "source_support_scope": "Source IDs support software mechanics, technical context or official guidance; they do not prove this discrepancy exists or is covered.",
+    "double_count_control": "Attribute each physical component/activity/location to one discrepancy. Subtract its existing allowance; do not sum overlapping category totals."
+  },
+  {
+    "id": "A-O08",
+    "title": "Low-slope membrane, coating and insulation assembly",
+    "roof_types": [
+      "low-slope/flat"
+    ],
+    "discrepancy": "A coating/patch allowance differs from a demonstrably necessary membrane/assembly repair.",
+    "calculation": "Measure affected layers, field and upstands separately; compare complete warranted repair alternatives.",
+    "evidence": "Identify membrane/coating/foam and substrate; product labels/history; qualified condition assessment; moisture investigation where indicated; adhesion/compatibility results; current applicable repair/restoration detail.",
+    "carrier_counterargument": "Coating or localized patch restores performance.",
+    "reply_when_supported": "Show why the lesser repair cannot address the established damage and compatible repair requirements.",
+    "disqualifiers": "Routine maintenance/recoat alone; unidentified system; moisture without cause/extent evidence; an inapplicable commercial restoration specification.",
+    "double_count_risk": "Complete system line plus base/cap/primer already included; roof and wall area overlap.",
+    "xactimate_action": "Use system-specific detail; separate pending insulation/deck findings.",
+    "source_ids": [
+      "A-S21",
+      "A-S03",
+      "A-S26",
+      "A-S27",
+      "A-S28",
+      "A-S29"
+    ],
+    "status": "REVIEW_CATEGORY_ONLY__CLAIM_EVIDENCE_REQUIRED",
+    "interpretation": "Source IDs support relevant workflow or technical context; the discrepancy, calculation, response and disqualifiers are proposed harness controls, not findings about a particular claim.",
+    "review_priority": 4,
+    "priority_rationale": "Repair versus coating or assembly replacement may change several layers and operations.",
+    "ranking_basis": "Analyst judgment of potential cost exposure and verification value; not measured frequency, expected recovery or a guaranteed increase.",
+    "claim_specific_amount": null,
+    "source_support_scope": "Source IDs support software mechanics, technical context or official guidance; they do not prove this discrepancy exists or is covered.",
+    "double_count_control": "Attribute each physical component/activity/location to one discrepancy. Subtract its existing allowance; do not sum overlapping category totals."
+  },
+  {
+    "id": "A-O09",
+    "title": "Drip edge, eave/rake metal and tile closures",
+    "roof_types": [
+      "shingle",
+      "tile",
+      "low-slope/flat"
+    ],
+    "discrepancy": "Perimeter metal or closures omitted, mismeasured or unnecessarily replaced.",
+    "calculation": "Verified affected LF by edge type × applicable operation; preserve reusable sections where appropriate.",
+    "evidence": "Edge photos; LF takeoff; metal/closure profile; attachment and integration method.",
+    "carrier_counterargument": "Undamaged metal can be reused or is already priced.",
+    "reply_when_supported": "Explain damaged section or inability to complete supported repair with existing component.",
+    "disqualifiers": "Blanket replacement without integration/condition evidence.",
+    "double_count_risk": "Drip edge plus eave/rake line with same metal; accessory in composite scope.",
+    "xactimate_action": "Separate edge types and operations; check inclusions.",
+    "source_ids": [
+      "A-S05",
+      "A-S19",
+      "A-S21"
+    ],
+    "status": "REVIEW_CATEGORY_ONLY__CLAIM_EVIDENCE_REQUIRED",
+    "interpretation": "Source IDs support relevant workflow or technical context; the discrepancy, calculation, response and disqualifiers are proposed harness controls, not findings about a particular claim.",
+    "review_priority": 16,
+    "priority_rationale": "Perimeter work is measurable; reuse and included items may narrow the difference.",
+    "ranking_basis": "Analyst judgment of potential cost exposure and verification value; not measured frequency, expected recovery or a guaranteed increase.",
+    "claim_specific_amount": null,
+    "source_support_scope": "Source IDs support software mechanics, technical context or official guidance; they do not prove this discrepancy exists or is covered.",
+    "double_count_control": "Attribute each physical component/activity/location to one discrepancy. Subtract its existing allowance; do not sum overlapping category totals."
+  },
+  {
+    "id": "A-O10",
+    "title": "Valleys, walls, chimneys, skylights and penetration flashings",
+    "roof_types": [
+      "shingle",
+      "tile",
+      "low-slope/flat"
+    ],
+    "discrepancy": "Counts, lengths, flashing stages or associated access differ.",
+    "calculation": "Count each penetration and measured flashing LF/area; price only required reset/repair/replacement.",
+    "evidence": "Detail photos; penetration inventory; dimensions; applicable installation detail; reuse assessment.",
+    "carrier_counterargument": "Existing flashing is serviceable; pipe boot already includes flashing.",
+    "reply_when_supported": "Demonstrate the missing specific detail or documented failed component.",
+    "disqualifiers": "Cosmetic change; replacing sound reusable components without reason.",
+    "double_count_risk": "Boot with integral flashing plus same flashing separately; curb assembly overlap.",
+    "xactimate_action": "Match operation and unit to each unique feature.",
+    "source_ids": [
+      "A-S19",
+      "A-S21",
+      "A-S05"
+    ],
+    "status": "REVIEW_CATEGORY_ONLY__CLAIM_EVIDENCE_REQUIRED",
+    "interpretation": "Source IDs support relevant workflow or technical context; the discrepancy, calculation, response and disqualifiers are proposed harness controls, not findings about a particular claim.",
+    "review_priority": 13,
+    "priority_rationale": "Multiple roof intersections or penetrations accumulate measured work.",
+    "ranking_basis": "Analyst judgment of potential cost exposure and verification value; not measured frequency, expected recovery or a guaranteed increase.",
+    "claim_specific_amount": null,
+    "source_support_scope": "Source IDs support software mechanics, technical context or official guidance; they do not prove this discrepancy exists or is covered.",
+    "double_count_control": "Attribute each physical component/activity/location to one discrepancy. Subtract its existing allowance; do not sum overlapping category totals."
+  },
+  {
+    "id": "A-O11",
+    "title": "Decking and localized structural substrate repair",
+    "roof_types": [
+      "shingle",
+      "tile",
+      "low-slope/flat"
+    ],
+    "discrepancy": "Concealed or observed deck repair omitted or over-assumed.",
+    "calculation": "Verified damaged/replacement area × matched thickness/material and necessary labor; show contingency separately.",
+    "evidence": "Photos after exposure; thickness/span/fastening; moisture/rot distinction; qualified assessment; AHJ requirement if applicable.",
+    "carrier_counterargument": "No storm-related deck damage is established.",
+    "reply_when_supported": "Provide location, extent, cause and repair-necessity evidence when exposed.",
+    "disqualifiers": "Blanket redeck; ordinary decay labelled storm damage; no code trigger.",
+    "double_count_risk": "Deck in complete assembly and separate deck line; overlapping patches.",
+    "xactimate_action": "Hold unverified area pending; add measured work with exposure photos.",
+    "source_ids": [
+      "A-S21",
+      "A-S19",
+      "A-S26"
+    ],
+    "status": "REVIEW_CATEGORY_ONLY__CLAIM_EVIDENCE_REQUIRED",
+    "interpretation": "Source IDs support relevant workflow or technical context; the discrepancy, calculation, response and disqualifiers are proposed harness controls, not findings about a particular claim.",
+    "review_priority": 11,
+    "priority_rationale": "Deck repairs can matter but concealed conditions must remain contingent until evidenced.",
+    "ranking_basis": "Analyst judgment of potential cost exposure and verification value; not measured frequency, expected recovery or a guaranteed increase.",
+    "claim_specific_amount": null,
+    "source_support_scope": "Source IDs support software mechanics, technical context or official guidance; they do not prove this discrepancy exists or is covered.",
+    "double_count_control": "Attribute each physical component/activity/location to one discrepancy. Subtract its existing allowance; do not sum overlapping category totals."
+  },
+  {
+    "id": "A-O12",
+    "title": "Ventilation components and roof-system ventilation",
+    "roof_types": [
+      "shingle",
+      "tile"
+    ],
+    "discrepancy": "Damaged vent replacement/reset or necessary integration omitted; unrelated redesign added.",
+    "calculation": "Count existing affected vents/LF; calculate any design change only under applicable documented requirement.",
+    "evidence": "Vent inventory; photos; existing configuration; manufacturer detail; code trigger and qualified design if proposed.",
+    "carrier_counterargument": "Existing ventilation works; added ventilation is improvement.",
+    "reply_when_supported": "Limit request to repair/restoration or specifically triggered compliance.",
+    "disqualifiers": "Heat/condensation maintenance issue alone; automatic whole-attic redesign.",
+    "double_count_risk": "Ridge cap/vent bundled line plus duplicate separate components.",
+    "xactimate_action": "Separate damaged component work from optional upgrade.",
+    "source_ids": [
+      "A-S05",
+      "A-S18"
+    ],
+    "status": "REVIEW_CATEGORY_ONLY__CLAIM_EVIDENCE_REQUIRED",
+    "interpretation": "Source IDs support relevant workflow or technical context; the discrepancy, calculation, response and disqualifiers are proposed harness controls, not findings about a particular claim.",
+    "review_priority": 19,
+    "priority_rationale": "Limit to damaged components or specifically triggered compliance, not general improvement.",
+    "ranking_basis": "Analyst judgment of potential cost exposure and verification value; not measured frequency, expected recovery or a guaranteed increase.",
+    "claim_specific_amount": null,
+    "source_support_scope": "Source IDs support software mechanics, technical context or official guidance; they do not prove this discrepancy exists or is covered.",
+    "double_count_control": "Attribute each physical component/activity/location to one discrepancy. Subtract its existing allowance; do not sum overlapping category totals."
+  },
+  {
+    "id": "A-O13",
+    "title": "Drainage, scuppers, drains and low-slope transitions",
+    "roof_types": [
+      "tile",
+      "low-slope/flat",
+      "shingle"
+    ],
+    "discrepancy": "Damaged drainage or necessary tie-in omitted; pre-existing ponding correction included without support.",
+    "calculation": "Measured damaged features and necessary tie-in areas; compare reset versus replacement.",
+    "evidence": "Water-path photos; drain/scupper dimensions; storm debris versus maintenance record; system details.",
+    "carrier_counterargument": "Blockage/ponding is maintenance or pre-existing design.",
+    "reply_when_supported": "Show event-linked damage or required integration with supported repair.",
+    "disqualifiers": "Routine cleaning; unrelated slope redesign; no damage nexus.",
+    "double_count_risk": "Drain/curb package and separate flashing; cleanup counted twice.",
+    "xactimate_action": "Keep maintenance separate; note exact drainage feature and activity.",
+    "source_ids": [
+      "A-S21",
+      "A-S20",
+      "A-S26"
+    ],
+    "status": "REVIEW_CATEGORY_ONLY__CLAIM_EVIDENCE_REQUIRED",
+    "interpretation": "Source IDs support relevant workflow or technical context; the discrepancy, calculation, response and disqualifiers are proposed harness controls, not findings about a particular claim.",
+    "review_priority": 17,
+    "priority_rationale": "Drainage changes require a precise damaged feature or repair-integration basis.",
+    "ranking_basis": "Analyst judgment of potential cost exposure and verification value; not measured frequency, expected recovery or a guaranteed increase.",
+    "claim_specific_amount": null,
+    "source_support_scope": "Source IDs support software mechanics, technical context or official guidance; they do not prove this discrepancy exists or is covered.",
+    "double_count_control": "Attribute each physical component/activity/location to one discrepancy. Subtract its existing allowance; do not sum overlapping category totals."
+  },
+  {
+    "id": "A-O14",
+    "title": "Access, height, steepness, staging and protection",
+    "roof_types": [
+      "shingle",
+      "tile",
+      "low-slope/flat"
+    ],
+    "discrepancy": "Documented site constraints not reflected or generic surcharges overstate them.",
+    "calculation": "Affected area or documented equipment/time × applicable rate, less included productivity/safety costs.",
+    "evidence": "Slope/height measurements; access photos; staging plan; rental quote/duration; task-specific labor basis.",
+    "carrier_counterargument": "Normal setup/safety/productivity already included.",
+    "reply_when_supported": "Identify incremental site-specific cost and exclusions in base items.",
+    "disqualifiers": "Standard job conditions; blanket unsafe-work surcharge; unsupported duration.",
+    "double_count_risk": "High/steep lines plus custom labor for identical impediment.",
+    "xactimate_action": "Check licensed item scope, trade and supporting-event assumptions before adding.",
+    "source_ids": [
+      "A-S04",
+      "A-S06"
+    ],
+    "status": "REVIEW_CATEGORY_ONLY__CLAIM_EVIDENCE_REQUIRED",
+    "interpretation": "Source IDs support relevant workflow or technical context; the discrepancy, calculation, response and disqualifiers are proposed harness controls, not findings about a particular claim.",
+    "review_priority": 14,
+    "priority_rationale": "Only incremental, site-specific access/productivity costs survive the inclusion check.",
+    "ranking_basis": "Analyst judgment of potential cost exposure and verification value; not measured frequency, expected recovery or a guaranteed increase.",
+    "claim_specific_amount": null,
+    "source_support_scope": "Source IDs support software mechanics, technical context or official guidance; they do not prove this discrepancy exists or is covered.",
+    "double_count_control": "Attribute each physical component/activity/location to one discrepancy. Subtract its existing allowance; do not sum overlapping category totals."
+  },
+  {
+    "id": "A-O15",
+    "title": "Solar, HVAC and other equipment detach/reset",
+    "roof_types": [
+      "shingle",
+      "tile",
+      "low-slope/flat"
+    ],
+    "discrepancy": "Necessary trade work to access roofing omitted, or replacement claimed where reset suffices.",
+    "calculation": "Equipment count × scoped detach/reset quote plus separately necessary testing/permit; remove duplicates.",
+    "evidence": "Equipment layout; access interference; licensed trade proposal; owner/lease constraints; manufacturer reset protocol.",
+    "carrier_counterargument": "Equipment need not move; roofer quote includes it.",
+    "reply_when_supported": "Show physical interference and least-cost compliant access method.",
+    "disqualifiers": "Optional relocation/upgrade; undamaged equipment replacement without necessity.",
+    "double_count_risk": "Trade lump sum plus crane, electrical or reset labor already quoted.",
+    "xactimate_action": "Use documented quote and precise scope; mark permit/commissioning pending.",
+    "source_ids": [
+      "A-S06",
+      "A-S17"
+    ],
+    "status": "REVIEW_CATEGORY_ONLY__CLAIM_EVIDENCE_REQUIRED",
+    "interpretation": "Source IDs support relevant workflow or technical context; the discrepancy, calculation, response and disqualifiers are proposed harness controls, not findings about a particular claim.",
+    "review_priority": 10,
+    "priority_rationale": "Specialty equipment access can add substantial but discrete trade work.",
+    "ranking_basis": "Analyst judgment of potential cost exposure and verification value; not measured frequency, expected recovery or a guaranteed increase.",
+    "claim_specific_amount": null,
+    "source_support_scope": "Source IDs support software mechanics, technical context or official guidance; they do not prove this discrepancy exists or is covered.",
+    "double_count_control": "Attribute each physical component/activity/location to one discrepancy. Subtract its existing allowance; do not sum overlapping category totals."
+  },
+  {
+    "id": "A-O16",
+    "title": "Debris hauling, disposal and conditional permits",
+    "roof_types": [
+      "shingle",
+      "tile",
+      "low-slope/flat"
+    ],
+    "discrepancy": "Required disposal/permit costs missing, already embedded or inapplicable.",
+    "calculation": "Measured disposal weight/volume and actual haul basis; applicable fee schedule/receipt; subtract included cleanup/disposal.",
+    "evidence": "Removal item detail; disposal quote/tickets; site logistics; actual AHJ scope/fee confirmation.",
+    "carrier_counterargument": "Tear-off includes disposal; same-material Phoenix reroof is exempt.",
+    "reply_when_supported": "Show net nonduplicative disposal and any specific permit trigger.",
+    "disqualifiers": "Automatic permit charge based only on the older Phoenix brochure; exempt work; unrelated debris; unsupported loads.",
+    "double_count_risk": "Per-square tear-off disposal plus full dumpster charge; fee in trade quote.",
+    "xactimate_action": "Inspect inclusions; separate justified job cost from conditional fee.",
+    "source_ids": [
+      "A-S17",
+      "A-S21",
+      "A-S04"
+    ],
+    "status": "REVIEW_CATEGORY_ONLY__CLAIM_EVIDENCE_REQUIRED",
+    "interpretation": "Source IDs support relevant workflow or technical context; the discrepancy, calculation, response and disqualifiers are proposed harness controls, not findings about a particular claim.",
+    "review_priority": 18,
+    "priority_rationale": "Net hauling can matter; permit applicability must be proved for the actual scope.",
+    "ranking_basis": "Analyst judgment of potential cost exposure and verification value; not measured frequency, expected recovery or a guaranteed increase.",
+    "claim_specific_amount": null,
+    "source_support_scope": "Source IDs support software mechanics, technical context or official guidance; they do not prove this discrepancy exists or is covered.",
+    "double_count_control": "Attribute each physical component/activity/location to one discrepancy. Subtract its existing allowance; do not sum overlapping category totals."
+  },
+  {
+    "id": "A-O17",
+    "title": "Price-list date, geographic market and benchmark",
+    "roof_types": [
+      "shingle",
+      "tile",
+      "low-slope/flat"
+    ],
+    "discrepancy": "Estimates use different list periods, areas or modified baselines.",
+    "calculation": "Reprice unchanged supported scope on each recorded basis; isolate price delta from scope delta.",
+    "evidence": "Exact list identifier/version; location/ZIP; estimate and repair dates; original checkpoint; basis rationale.",
+    "carrier_counterargument": "Carrier's list is appropriate to the adjustment date.",
+    "reply_when_supported": "Explain factual basis for alternate market/date; provide both scenarios if unresolved.",
+    "disqualifiers": "Selecting most expensive period; silent repricing; unsupported catastrophe assumption.",
+    "double_count_risk": "Date effect plus custom override for same price movement.",
+    "xactimate_action": "Record Claim Info > Parameters; export Variation and preserve originals.",
+    "source_ids": [
+      "A-S02",
+      "A-S13",
+      "A-S09",
+      "A-S25"
+    ],
+    "status": "REVIEW_CATEGORY_ONLY__CLAIM_EVIDENCE_REQUIRED",
+    "interpretation": "Source IDs support relevant workflow or technical context; the discrepancy, calculation, response and disqualifiers are proposed harness controls, not findings about a particular claim.",
+    "review_priority": 8,
+    "priority_rationale": "An inconsistent market/date can create a broad apparent difference; normalize before claiming it.",
+    "ranking_basis": "Analyst judgment of potential cost exposure and verification value; not measured frequency, expected recovery or a guaranteed increase.",
+    "claim_specific_amount": null,
+    "source_support_scope": "Source IDs support software mechanics, technical context or official guidance; they do not prove this discrepancy exists or is covered.",
+    "double_count_control": "Attribute each physical component/activity/location to one discrepancy. Subtract its existing allowance; do not sum overlapping category totals."
+  },
+  {
+    "id": "A-O18",
+    "title": "Documented local unit-price, labor and specialty overrides",
+    "roof_types": [
+      "shingle",
+      "tile",
+      "low-slope/flat"
+    ],
+    "discrepancy": "Published allowance differs from substantiated available job-specific cost.",
+    "calculation": "Quantity × evidenced rate difference, after matching scope, units, tax, delivery and markup.",
+    "evidence": "Dated comparable supplier/trade bids; availability; detailed labor basis; quote exclusions.",
+    "carrier_counterargument": "Single high quote does not establish reasonable market cost.",
+    "reply_when_supported": "Reconcile comparable scope and explain actual constraint or verified cost.",
+    "disqualifiers": "Unverifiable quote; target-driven markup; premium elective contractor preference.",
+    "double_count_risk": "All-in quote with separate included labor/material/delivery/markup.",
+    "xactimate_action": "Override transparently; attach quote and include Variation report.",
+    "source_ids": [
+      "A-S01",
+      "A-S06",
+      "A-S09",
+      "A-S25"
+    ],
+    "status": "REVIEW_CATEGORY_ONLY__CLAIM_EVIDENCE_REQUIRED",
+    "interpretation": "Source IDs support relevant workflow or technical context; the discrepancy, calculation, response and disqualifiers are proposed harness controls, not findings about a particular claim.",
+    "review_priority": 7,
+    "priority_rationale": "A supported unit-rate difference multiplies across the affected quantity.",
+    "ranking_basis": "Analyst judgment of potential cost exposure and verification value; not measured frequency, expected recovery or a guaranteed increase.",
+    "claim_specific_amount": null,
+    "source_support_scope": "Source IDs support software mechanics, technical context or official guidance; they do not prove this discrepancy exists or is covered.",
+    "double_count_control": "Attribute each physical component/activity/location to one discrepancy. Subtract its existing allowance; do not sum overlapping category totals."
+  },
+  {
+    "id": "A-O19",
+    "title": "Taxes, O&P, labor minimums and allocation",
+    "roof_types": [
+      "shingle",
+      "tile",
+      "low-slope/flat"
+    ],
+    "discrepancy": "Financial settings omit, duplicate or misapply a justified cost.",
+    "calculation": "Recalculate each eligible base once under verified jurisdiction/contract basis; show minimum shortfall separately.",
+    "evidence": "Current tax authority determination; job/trade structure; actual supervisory need; scope-separated bids; minimum-group review.",
+    "carrier_counterargument": "Embedded trade overhead/minimums already cover cost; added general O&P unwarranted.",
+    "reply_when_supported": "Separate embedded, job-specific and general costs with a job-specific basis.",
+    "disqualifiers": "Assumed fixed O&P rate; arbitrary trade-count rule; tax rate without classification.",
+    "double_count_risk": "Markup on already marked-up quotes; minimum plus equivalent callout; tax duplication.",
+    "xactimate_action": "Review Unit Price flags, Parameters and Labor minimums; retain assumptions.",
+    "source_ids": [
+      "A-S01",
+      "A-S06",
+      "A-S08"
+    ],
+    "status": "REVIEW_CATEGORY_ONLY__CLAIM_EVIDENCE_REQUIRED",
+    "interpretation": "Source IDs support relevant workflow or technical context; the discrepancy, calculation, response and disqualifiers are proposed harness controls, not findings about a particular claim.",
+    "review_priority": 15,
+    "priority_rationale": "Percentage/base/minimum errors can be material but need jurisdiction and inclusion checks.",
+    "ranking_basis": "Analyst judgment of potential cost exposure and verification value; not measured frequency, expected recovery or a guaranteed increase.",
+    "claim_specific_amount": null,
+    "source_support_scope": "Source IDs support software mechanics, technical context or official guidance; they do not prove this discrepancy exists or is covered.",
+    "double_count_control": "Attribute each physical component/activity/location to one discrepancy. Subtract its existing allowance; do not sum overlapping category totals."
+  },
+  {
+    "id": "A-O20",
+    "title": "RCV, ACV, depreciation, payments and final duplicate audit",
+    "roof_types": [
+      "shingle",
+      "tile",
+      "low-slope/flat"
+    ],
+    "discrepancy": "Gross scope difference confused with depreciation, deductible, prior payment or withheld item.",
+    "calculation": "Compare gross RCV first; reconcile documented depreciation and recoverability; calculate payment bridge separately under policy terms.",
+    "evidence": "Full estimate summaries; line depreciation; roof age/condition records; payment ledger; policy/endorsements; coverage review.",
+    "carrier_counterargument": "Difference reflects policy settlement, not omitted repair cost.",
+    "reply_when_supported": "Identify the exact accounting mismatch without asserting unsupported coverage.",
+    "disqualifiers": "Treating contractor RCV as immediately payable; assuming all depreciation recoverable.",
+    "double_count_risk": "Deductible/prior payment subtracted twice; repair and replacement overlap; allowance counted in multiple categories.",
+    "xactimate_action": "Review item and project depreciation; reconcile totals and unique work IDs before export.",
+    "source_ids": [
+      "A-S14",
+      "A-S12",
+      "A-S15"
+    ],
+    "status": "REVIEW_CATEGORY_ONLY__CLAIM_EVIDENCE_REQUIRED",
+    "interpretation": "Source IDs support relevant workflow or technical context; the discrepancy, calculation, response and disqualifiers are proposed harness controls, not findings about a particular claim.",
+    "review_priority": 20,
+    "priority_rationale": "Mandatory initial and final comparison gate; can explain a large apparent gap without adding repair scope.",
+    "ranking_basis": "Analyst judgment of potential cost exposure and verification value; not measured frequency, expected recovery or a guaranteed increase.",
+    "claim_specific_amount": null,
+    "source_support_scope": "Source IDs support software mechanics, technical context or official guidance; they do not prove this discrepancy exists or is covered.",
+    "workflow_timing": "Run before the ranked scope review and again before release; priority number is not an instruction to postpone this gate.",
+    "double_count_control": "Attribute each physical component/activity/location to one discrepancy. Subtract its existing allowance; do not sum overlapping category totals."
+  }
+]

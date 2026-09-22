@@ -1,0 +1,1036 @@
+{
+  "schema_version": "xr-case/1.0",
+  "synthetic": true,
+  "case_id": "SYN-TILE",
+  "title": "Feasible tile repair with a documented underlayment rate question",
+  "roof_type": "tile",
+  "as_of": "2026-09-21",
+  "currency": "USD",
+  "rounding": "ROUND_HALF_UP",
+  "financial_basis": "direct_pre_tax",
+  "baseline_label": "Carrier estimate",
+  "proposed_label": "Contractor estimate",
+  "author_role": "Technical estimate preparation",
+  "price_context": {
+    "list": null,
+    "month": null,
+    "location": "Synthetic Phoenix setting; no market prices supplied"
+  },
+  "jurisdiction": {
+    "country": "US",
+    "state": "AZ",
+    "municipality": "Phoenix",
+    "verified": true
+  },
+  "sender": {
+    "name": "Synthetic estimator",
+    "role": "contractor",
+    "authority_status": "unverified",
+    "authority_evidence_ids": []
+  },
+  "documents": [
+    {
+      "id": "D-520dd659127de253-baseline",
+      "role": "baseline",
+      "path": "originals/D-520dd659127de253-baseline.pdf",
+      "sha256": "520dd659127de2534b579985043cc481516c203675da42c1e9196734c203ea17",
+      "page_count": 1,
+      "received_pages": [
+        1
+      ],
+      "version": "v1",
+      "date": "2026-09-22",
+      "kind": "estimate",
+      "estimate_complete": true,
+      "synthetic": true,
+      "reported_direct_total": {
+        "value": "6600.00",
+        "raw_text": "6600.00",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-520dd659127de253-baseline",
+          "page": 1,
+          "bbox": [
+            88,
+            618,
+            1140,
+            662
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "pages": [
+        {
+          "page": 1,
+          "width": 1224,
+          "height": 1584,
+          "image_path": "derived/D-520dd659127de253-baseline/page-001.png",
+          "image_sha256": "ad56a677f77340a2bc70a57973e35bad0b6a83669f962d2279bae389478daaaa",
+          "text_path": "derived/D-520dd659127de253-baseline/page-001.txt",
+          "words_path": "derived/D-520dd659127de253-baseline/page-001.words.json",
+          "method": "native_text",
+          "coordinate_space": "pixels",
+          "transform": {
+            "kind": "pdf_render",
+            "scale": 2.0,
+            "original_space": "PDF points",
+            "rotation": 0
+          }
+        }
+      ],
+      "original_name": "tile-baseline.pdf",
+      "mime_type": "application/pdf",
+      "receipt_time": "2026-09-22T00:12:21.716527+00:00",
+      "inspection_limits": "File page count verified; a person must confirm the full intended document was supplied."
+    },
+    {
+      "id": "D-4be3da93eee26df5-proposed",
+      "role": "proposed",
+      "path": "originals/D-4be3da93eee26df5-proposed.pdf",
+      "sha256": "4be3da93eee26df5638e4320cf32f059875e8712778a283dc4d85dc7efe3b9bd",
+      "page_count": 1,
+      "received_pages": [
+        1
+      ],
+      "version": "v1",
+      "date": "2026-09-22",
+      "kind": "estimate",
+      "estimate_complete": true,
+      "synthetic": true,
+      "reported_direct_total": {
+        "value": "7050.00",
+        "raw_text": "7050.00",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-4be3da93eee26df5-proposed",
+          "page": 1,
+          "bbox": [
+            88,
+            618,
+            1140,
+            662
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "pages": [
+        {
+          "page": 1,
+          "width": 1224,
+          "height": 1584,
+          "image_path": "derived/D-4be3da93eee26df5-proposed/page-001.png",
+          "image_sha256": "491924def83db049b5ae5c76bb6098ecc51f7d517db2c69e24c0290cd01c4bf5",
+          "text_path": "derived/D-4be3da93eee26df5-proposed/page-001.txt",
+          "words_path": "derived/D-4be3da93eee26df5-proposed/page-001.words.json",
+          "method": "native_text",
+          "coordinate_space": "pixels",
+          "transform": {
+            "kind": "pdf_render",
+            "scale": 2.0,
+            "original_space": "PDF points",
+            "rotation": 0
+          }
+        }
+      ],
+      "original_name": "tile-proposed.pdf",
+      "mime_type": "application/pdf",
+      "receipt_time": "2026-09-22T00:12:21.751622+00:00",
+      "inspection_limits": "File page count verified; a person must confirm the full intended document was supplied."
+    },
+    {
+      "id": "D-5f56f76c6579984c-evidence",
+      "role": "evidence",
+      "path": "originals/D-5f56f76c6579984c-evidence.txt",
+      "sha256": "5f56f76c6579984c51aab73e5134d1950ed5dc8365f4ad28b17b82a48f2f3850",
+      "page_count": 1,
+      "received_pages": [
+        1
+      ],
+      "version": "v1",
+      "date": "2026-09-22",
+      "kind": "evidence",
+      "estimate_complete": true,
+      "synthetic": true,
+      "reported_direct_total": null,
+      "pages": [
+        {
+          "page": 1,
+          "width": 1,
+          "height": 1,
+          "text_path": "derived/D-5f56f76c6579984c-evidence/page-001.txt",
+          "image_path": null,
+          "method": "native_text",
+          "coordinate_space": "pixels",
+          "note": "Text exhibit; not a source image for monetary verification."
+        }
+      ],
+      "original_name": "tile-notes.txt",
+      "mime_type": "text/plain",
+      "receipt_time": "2026-09-22T00:12:21.786686+00:00",
+      "inspection_limits": "File page count verified; a person must confirm the full intended document was supplied."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E-BASE",
+      "doc_id": "D-520dd659127de253-baseline",
+      "page": 1,
+      "description": "Synthetic baseline estimate"
+    },
+    {
+      "id": "E-PROP",
+      "doc_id": "D-4be3da93eee26df5-proposed",
+      "page": 1,
+      "description": "Synthetic proposed estimate"
+    },
+    {
+      "id": "E-NOTES",
+      "doc_id": "D-5f56f76c6579984c-evidence",
+      "page": 1,
+      "description": "Fictional scenario premises and limitations"
+    }
+  ],
+  "lines": [
+    {
+      "id": "B1",
+      "side": "baseline",
+      "description": "Tile lift and reset",
+      "specification": "synthetic-same-assembly",
+      "roof_location": "main-roof",
+      "quantity": {
+        "value": "18",
+        "raw_text": "18",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-520dd659127de253-baseline",
+          "page": 1,
+          "bbox": [
+            88,
+            314,
+            1140,
+            354
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "unit": "SQ",
+      "unit_price": {
+        "value": "200",
+        "raw_text": "200",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-520dd659127de253-baseline",
+          "page": 1,
+          "bbox": [
+            88,
+            314,
+            1140,
+            354
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "reported_total": {
+        "value": "3600.00",
+        "raw_text": "3600.00",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-520dd659127de253-baseline",
+          "page": 1,
+          "bbox": [
+            88,
+            314,
+            1140,
+            354
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "financial_basis": "direct_pre_tax",
+      "area_basis": "roof_surface",
+      "geometry": {
+        "slope_included": true,
+        "waste_included": false,
+        "apply_slope": false,
+        "apply_waste": false
+      },
+      "work_components": [
+        "tile-reset"
+      ],
+      "quote_inclusions": [],
+      "source": {
+        "doc_id": "D-520dd659127de253-baseline",
+        "page": 1,
+        "bbox": [
+          88,
+          314,
+          1140,
+          354
+        ],
+        "coordinate_space": "pixels",
+        "image_size": [
+          1224,
+          1584
+        ],
+        "method": "manual_synthetic"
+      },
+      "kind": "work"
+    },
+    {
+      "id": "P1",
+      "side": "proposed",
+      "description": "Tile lift and reset",
+      "specification": "synthetic-same-assembly",
+      "roof_location": "main-roof",
+      "quantity": {
+        "value": "18",
+        "raw_text": "18",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-4be3da93eee26df5-proposed",
+          "page": 1,
+          "bbox": [
+            88,
+            314,
+            1140,
+            354
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "unit": "SQ",
+      "unit_price": {
+        "value": "200",
+        "raw_text": "200",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-4be3da93eee26df5-proposed",
+          "page": 1,
+          "bbox": [
+            88,
+            314,
+            1140,
+            354
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "reported_total": {
+        "value": "3600.00",
+        "raw_text": "3600.00",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-4be3da93eee26df5-proposed",
+          "page": 1,
+          "bbox": [
+            88,
+            314,
+            1140,
+            354
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "financial_basis": "direct_pre_tax",
+      "area_basis": "roof_surface",
+      "geometry": {
+        "slope_included": true,
+        "waste_included": false,
+        "apply_slope": false,
+        "apply_waste": false
+      },
+      "work_components": [
+        "tile-reset"
+      ],
+      "quote_inclusions": [],
+      "source": {
+        "doc_id": "D-4be3da93eee26df5-proposed",
+        "page": 1,
+        "bbox": [
+          88,
+          314,
+          1140,
+          354
+        ],
+        "coordinate_space": "pixels",
+        "image_size": [
+          1224,
+          1584
+        ],
+        "method": "manual_synthetic"
+      },
+      "kind": "work"
+    },
+    {
+      "id": "B2",
+      "side": "baseline",
+      "description": "Compatible replacement tile",
+      "specification": "synthetic-same-assembly",
+      "roof_location": "main-roof",
+      "quantity": {
+        "value": "10",
+        "raw_text": "10",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-520dd659127de253-baseline",
+          "page": 1,
+          "bbox": [
+            88,
+            404,
+            1140,
+            444
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "unit": "EA",
+      "unit_price": {
+        "value": "30",
+        "raw_text": "30",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-520dd659127de253-baseline",
+          "page": 1,
+          "bbox": [
+            88,
+            404,
+            1140,
+            444
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "reported_total": {
+        "value": "300.00",
+        "raw_text": "300.00",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-520dd659127de253-baseline",
+          "page": 1,
+          "bbox": [
+            88,
+            404,
+            1140,
+            444
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "financial_basis": "direct_pre_tax",
+      "area_basis": "not_area",
+      "geometry": {
+        "slope_included": false,
+        "waste_included": false,
+        "apply_slope": false,
+        "apply_waste": false
+      },
+      "work_components": [
+        "replacement-tile"
+      ],
+      "quote_inclusions": [],
+      "source": {
+        "doc_id": "D-520dd659127de253-baseline",
+        "page": 1,
+        "bbox": [
+          88,
+          404,
+          1140,
+          444
+        ],
+        "coordinate_space": "pixels",
+        "image_size": [
+          1224,
+          1584
+        ],
+        "method": "manual_synthetic"
+      },
+      "kind": "work"
+    },
+    {
+      "id": "P2",
+      "side": "proposed",
+      "description": "Compatible replacement tile",
+      "specification": "synthetic-same-assembly",
+      "roof_location": "main-roof",
+      "quantity": {
+        "value": "10",
+        "raw_text": "10",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-4be3da93eee26df5-proposed",
+          "page": 1,
+          "bbox": [
+            88,
+            404,
+            1140,
+            444
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "unit": "EA",
+      "unit_price": {
+        "value": "30",
+        "raw_text": "30",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-4be3da93eee26df5-proposed",
+          "page": 1,
+          "bbox": [
+            88,
+            404,
+            1140,
+            444
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "reported_total": {
+        "value": "300.00",
+        "raw_text": "300.00",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-4be3da93eee26df5-proposed",
+          "page": 1,
+          "bbox": [
+            88,
+            404,
+            1140,
+            444
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "financial_basis": "direct_pre_tax",
+      "area_basis": "not_area",
+      "geometry": {
+        "slope_included": false,
+        "waste_included": false,
+        "apply_slope": false,
+        "apply_waste": false
+      },
+      "work_components": [
+        "replacement-tile"
+      ],
+      "quote_inclusions": [],
+      "source": {
+        "doc_id": "D-4be3da93eee26df5-proposed",
+        "page": 1,
+        "bbox": [
+          88,
+          404,
+          1140,
+          444
+        ],
+        "coordinate_space": "pixels",
+        "image_size": [
+          1224,
+          1584
+        ],
+        "method": "manual_synthetic"
+      },
+      "kind": "work"
+    },
+    {
+      "id": "B3",
+      "side": "baseline",
+      "description": "Underlayment installation",
+      "specification": "synthetic-same-assembly",
+      "roof_location": "main-roof",
+      "quantity": {
+        "value": "18",
+        "raw_text": "18",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-520dd659127de253-baseline",
+          "page": 1,
+          "bbox": [
+            88,
+            494,
+            1140,
+            534
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "unit": "SQ",
+      "unit_price": {
+        "value": "150",
+        "raw_text": "150",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-520dd659127de253-baseline",
+          "page": 1,
+          "bbox": [
+            88,
+            494,
+            1140,
+            534
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "reported_total": {
+        "value": "2700.00",
+        "raw_text": "2700.00",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-520dd659127de253-baseline",
+          "page": 1,
+          "bbox": [
+            88,
+            494,
+            1140,
+            534
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "financial_basis": "direct_pre_tax",
+      "area_basis": "roof_surface",
+      "geometry": {
+        "slope_included": true,
+        "waste_included": false,
+        "apply_slope": false,
+        "apply_waste": false
+      },
+      "work_components": [
+        "underlayment"
+      ],
+      "quote_inclusions": [],
+      "source": {
+        "doc_id": "D-520dd659127de253-baseline",
+        "page": 1,
+        "bbox": [
+          88,
+          494,
+          1140,
+          534
+        ],
+        "coordinate_space": "pixels",
+        "image_size": [
+          1224,
+          1584
+        ],
+        "method": "manual_synthetic"
+      },
+      "kind": "work"
+    },
+    {
+      "id": "P3",
+      "side": "proposed",
+      "description": "Underlayment installation",
+      "specification": "synthetic-same-assembly",
+      "roof_location": "main-roof",
+      "quantity": {
+        "value": "18",
+        "raw_text": "18",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-4be3da93eee26df5-proposed",
+          "page": 1,
+          "bbox": [
+            88,
+            494,
+            1140,
+            534
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "unit": "SQ",
+      "unit_price": {
+        "value": "175",
+        "raw_text": "175",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-4be3da93eee26df5-proposed",
+          "page": 1,
+          "bbox": [
+            88,
+            494,
+            1140,
+            534
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "reported_total": {
+        "value": "3150.00",
+        "raw_text": "3150.00",
+        "alternatives": [],
+        "resolution": null,
+        "verification": "synthetic_checked",
+        "reviewer": "synthetic fixture author",
+        "reviewed_at": "2026-09-21T23:00:00Z",
+        "ocr_confidence": null,
+        "source": {
+          "doc_id": "D-4be3da93eee26df5-proposed",
+          "page": 1,
+          "bbox": [
+            88,
+            494,
+            1140,
+            534
+          ],
+          "coordinate_space": "pixels",
+          "image_size": [
+            1224,
+            1584
+          ],
+          "method": "manual_synthetic"
+        }
+      },
+      "financial_basis": "direct_pre_tax",
+      "area_basis": "roof_surface",
+      "geometry": {
+        "slope_included": true,
+        "waste_included": false,
+        "apply_slope": false,
+        "apply_waste": false
+      },
+      "work_components": [
+        "underlayment"
+      ],
+      "quote_inclusions": [],
+      "source": {
+        "doc_id": "D-4be3da93eee26df5-proposed",
+        "page": 1,
+        "bbox": [
+          88,
+          494,
+          1140,
+          534
+        ],
+        "coordinate_space": "pixels",
+        "image_size": [
+          1224,
+          1584
+        ],
+        "method": "manual_synthetic"
+      },
+      "kind": "work"
+    }
+  ],
+  "groups": [
+    {
+      "claim_id": "I-001",
+      "title": "Tile lift and reset",
+      "baseline": [
+        "B1"
+      ],
+      "proposed": [
+        "P1"
+      ],
+      "roof_location": "main-roof",
+      "change_type": "quantity_price",
+      "mapping_rationale": "The two lines describe the same synthetic operation, location and specification.",
+      "source_ids": [
+        "E-BASE",
+        "E-PROP",
+        "E-NOTES"
+      ],
+      "scope_support": {
+        "status": "supported",
+        "source_ids": [
+          "E-NOTES"
+        ]
+      },
+      "coverage": {
+        "status": "unknown",
+        "source_ids": [],
+        "reviewer": null
+      },
+      "counterargument": "Widespread handling damage could prevent reuse.",
+      "disposition": "retain",
+      "absence_verified": false,
+      "requested_action": "Retain the bounded lift-and-reset scope.",
+      "observation": "The synthetic case specifies reusable compatible tiles and access to the affected underlayment.",
+      "necessity": "The supplied scenario supports reuse, not replacement of all roof tile.",
+      "reply": "No such finding is supplied; hold any additional tile quantity until documented.",
+      "category_ids": [
+        "A-O07",
+        "A-O04",
+        "B-I05"
+      ]
+    },
+    {
+      "claim_id": "I-002",
+      "title": "Compatible replacement tile",
+      "baseline": [
+        "B2"
+      ],
+      "proposed": [
+        "P2"
+      ],
+      "roof_location": "main-roof",
+      "change_type": "quantity_price",
+      "mapping_rationale": "The two lines describe the same synthetic operation, location and specification.",
+      "source_ids": [
+        "E-BASE",
+        "E-PROP",
+        "E-NOTES"
+      ],
+      "scope_support": {
+        "status": "supported",
+        "source_ids": [
+          "E-NOTES"
+        ]
+      },
+      "coverage": {
+        "status": "unknown",
+        "source_ids": [],
+        "reviewer": null
+      },
+      "counterargument": "Discontinued products can be unavailable or incompatible.",
+      "disposition": "retain",
+      "absence_verified": false,
+      "requested_action": "Retain replacement of ten documented damaged tiles.",
+      "observation": "Ten damaged units are identified in the synthetic record and compatible replacements are available.",
+      "necessity": "Individual replacement is feasible on the stipulated facts.",
+      "reply": "This fictional sourcing record identifies compatible stock; discontinuation alone cannot defeat that evidence.",
+      "category_ids": [
+        "A-O03",
+        "B-I05"
+      ]
+    },
+    {
+      "claim_id": "I-003",
+      "title": "Underlayment installation",
+      "baseline": [
+        "B3"
+      ],
+      "proposed": [
+        "P3"
+      ],
+      "roof_location": "main-roof",
+      "change_type": "quantity_price",
+      "mapping_rationale": "The two lines describe the same synthetic operation, location and specification.",
+      "source_ids": [
+        "E-BASE",
+        "E-PROP",
+        "E-NOTES"
+      ],
+      "scope_support": {
+        "status": "supported",
+        "source_ids": [
+          "E-NOTES"
+        ]
+      },
+      "coverage": {
+        "status": "unknown",
+        "source_ids": [],
+        "reviewer": null
+      },
+      "counterargument": "The higher quote may include an upgrade or work already counted.",
+      "disposition": "candidate_change",
+      "absence_verified": false,
+      "requested_action": "Review the supported rate difference for the same underlayment scope.",
+      "observation": "The synthetic price record uses 175 per SQ for the specified replacement assembly, compared with 150 in the first estimate.",
+      "necessity": "The quantities and assembly are held constant to isolate the rate effect.",
+      "reply": "The fixture holds specification and included work constant. A real case needs comparable dated pricing and licensed item detail.",
+      "category_ids": [
+        "A-O06",
+        "A-O18",
+        "B-I10",
+        "B-I12"
+      ]
+    }
+  ],
+  "financial_adjustments": {
+    "baseline": [],
+    "proposed": []
+  },
+  "payment_scenario": null,
+  "notes": "Scenario premise: localized repair remains feasible; eighteen SQ of lift/reset and underlayment; ten compatible replacement tiles. No blanket breakage factor, matching entitlement or market price is asserted."
+}

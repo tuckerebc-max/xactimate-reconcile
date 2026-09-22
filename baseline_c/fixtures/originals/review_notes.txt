@@ -1,0 +1,6 @@
+SYNTHETIC REVIEW NOTES, 2026-09-21. EX-003. Not a real roof inspection.
+C-001: Fixture roof surface is 12 SQ. Net surface; slope included, waste excluded. Proposed price is an explicit synthetic assumption. Counterargument: no actual local price evidence supplied.
+C-002: Fixture flashing length is 80 LF. The 100 LF entry counts a 20 LF segment twice; proposed correction removes it. A contractor can overstate the same quantity; correction must lower it.
+C-003: Localized tile repair is feasible in this synthetic scenario; retain 450.00. No evidence supports replacement.
+C-004: Two vents, A and B, are the same scope as the combined two-vent line. Retain 200.00.
+No policy, endorsement, tax, overhead/profit, depreciation, deductible, limits or prior payments supplied. Coverage unknown.

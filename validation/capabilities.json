@@ -1,0 +1,16 @@
+{
+  "python": "3.12.14",
+  "libraries": {
+    "fitz": true,
+    "PIL": true,
+    "docx": true,
+    "reportlab": true
+  },
+  "executables": {
+    "tesseract": "/usr/bin/tesseract",
+    "pdftotext": "/usr/bin/pdftotext",
+    "soffice": "/opt/codex/runtimes/codex-primary-runtime/dependencies/bin/override/soffice"
+  },
+  "network_required": false,
+  "note": "Availability is not an OCR accuracy or Xactimate compatibility test."
+}

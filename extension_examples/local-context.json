@@ -1,0 +1,51 @@
+{
+  "schema_version": "xr-extension/1.0",
+  "id": "local-context",
+  "version": "0.1.0",
+  "type": "geography",
+  "title": "Draft city-specific work context",
+  "jurisdiction": {
+    "country": "US",
+    "state": "AZ",
+    "municipality": "Phoenix"
+  },
+  "roof_types": [
+    "shingle",
+    "tile",
+    "low_slope"
+  ],
+  "effective_from": "2026-09-21",
+  "effective_to": null,
+  "review": {
+    "status": "draft",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  "sources": [
+    {
+      "id": "SUPPLIED-1",
+      "title": "Replace with actual source",
+      "url_or_document": "Private source document pending",
+      "accessed_date": "2026-09-22",
+      "limitation": "Template only; no source has been supplied or verified."
+    }
+  ],
+  "entries": [
+    {
+      "id": "ENTRY-1",
+      "title": "Draft city-specific work context",
+      "kind": "context",
+      "content": "Replace with a bounded factual observation and its limitations. This draft is not applicable approved context.",
+      "source_ids": [
+        "SUPPLIED-1"
+      ],
+      "amount": null,
+      "unit": null,
+      "currency": null,
+      "observed_at": null,
+      "expires_at": null,
+      "artifact_path": null,
+      "artifact_sha256": null
+    }
+  ]
+}

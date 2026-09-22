@@ -1,0 +1,62 @@
+[
+  {
+    "input": "examples/low_slope/runs/2026-09-22T003809047879+0000-54250e/cover_letter.docx",
+    "exit_code": 0,
+    "pages": 1
+  },
+  {
+    "input": "examples/low_slope/runs/2026-09-22T003809047879+0000-54250e/evidence_appendix.docx",
+    "exit_code": 0,
+    "pages": 3
+  },
+  {
+    "input": "examples/low_slope/runs/2026-09-22T003809047879+0000-54250e/operator_checklist.docx",
+    "exit_code": 0,
+    "pages": 1
+  },
+  {
+    "input": "examples/low_slope/runs/2026-09-22T003809047879+0000-54250e/reconciliation_memo.docx",
+    "exit_code": 0,
+    "pages": 2
+  },
+  {
+    "input": "examples/shingle/runs/2026-09-22T003808292678+0000-1e4df7/cover_letter.docx",
+    "exit_code": 0,
+    "pages": 1
+  },
+  {
+    "input": "examples/shingle/runs/2026-09-22T003808292678+0000-1e4df7/evidence_appendix.docx",
+    "exit_code": 0,
+    "pages": 3
+  },
+  {
+    "input": "examples/shingle/runs/2026-09-22T003808292678+0000-1e4df7/operator_checklist.docx",
+    "exit_code": 0,
+    "pages": 1
+  },
+  {
+    "input": "examples/shingle/runs/2026-09-22T003808292678+0000-1e4df7/reconciliation_memo.docx",
+    "exit_code": 0,
+    "pages": 2
+  },
+  {
+    "input": "examples/tile/runs/2026-09-22T003808754227+0000-3f88dd/cover_letter.docx",
+    "exit_code": 0,
+    "pages": 1
+  },
+  {
+    "input": "examples/tile/runs/2026-09-22T003808754227+0000-3f88dd/evidence_appendix.docx",
+    "exit_code": 0,
+    "pages": 3
+  },
+  {
+    "input": "examples/tile/runs/2026-09-22T003808754227+0000-3f88dd/operator_checklist.docx",
+    "exit_code": 0,
+    "pages": 1
+  },
+  {
+    "input": "examples/tile/runs/2026-09-22T003808754227+0000-3f88dd/reconciliation_memo.docx",
+    "exit_code": 0,
+    "pages": 2
+  }
+]

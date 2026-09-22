@@ -1,0 +1,118 @@
+{
+  "applicable": [
+    {
+      "id": "arizona-roofing-research",
+      "pack": {
+        "schema_version": "xr-extension/1.0",
+        "id": "arizona-roofing-research",
+        "version": "2026.09.21",
+        "type": "geography",
+        "title": "Arizona roofing research context as of September 21 2026",
+        "jurisdiction": {
+          "country": "US",
+          "state": "AZ",
+          "municipality": null
+        },
+        "roof_types": [
+          "shingle",
+          "tile",
+          "low_slope"
+        ],
+        "effective_from": "2026-09-21",
+        "effective_to": null,
+        "review": {
+          "status": "reviewed",
+          "reviewer": "A and B research synthesis by AI; no professional signoff",
+          "reviewed_at": "2026-09-21"
+        },
+        "sources": [
+          {
+            "id": "A-S16",
+            "title": "Phoenix code adoption record",
+            "url_or_document": "https://www.phoenix.gov/administration/departments/pdd/tools-resources/codes-ordinance/building-code.html",
+            "accessed_date": "2026-09-21",
+            "limitation": "Phoenix city only; exact requirement, trigger and coverage not established."
+          },
+          {
+            "id": "B-S04",
+            "title": "Arizona residential construction contracts",
+            "url_or_document": "https://www.azleg.gov/ars/32/01158-02.htm",
+            "accessed_date": "2026-09-21",
+            "limitation": "Source snapshot; actual role, compensation, dates and statutory scope require verification."
+          }
+        ],
+        "entries": [
+          {
+            "id": "jurisdiction-check",
+            "title": "Confirm the actual authority having jurisdiction",
+            "kind": "context",
+            "content": "A Phoenix-area mailing address does not establish city jurisdiction. Confirm parcel, work scope, adopted edition and applicable permit trigger. This pack supplies no current municipal fee or tax rate.",
+            "source_ids": [
+              "A-S16"
+            ],
+            "amount": null,
+            "unit": null,
+            "currency": null,
+            "observed_at": null,
+            "expires_at": null,
+            "artifact_path": null,
+            "artifact_sha256": null
+          },
+          {
+            "id": "contractor-role",
+            "title": "Keep technical estimation and claim representation distinct",
+            "kind": "context",
+            "content": "Record actual sender authority, compensation and relevant conduct dates. A technical estimate and formal wording do not establish authority to negotiate settlement or give legal advice. Refresh material authority before claim use.",
+            "source_ids": [
+              "B-S04"
+            ],
+            "amount": null,
+            "unit": null,
+            "currency": null,
+            "observed_at": null,
+            "expires_at": null,
+            "artifact_path": null,
+            "artifact_sha256": null
+          }
+        ]
+      },
+      "entries": [
+        {
+          "id": "jurisdiction-check",
+          "title": "Confirm the actual authority having jurisdiction",
+          "kind": "context",
+          "content": "A Phoenix-area mailing address does not establish city jurisdiction. Confirm parcel, work scope, adopted edition and applicable permit trigger. This pack supplies no current municipal fee or tax rate.",
+          "source_ids": [
+            "A-S16"
+          ],
+          "amount": null,
+          "unit": null,
+          "currency": null,
+          "observed_at": null,
+          "expires_at": null,
+          "artifact_path": null,
+          "artifact_sha256": null
+        },
+        {
+          "id": "contractor-role",
+          "title": "Keep technical estimation and claim representation distinct",
+          "kind": "context",
+          "content": "Record actual sender authority, compensation and relevant conduct dates. A technical estimate and formal wording do not establish authority to negotiate settlement or give legal advice. Refresh material authority before claim use.",
+          "source_ids": [
+            "B-S04"
+          ],
+          "amount": null,
+          "unit": null,
+          "currency": null,
+          "observed_at": null,
+          "expires_at": null,
+          "artifact_path": null,
+          "artifact_sha256": null
+        }
+      ],
+      "note": "Context only; no rate is automatically applied."
+    }
+  ],
+  "excluded": [],
+  "warnings": []
+}

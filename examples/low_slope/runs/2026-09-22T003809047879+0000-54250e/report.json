@@ -1,0 +1,237 @@
+{
+  "schema_version": "xr-report/1.0",
+  "case_id": "SYN-LOW-SLOPE",
+  "synthetic": true,
+  "status": "partial",
+  "release_allowed": false,
+  "issues": [
+    {
+      "code": "R_NUMERIC_UNKNOWN",
+      "ref": "line:P3:quantity",
+      "message": "Missing or ambiguous number is held and never zero-filled.",
+      "severity": "review"
+    },
+    {
+      "code": "R_NUMERIC_UNKNOWN",
+      "ref": "line:P3:reported_total",
+      "message": "Missing or ambiguous number is held and never zero-filled.",
+      "severity": "review"
+    },
+    {
+      "code": "R_NUMERIC_UNKNOWN",
+      "ref": "document:D-ba2174ea0c6eca22-proposed:reported_direct_total",
+      "message": "Missing or ambiguous number is held and never zero-filled.",
+      "severity": "review"
+    },
+    {
+      "code": "R_SCOPE",
+      "ref": "I-003",
+      "message": "Scope is not supported by supplied evidence; group held.",
+      "severity": "review"
+    }
+  ],
+  "groups": [
+    {
+      "claim_id": "I-001",
+      "baseline": [
+        "B1"
+      ],
+      "proposed": [
+        "P1"
+      ],
+      "roof_location": "main-roof",
+      "baseline_direct": "1000.00",
+      "proposed_direct": "1500.00",
+      "delta": "500.00",
+      "components": {
+        "quantity": "500.00",
+        "price": "0.00",
+        "scope": "0.00",
+        "specification_bundle": "0.00",
+        "bundle": "0.00",
+        "rounding": "0.00"
+      },
+      "action": "increase",
+      "disposition": "candidate_change",
+      "source_ids": [
+        "E-BASE",
+        "E-PROP",
+        "E-NOTES"
+      ],
+      "coverage_status": "unknown",
+      "counterargument": "Maintenance, ponding or a smaller patch may explain the condition.",
+      "mapping_rationale": "The two lines describe the same synthetic operation, location and specification.",
+      "status": "computed",
+      "scope_status": "supported",
+      "held_line_ids": [],
+      "hold_reasons": []
+    },
+    {
+      "claim_id": "I-002",
+      "baseline": [
+        "B2"
+      ],
+      "proposed": [
+        "P2"
+      ],
+      "roof_location": "main-roof",
+      "baseline_direct": "180.00",
+      "proposed_direct": "180.00",
+      "delta": "0.00",
+      "components": {
+        "quantity": "0.00",
+        "price": "0.00",
+        "scope": "0.00",
+        "specification_bundle": "0.00",
+        "bundle": "0.00",
+        "rounding": "0.00"
+      },
+      "action": "retain_baseline",
+      "disposition": "retain",
+      "source_ids": [
+        "E-BASE",
+        "E-PROP",
+        "E-NOTES"
+      ],
+      "coverage_status": "unknown",
+      "counterargument": "Drain cleaning may be maintenance rather than covered repair.",
+      "mapping_rationale": "The two lines describe the same synthetic operation, location and specification.",
+      "status": "computed",
+      "scope_status": "supported",
+      "held_line_ids": [],
+      "hold_reasons": []
+    },
+    {
+      "claim_id": "I-003",
+      "baseline": [
+        "B3"
+      ],
+      "proposed": [
+        "P3"
+      ],
+      "roof_location": "main-roof",
+      "baseline_direct": null,
+      "proposed_direct": null,
+      "delta": null,
+      "components": null,
+      "action": null,
+      "disposition": "needs_evidence",
+      "source_ids": [
+        "E-BASE",
+        "E-PROP",
+        "E-NOTES"
+      ],
+      "coverage_status": "unknown",
+      "counterargument": "The material may be sound or deteriorated for an unrelated reason.",
+      "mapping_rationale": "The two lines describe the same synthetic operation, location and specification.",
+      "status": "held",
+      "scope_status": "needs_evidence",
+      "held_line_ids": [
+        "P3"
+      ],
+      "hold_reasons": [
+        "numeric_value_missing_or_ambiguous",
+        "scope_not_supported"
+      ]
+    }
+  ],
+  "totals": null,
+  "partial_totals": {
+    "supported_delta": "500.00",
+    "is_complete": false
+  },
+  "unmapped_lines": [],
+  "financial_bridge": {
+    "baseline": {
+      "direct": null,
+      "adjustments_specified": false,
+      "basis_status": "no_adjustments_specified_not_verified_zero",
+      "adjustments": [],
+      "total": null,
+      "status": "held"
+    },
+    "proposed": {
+      "direct": null,
+      "adjustments_specified": false,
+      "basis_status": "no_adjustments_specified_not_verified_zero",
+      "adjustments": [],
+      "total": null,
+      "status": "held"
+    },
+    "payment_scenario": null,
+    "net_payable": null
+  },
+  "source_checks": [
+    {
+      "doc_id": "D-4b7a6e9057262960-baseline",
+      "sha256": "4b7a6e905726296064accdcc04e3109ea6db6579d4fff1cf5cff55cb144b0331",
+      "match": true
+    },
+    {
+      "doc_id": "D-ba2174ea0c6eca22-proposed",
+      "sha256": "ba2174ea0c6eca2264d288c2907981ac4d136e133f9005bbde5ae03396e2aeb0",
+      "match": true
+    },
+    {
+      "doc_id": "D-cfe89c3bb604fd9b-evidence",
+      "sha256": "cfe89c3bb604fd9bcbd437506cf0d606f7f05a0db79d049d2c229f99e17fff3b",
+      "match": true
+    }
+  ],
+  "review_summary": {
+    "required": [
+      "document:D-4b7a6e9057262960-baseline:reported_direct_total",
+      "document:D-ba2174ea0c6eca22-proposed:reported_direct_total",
+      "line:B1:quantity",
+      "line:B1:reported_total",
+      "line:B1:unit_price",
+      "line:B2:quantity",
+      "line:B2:reported_total",
+      "line:B2:unit_price",
+      "line:B3:quantity",
+      "line:B3:reported_total",
+      "line:B3:unit_price",
+      "line:P1:quantity",
+      "line:P1:reported_total",
+      "line:P1:unit_price",
+      "line:P2:quantity",
+      "line:P2:reported_total",
+      "line:P2:unit_price",
+      "line:P3:quantity",
+      "line:P3:reported_total",
+      "line:P3:unit_price"
+    ],
+    "human_confirmed": [],
+    "ai_confirmed": [],
+    "synthetic_confirmed": [],
+    "pending_subjects": [
+      "document:D-4b7a6e9057262960-baseline:reported_direct_total",
+      "document:D-ba2174ea0c6eca22-proposed:reported_direct_total",
+      "line:B1:quantity",
+      "line:B1:reported_total",
+      "line:B1:unit_price",
+      "line:B2:quantity",
+      "line:B2:reported_total",
+      "line:B2:unit_price",
+      "line:B3:quantity",
+      "line:B3:reported_total",
+      "line:B3:unit_price",
+      "line:P1:quantity",
+      "line:P1:reported_total",
+      "line:P1:unit_price",
+      "line:P2:quantity",
+      "line:P2:reported_total",
+      "line:P2:unit_price",
+      "line:P3:quantity",
+      "line:P3:reported_total",
+      "line:P3:unit_price"
+    ],
+    "stale_subjects": []
+  },
+  "limitations": [
+    "Draft calculation only; release is never authorized by this engine.",
+    "Coverage and payment entitlement are not inferred.",
+    "Price context is recorded but never used to select a price.",
+    "Review receipts are assertions and do not authenticate identity."
+  ]
+}

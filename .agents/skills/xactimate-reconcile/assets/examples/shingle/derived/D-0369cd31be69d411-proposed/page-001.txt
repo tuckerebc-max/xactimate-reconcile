@@ -1,0 +1,27 @@
+SYNTHETIC EXAMPLE - NOT A CLIENT CLAIM
+
+Measured area and duplicate flashing correction
+
+PROPOSED v1 | 2026-09-21 | direct pre-tax USD
+
+
+Item                                               Qty      Unit     Rate            Total
+
+Shingle installation                                    25     SQ      450            11250.00
+
+
+Flashing replacement                                  80      LF      10             800.00
+
+
+Debris handling                                       1      EA      350            350.00
+
+
+
+Direct subtotal: 12400.00
+
+
+
+
+
+All quantities, observations and rates are fictional test assumptions.
+Taxes, general overhead/profit, coverage and payment are not determined.

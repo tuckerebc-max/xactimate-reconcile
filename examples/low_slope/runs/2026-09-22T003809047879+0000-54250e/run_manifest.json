@@ -1,0 +1,35 @@
+{
+  "schema_version": "xr-run/1.0",
+  "run_id": "2026-09-22T003809047879+0000-54250e",
+  "version": "0.1.0",
+  "at": "2026-09-22T00:38:09.335730+00:00",
+  "input_digest": "5cdcd9eaa9f405d7d16667974673d0334b0304dccd3f270861b8ec4359b7a99d",
+  "status": "partial",
+  "outputs": {
+    "reconciliation_memo.pdf": "9d531df807dc8e857c8520f6efc9448ba32bbe1e34e2b293f3ae1fe356f95b3b",
+    "case_snapshot.json": "717e2f6ee61584c7137cca884417c974f7795ad76ef367545ba9f6b920100003",
+    "evidence_appendix.pdf": "8e089d8f8e009c38c2c8981cafaf1297efae7bcf3e6bf99f92fbb8775724584b",
+    "cover_letter.md": "fc0f8d6bde4acc1ef4dbd567c5e10b496cab3fce5ba53fb8a8e93ff339d772c6",
+    "report.json": "455d82e876cf9ad8bce99f9a3306b21f86be091eae39be604442461f4f70978d",
+    "cover_letter.pdf": "e9d7801a300455b9f9a6024faecf5037f41e92532df5117b2fd6456c3098245b",
+    "reconciliation_memo.docx": "e0e0bf3cf6e78252747740caecf7d302ca238e5c30d1eb185713159577d32752",
+    "cover_letter.docx": "1943332fbb7630bdfc743b5dbd7446cb2501f4e8b00b5cf43b43376ad255d8ea",
+    "reconciliation_memo.md": "bff480c13d5669e7a6696f2ca316718fef64d5ea2034aca94ab78f5282d6c626",
+    "operator_checklist.md": "1b9a2c0cc16c92709da755231ebdcba2f8f2d6219e3f41d184c530a30361d18d",
+    "operator_checklist.pdf": "f5a20e51955c285be740f1e6e2dd2e35e8ef00b9be413e6bf4567f5590e4aab4",
+    "evidence_appendix.docx": "ca17de7336fb7c7112bd1d83f69dbfea6e73ae66d83a50c763c8e6b34c771317",
+    "operator_checklist.docx": "127e6f746661a4fe9dcfdf4bab6f5d1405232136de3977a852853995f333cc9b",
+    "evidence_appendix.md": "8592c9de61fd478a8b02305d6f51b5f464fb4a7ddb343d357bd795b77308f3bf",
+    "context.json": "d09ed067721e16df864981f683b2314f7af64b94a6110edede32a835861bffdc",
+    "evidence_pages/334d61e6de9b02730e99.png": "334d61e6de9b02730e99f5043c52043310485ebc0cc0919cb2e53eb6e3f956fa",
+    "evidence_pages/4016a6d918570a7c96ed.png": "4016a6d918570a7c96ed1819072563773b1ad2768b0ff7e810e00b2efcaba955"
+  },
+  "formats_requested": [
+    "md",
+    "docx",
+    "pdf"
+  ],
+  "render_warnings": [],
+  "automatic_sending": false,
+  "human_identity_authenticated": false
+}

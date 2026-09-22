@@ -1,0 +1,100 @@
+{
+  "schema_version": "c-sources/0.1",
+  "checked_at": "2026-09-21",
+  "sources": [
+    {
+      "id": "DOC-001",
+      "url": "https://developers.openai.com/codex/skills",
+      "redirected_url": "https://learn.chatgpt.com/docs/build-skills",
+      "publisher": "OpenAI / ChatGPT Learn",
+      "title": "Build skills",
+      "retrieved_at": "2026-09-21",
+      "published_or_updated_at": null,
+      "date_note": "No stable page revision date recorded.",
+      "verification": "official page opened in this session",
+      "supported_claim": "Skills use SKILL.md and optional scripts/references; Codex documents repository .agents/skills discovery.",
+      "limitations": "Public documentation does not establish this session\u2019s installation route, OCR availability or permissions. Redirect observed.",
+      "retrieval_reference": "turn1view0"
+    },
+    {
+      "id": "DOC-002",
+      "url": "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview",
+      "redirected_url": null,
+      "publisher": "Anthropic",
+      "title": "Agent Skills overview",
+      "retrieved_at": "2026-09-21",
+      "published_or_updated_at": null,
+      "date_note": "No stable page revision date recorded.",
+      "verification": "official page opened in this session",
+      "supported_claim": "Describes progressive loading, API skill containers and product-specific constraints. The overview says custom skills do not sync across surfaces.",
+      "limitations": "That sync claim conflicts with DOC-005; verify target product/account/version. No paid API tested.",
+      "retrieval_reference": "turn1view1"
+    },
+    {
+      "id": "DOC-003",
+      "url": "https://tesseract-ocr.github.io/tessdoc/ImproveQuality.html",
+      "redirected_url": null,
+      "publisher": "Tesseract project",
+      "title": "Improving output quality",
+      "retrieved_at": "2026-09-21",
+      "published_or_updated_at": null,
+      "date_note": "No stable page revision date recorded.",
+      "verification": "official page opened in this session",
+      "supported_claim": "Discusses image resolution, noise, deskew and page segmentation; recommends at least 300 DPI for best operation.",
+      "limitations": "Image preprocessing cannot restore missing source detail or prove numeric correctness.",
+      "retrieval_reference": "turn1view3"
+    },
+    {
+      "id": "DOC-004",
+      "url": "https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html",
+      "redirected_url": null,
+      "publisher": "Tesseract project",
+      "title": "Command Line Usage",
+      "retrieved_at": "2026-09-21",
+      "published_or_updated_at": null,
+      "date_note": "No stable page revision date recorded.",
+      "verification": "official page opened in this session",
+      "supported_claim": "TSV output includes text, bounding coordinates and confidence; output is selected with the tsv configuration.",
+      "limitations": "TSV confidence is not a release approval; this source does not establish calibrated probabilities for claim numbers.",
+      "retrieval_reference": "turn1view4"
+    },
+    {
+      "id": "DOC-005",
+      "url": "https://code.claude.com/docs/en/skills",
+      "redirected_url": null,
+      "publisher": "Anthropic",
+      "title": "Extend Claude with skills",
+      "retrieved_at": "2026-09-21",
+      "published_or_updated_at": null,
+      "date_note": "No stable page revision date recorded.",
+      "verification": "official page opened in this session",
+      "supported_claim": "Documents personal/project skill paths and a claude.ai account sync mechanism in Claude Code.",
+      "limitations": "Conflicts with broad no-sync wording in DOC-002. Actual runtime and account behavior not tested here.",
+      "retrieval_reference": "turn3view0"
+    },
+    {
+      "id": "DOC-006",
+      "url": "https://docs.python.org/3/library/decimal.html",
+      "redirected_url": null,
+      "publisher": "Python Software Foundation",
+      "title": "decimal",
+      "retrieved_at": "2026-09-21",
+      "published_or_updated_at": null,
+      "date_note": "No stable page revision date recorded.",
+      "verification": "official page opened in this session",
+      "supported_claim": "Documents decimal arithmetic, quantize and rounding modes including ROUND_HALF_UP.",
+      "limitations": "Does not specify Xactimate rounding. Retrieved current docs; prototype actually tested on Python 3.12.",
+      "retrieval_reference": "turn3view1"
+    }
+  ],
+  "integration_slots": {
+    "A": {
+      "status": "awaiting_return",
+      "namespace": "A:"
+    },
+    "B": {
+      "status": "awaiting_return",
+      "namespace": "B:"
+    }
+  }
+}

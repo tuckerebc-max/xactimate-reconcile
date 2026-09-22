@@ -1,0 +1,4609 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:xactimate-reconcile:case:1.0",
+  "title": "Xactimate supervised reconciliation case",
+  "description": "Deterministic source-linked draft reconciliation input.",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "xr-case/1.0"
+    },
+    "synthetic": {
+      "type": "boolean"
+    },
+    "case_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": ".*\\S.*"
+    },
+    "roof_type": {
+      "enum": [
+        "shingle",
+        "tile",
+        "low_slope"
+      ]
+    },
+    "as_of": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "jurisdiction": {
+      "type": "object",
+      "properties": {
+        "country": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "state": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "municipality": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "verified": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "country",
+        "state",
+        "municipality",
+        "verified"
+      ],
+      "additionalProperties": false
+    },
+    "sender": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "role": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "authority_status": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "authority_evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "name",
+        "role",
+        "authority_status",
+        "authority_evidence_ids"
+      ],
+      "additionalProperties": false
+    },
+    "currency": {
+      "const": "USD"
+    },
+    "rounding": {
+      "const": "ROUND_HALF_UP"
+    },
+    "financial_basis": {
+      "const": "direct_pre_tax"
+    },
+    "baseline_label": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": ".*\\S.*"
+    },
+    "proposed_label": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": ".*\\S.*"
+    },
+    "author_role": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": ".*\\S.*"
+    },
+    "price_context": {
+      "type": "object",
+      "properties": {
+        "list": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "month": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "location": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "list",
+        "month",
+        "location"
+      ],
+      "additionalProperties": false
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+          },
+          "role": {
+            "enum": [
+              "baseline",
+              "proposed",
+              "evidence",
+              "policy",
+              "operator"
+            ]
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "page_count": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 10000
+          },
+          "received_pages": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "uniqueItems": true
+          },
+          "version": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          },
+          "date": {
+            "type": "string",
+            "format": "date",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          },
+          "kind": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          },
+          "estimate_complete": {
+            "type": "boolean"
+          },
+          "synthetic": {
+            "type": "boolean"
+          },
+          "reported_direct_total": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "pattern": "^-?(?:0|[1-9][0-9]{0,17})(?:\\.[0-9]{1,8})?$"
+                  },
+                  "raw_text": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "alternatives": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "resolution": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "verification": {
+                    "enum": [
+                      "unreviewed",
+                      "ambiguous",
+                      "ai_checked",
+                      "synthetic_checked"
+                    ]
+                  },
+                  "reviewer": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "reviewed_at": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "format": "date-time"
+                  },
+                  "source": {
+                    "type": "object",
+                    "properties": {
+                      "doc_id": {
+                        "type": "string",
+                        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+                      },
+                      "page": {
+                        "type": "integer",
+                        "minimum": 1
+                      },
+                      "bbox": {
+                        "type": "array",
+                        "prefixItems": [
+                          {
+                            "type": "number"
+                          },
+                          {
+                            "type": "number"
+                          },
+                          {
+                            "type": "number"
+                          },
+                          {
+                            "type": "number"
+                          }
+                        ],
+                        "items": false,
+                        "minItems": 4,
+                        "maxItems": 4
+                      },
+                      "coordinate_space": {
+                        "const": "pixels"
+                      },
+                      "image_size": {
+                        "type": "array",
+                        "prefixItems": [
+                          {
+                            "type": "number",
+                            "exclusiveMinimum": 0
+                          },
+                          {
+                            "type": "number",
+                            "exclusiveMinimum": 0
+                          }
+                        ],
+                        "items": false,
+                        "minItems": 2,
+                        "maxItems": 2
+                      },
+                      "method": {
+                        "enum": [
+                          "manual_synthetic",
+                          "native_text",
+                          "local_ocr",
+                          "vision",
+                          "manual"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "doc_id",
+                      "page",
+                      "bbox",
+                      "coordinate_space",
+                      "image_size",
+                      "method"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "ocr_confidence": {
+                    "type": [
+                      "string",
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "derived_from": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "value",
+                  "raw_text",
+                  "alternatives",
+                  "resolution",
+                  "verification",
+                  "reviewer",
+                  "reviewed_at",
+                  "source"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "pages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "page": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "width": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "height": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "image_path": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "image_sha256": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "text_path": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "words_path": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "method": {
+                  "enum": [
+                    "manual_synthetic",
+                    "native_text",
+                    "local_ocr",
+                    "vision",
+                    "manual"
+                  ]
+                },
+                "coordinate_space": {
+                  "const": "pixels"
+                },
+                "transform": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "kind": {
+                          "type": "string",
+                          "minLength": 1,
+                          "pattern": ".*\\S.*"
+                        },
+                        "scale": {
+                          "type": "number",
+                          "exclusiveMinimum": 0
+                        },
+                        "original_space": {
+                          "type": "string",
+                          "minLength": 1,
+                          "pattern": ".*\\S.*"
+                        },
+                        "rotation": {
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "kind"
+                      ],
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "note": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "page",
+                "width",
+                "height"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "original_name": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          },
+          "mime_type": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          },
+          "receipt_time": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "inspection_limits": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          }
+        },
+        "required": [
+          "id",
+          "role",
+          "path",
+          "sha256",
+          "page_count",
+          "received_pages",
+          "version",
+          "date",
+          "kind",
+          "estimate_complete",
+          "synthetic",
+          "reported_direct_total"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+          },
+          "doc_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+          },
+          "page": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          }
+        },
+        "required": [
+          "id",
+          "doc_id",
+          "page",
+          "description"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "lines": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+          },
+          "side": {
+            "enum": [
+              "baseline",
+              "proposed"
+            ]
+          },
+          "kind": {
+            "enum": [
+              "work",
+              "credit"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          },
+          "specification": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          },
+          "roof_location": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+          },
+          "quantity": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^-?(?:0|[1-9][0-9]{0,17})(?:\\.[0-9]{1,8})?$"
+              },
+              "raw_text": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "alternatives": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "resolution": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "verification": {
+                "enum": [
+                  "unreviewed",
+                  "ambiguous",
+                  "ai_checked",
+                  "synthetic_checked"
+                ]
+              },
+              "reviewer": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "reviewed_at": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time"
+              },
+              "source": {
+                "type": "object",
+                "properties": {
+                  "doc_id": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+                  },
+                  "page": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "bbox": {
+                    "type": "array",
+                    "prefixItems": [
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "number"
+                      }
+                    ],
+                    "items": false,
+                    "minItems": 4,
+                    "maxItems": 4
+                  },
+                  "coordinate_space": {
+                    "const": "pixels"
+                  },
+                  "image_size": {
+                    "type": "array",
+                    "prefixItems": [
+                      {
+                        "type": "number",
+                        "exclusiveMinimum": 0
+                      },
+                      {
+                        "type": "number",
+                        "exclusiveMinimum": 0
+                      }
+                    ],
+                    "items": false,
+                    "minItems": 2,
+                    "maxItems": 2
+                  },
+                  "method": {
+                    "enum": [
+                      "manual_synthetic",
+                      "native_text",
+                      "local_ocr",
+                      "vision",
+                      "manual"
+                    ]
+                  }
+                },
+                "required": [
+                  "doc_id",
+                  "page",
+                  "bbox",
+                  "coordinate_space",
+                  "image_size",
+                  "method"
+                ],
+                "additionalProperties": false
+              },
+              "ocr_confidence": {
+                "type": [
+                  "string",
+                  "number",
+                  "null"
+                ]
+              },
+              "derived_from": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "value",
+              "raw_text",
+              "alternatives",
+              "resolution",
+              "verification",
+              "reviewer",
+              "reviewed_at",
+              "source"
+            ],
+            "additionalProperties": false
+          },
+          "unit": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          },
+          "unit_price": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^-?(?:0|[1-9][0-9]{0,17})(?:\\.[0-9]{1,8})?$"
+              },
+              "raw_text": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "alternatives": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "resolution": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "verification": {
+                "enum": [
+                  "unreviewed",
+                  "ambiguous",
+                  "ai_checked",
+                  "synthetic_checked"
+                ]
+              },
+              "reviewer": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "reviewed_at": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time"
+              },
+              "source": {
+                "type": "object",
+                "properties": {
+                  "doc_id": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+                  },
+                  "page": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "bbox": {
+                    "type": "array",
+                    "prefixItems": [
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "number"
+                      }
+                    ],
+                    "items": false,
+                    "minItems": 4,
+                    "maxItems": 4
+                  },
+                  "coordinate_space": {
+                    "const": "pixels"
+                  },
+                  "image_size": {
+                    "type": "array",
+                    "prefixItems": [
+                      {
+                        "type": "number",
+                        "exclusiveMinimum": 0
+                      },
+                      {
+                        "type": "number",
+                        "exclusiveMinimum": 0
+                      }
+                    ],
+                    "items": false,
+                    "minItems": 2,
+                    "maxItems": 2
+                  },
+                  "method": {
+                    "enum": [
+                      "manual_synthetic",
+                      "native_text",
+                      "local_ocr",
+                      "vision",
+                      "manual"
+                    ]
+                  }
+                },
+                "required": [
+                  "doc_id",
+                  "page",
+                  "bbox",
+                  "coordinate_space",
+                  "image_size",
+                  "method"
+                ],
+                "additionalProperties": false
+              },
+              "ocr_confidence": {
+                "type": [
+                  "string",
+                  "number",
+                  "null"
+                ]
+              },
+              "derived_from": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "value",
+              "raw_text",
+              "alternatives",
+              "resolution",
+              "verification",
+              "reviewer",
+              "reviewed_at",
+              "source"
+            ],
+            "additionalProperties": false
+          },
+          "reported_total": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^-?(?:0|[1-9][0-9]{0,17})(?:\\.[0-9]{1,8})?$"
+              },
+              "raw_text": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "alternatives": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "resolution": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "verification": {
+                "enum": [
+                  "unreviewed",
+                  "ambiguous",
+                  "ai_checked",
+                  "synthetic_checked"
+                ]
+              },
+              "reviewer": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "reviewed_at": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time"
+              },
+              "source": {
+                "type": "object",
+                "properties": {
+                  "doc_id": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+                  },
+                  "page": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "bbox": {
+                    "type": "array",
+                    "prefixItems": [
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "number"
+                      }
+                    ],
+                    "items": false,
+                    "minItems": 4,
+                    "maxItems": 4
+                  },
+                  "coordinate_space": {
+                    "const": "pixels"
+                  },
+                  "image_size": {
+                    "type": "array",
+                    "prefixItems": [
+                      {
+                        "type": "number",
+                        "exclusiveMinimum": 0
+                      },
+                      {
+                        "type": "number",
+                        "exclusiveMinimum": 0
+                      }
+                    ],
+                    "items": false,
+                    "minItems": 2,
+                    "maxItems": 2
+                  },
+                  "method": {
+                    "enum": [
+                      "manual_synthetic",
+                      "native_text",
+                      "local_ocr",
+                      "vision",
+                      "manual"
+                    ]
+                  }
+                },
+                "required": [
+                  "doc_id",
+                  "page",
+                  "bbox",
+                  "coordinate_space",
+                  "image_size",
+                  "method"
+                ],
+                "additionalProperties": false
+              },
+              "ocr_confidence": {
+                "type": [
+                  "string",
+                  "number",
+                  "null"
+                ]
+              },
+              "derived_from": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "value",
+              "raw_text",
+              "alternatives",
+              "resolution",
+              "verification",
+              "reviewer",
+              "reviewed_at",
+              "source"
+            ],
+            "additionalProperties": false
+          },
+          "financial_basis": {
+            "const": "direct_pre_tax"
+          },
+          "area_basis": {
+            "enum": [
+              "roof_surface",
+              "plan",
+              "not_area"
+            ]
+          },
+          "geometry": {
+            "type": "object",
+            "properties": {
+              "slope_included": {
+                "type": "boolean"
+              },
+              "waste_included": {
+                "type": "boolean"
+              },
+              "apply_slope": {
+                "type": "boolean"
+              },
+              "apply_waste": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "slope_included",
+              "waste_included",
+              "apply_slope",
+              "apply_waste"
+            ],
+            "additionalProperties": false
+          },
+          "work_components": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "quote_inclusions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          },
+          "source": {
+            "type": "object",
+            "properties": {
+              "doc_id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+              },
+              "page": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "bbox": {
+                "type": "array",
+                "prefixItems": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "number"
+                  }
+                ],
+                "items": false,
+                "minItems": 4,
+                "maxItems": 4
+              },
+              "coordinate_space": {
+                "const": "pixels"
+              },
+              "image_size": {
+                "type": "array",
+                "prefixItems": [
+                  {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  },
+                  {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  }
+                ],
+                "items": false,
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "method": {
+                "enum": [
+                  "manual_synthetic",
+                  "native_text",
+                  "local_ocr",
+                  "vision",
+                  "manual"
+                ]
+              }
+            },
+            "required": [
+              "doc_id",
+              "page",
+              "bbox",
+              "coordinate_space",
+              "image_size",
+              "method"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "id",
+          "side",
+          "description",
+          "specification",
+          "roof_location",
+          "quantity",
+          "unit",
+          "unit_price",
+          "reported_total",
+          "financial_basis",
+          "area_basis",
+          "geometry",
+          "work_components",
+          "quote_inclusions",
+          "source"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "claim_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          },
+          "observation": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          },
+          "necessity": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          },
+          "reply": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          },
+          "requested_action": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          },
+          "category_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^(?:A-O|B-I)[0-9]{2}$"
+            },
+            "uniqueItems": true
+          },
+          "baseline": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+            },
+            "uniqueItems": true
+          },
+          "proposed": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+            },
+            "uniqueItems": true
+          },
+          "roof_location": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+          },
+          "change_type": {
+            "enum": [
+              "quantity_price",
+              "bundle",
+              "scope",
+              "specification_bundle"
+            ]
+          },
+          "mapping_rationale": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "scope_support": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "enum": [
+                  "supported",
+                  "needs_evidence",
+                  "rejected"
+                ]
+              },
+              "source_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+                },
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "status",
+              "source_ids"
+            ],
+            "additionalProperties": false
+          },
+          "coverage": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "enum": [
+                  "unknown",
+                  "accepted",
+                  "disputed",
+                  "excluded"
+                ]
+              },
+              "source_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+                },
+                "uniqueItems": true
+              },
+              "reviewer": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "status",
+              "source_ids",
+              "reviewer"
+            ],
+            "additionalProperties": false
+          },
+          "counterargument": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          },
+          "disposition": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          },
+          "absence_verified": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "claim_id",
+          "baseline",
+          "proposed",
+          "roof_location",
+          "change_type",
+          "mapping_rationale",
+          "source_ids",
+          "scope_support",
+          "coverage",
+          "counterargument",
+          "disposition",
+          "absence_verified"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "financial_adjustments": {
+      "type": "object",
+      "properties": {
+        "baseline": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": ".*\\S.*"
+              },
+              "kind": {
+                "enum": [
+                  "tax",
+                  "fee",
+                  "overhead",
+                  "profit",
+                  "credit"
+                ]
+              },
+              "method": {
+                "enum": [
+                  "amount",
+                  "rate"
+                ]
+              },
+              "amount": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "pattern": "^-?(?:0|[1-9][0-9]{0,17})(?:\\.[0-9]{1,8})?$"
+                      },
+                      "raw_text": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "alternatives": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "resolution": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "verification": {
+                        "enum": [
+                          "unreviewed",
+                          "ambiguous",
+                          "ai_checked",
+                          "synthetic_checked"
+                        ]
+                      },
+                      "reviewer": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "reviewed_at": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "format": "date-time"
+                      },
+                      "source": {
+                        "type": "object",
+                        "properties": {
+                          "doc_id": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+                          },
+                          "page": {
+                            "type": "integer",
+                            "minimum": 1
+                          },
+                          "bbox": {
+                            "type": "array",
+                            "prefixItems": [
+                              {
+                                "type": "number"
+                              },
+                              {
+                                "type": "number"
+                              },
+                              {
+                                "type": "number"
+                              },
+                              {
+                                "type": "number"
+                              }
+                            ],
+                            "items": false,
+                            "minItems": 4,
+                            "maxItems": 4
+                          },
+                          "coordinate_space": {
+                            "const": "pixels"
+                          },
+                          "image_size": {
+                            "type": "array",
+                            "prefixItems": [
+                              {
+                                "type": "number",
+                                "exclusiveMinimum": 0
+                              },
+                              {
+                                "type": "number",
+                                "exclusiveMinimum": 0
+                              }
+                            ],
+                            "items": false,
+                            "minItems": 2,
+                            "maxItems": 2
+                          },
+                          "method": {
+                            "enum": [
+                              "manual_synthetic",
+                              "native_text",
+                              "local_ocr",
+                              "vision",
+                              "manual"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "doc_id",
+                          "page",
+                          "bbox",
+                          "coordinate_space",
+                          "image_size",
+                          "method"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "ocr_confidence": {
+                        "type": [
+                          "string",
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "derived_from": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "raw_text",
+                      "alternatives",
+                      "resolution",
+                      "verification",
+                      "reviewer",
+                      "reviewed_at",
+                      "source"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "rate": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "pattern": "^-?(?:0|[1-9][0-9]{0,17})(?:\\.[0-9]{1,8})?$"
+                      },
+                      "raw_text": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "alternatives": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "resolution": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "verification": {
+                        "enum": [
+                          "unreviewed",
+                          "ambiguous",
+                          "ai_checked",
+                          "synthetic_checked"
+                        ]
+                      },
+                      "reviewer": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "reviewed_at": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "format": "date-time"
+                      },
+                      "source": {
+                        "type": "object",
+                        "properties": {
+                          "doc_id": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+                          },
+                          "page": {
+                            "type": "integer",
+                            "minimum": 1
+                          },
+                          "bbox": {
+                            "type": "array",
+                            "prefixItems": [
+                              {
+                                "type": "number"
+                              },
+                              {
+                                "type": "number"
+                              },
+                              {
+                                "type": "number"
+                              },
+                              {
+                                "type": "number"
+                              }
+                            ],
+                            "items": false,
+                            "minItems": 4,
+                            "maxItems": 4
+                          },
+                          "coordinate_space": {
+                            "const": "pixels"
+                          },
+                          "image_size": {
+                            "type": "array",
+                            "prefixItems": [
+                              {
+                                "type": "number",
+                                "exclusiveMinimum": 0
+                              },
+                              {
+                                "type": "number",
+                                "exclusiveMinimum": 0
+                              }
+                            ],
+                            "items": false,
+                            "minItems": 2,
+                            "maxItems": 2
+                          },
+                          "method": {
+                            "enum": [
+                              "manual_synthetic",
+                              "native_text",
+                              "local_ocr",
+                              "vision",
+                              "manual"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "doc_id",
+                          "page",
+                          "bbox",
+                          "coordinate_space",
+                          "image_size",
+                          "method"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "ocr_confidence": {
+                        "type": [
+                          "string",
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "derived_from": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "raw_text",
+                      "alternatives",
+                      "resolution",
+                      "verification",
+                      "reviewer",
+                      "reviewed_at",
+                      "source"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "basis": {
+                "type": "array",
+                "items": {
+                  "oneOf": [
+                    {
+                      "const": "direct"
+                    },
+                    {
+                      "type": "string",
+                      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+                    }
+                  ]
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "id",
+              "label",
+              "kind",
+              "method",
+              "amount",
+              "rate",
+              "basis",
+              "evidence_ids"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "proposed": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": ".*\\S.*"
+              },
+              "kind": {
+                "enum": [
+                  "tax",
+                  "fee",
+                  "overhead",
+                  "profit",
+                  "credit"
+                ]
+              },
+              "method": {
+                "enum": [
+                  "amount",
+                  "rate"
+                ]
+              },
+              "amount": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "pattern": "^-?(?:0|[1-9][0-9]{0,17})(?:\\.[0-9]{1,8})?$"
+                      },
+                      "raw_text": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "alternatives": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "resolution": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "verification": {
+                        "enum": [
+                          "unreviewed",
+                          "ambiguous",
+                          "ai_checked",
+                          "synthetic_checked"
+                        ]
+                      },
+                      "reviewer": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "reviewed_at": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "format": "date-time"
+                      },
+                      "source": {
+                        "type": "object",
+                        "properties": {
+                          "doc_id": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+                          },
+                          "page": {
+                            "type": "integer",
+                            "minimum": 1
+                          },
+                          "bbox": {
+                            "type": "array",
+                            "prefixItems": [
+                              {
+                                "type": "number"
+                              },
+                              {
+                                "type": "number"
+                              },
+                              {
+                                "type": "number"
+                              },
+                              {
+                                "type": "number"
+                              }
+                            ],
+                            "items": false,
+                            "minItems": 4,
+                            "maxItems": 4
+                          },
+                          "coordinate_space": {
+                            "const": "pixels"
+                          },
+                          "image_size": {
+                            "type": "array",
+                            "prefixItems": [
+                              {
+                                "type": "number",
+                                "exclusiveMinimum": 0
+                              },
+                              {
+                                "type": "number",
+                                "exclusiveMinimum": 0
+                              }
+                            ],
+                            "items": false,
+                            "minItems": 2,
+                            "maxItems": 2
+                          },
+                          "method": {
+                            "enum": [
+                              "manual_synthetic",
+                              "native_text",
+                              "local_ocr",
+                              "vision",
+                              "manual"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "doc_id",
+                          "page",
+                          "bbox",
+                          "coordinate_space",
+                          "image_size",
+                          "method"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "ocr_confidence": {
+                        "type": [
+                          "string",
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "derived_from": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "raw_text",
+                      "alternatives",
+                      "resolution",
+                      "verification",
+                      "reviewer",
+                      "reviewed_at",
+                      "source"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "rate": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "pattern": "^-?(?:0|[1-9][0-9]{0,17})(?:\\.[0-9]{1,8})?$"
+                      },
+                      "raw_text": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "alternatives": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "resolution": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "verification": {
+                        "enum": [
+                          "unreviewed",
+                          "ambiguous",
+                          "ai_checked",
+                          "synthetic_checked"
+                        ]
+                      },
+                      "reviewer": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "reviewed_at": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "format": "date-time"
+                      },
+                      "source": {
+                        "type": "object",
+                        "properties": {
+                          "doc_id": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+                          },
+                          "page": {
+                            "type": "integer",
+                            "minimum": 1
+                          },
+                          "bbox": {
+                            "type": "array",
+                            "prefixItems": [
+                              {
+                                "type": "number"
+                              },
+                              {
+                                "type": "number"
+                              },
+                              {
+                                "type": "number"
+                              },
+                              {
+                                "type": "number"
+                              }
+                            ],
+                            "items": false,
+                            "minItems": 4,
+                            "maxItems": 4
+                          },
+                          "coordinate_space": {
+                            "const": "pixels"
+                          },
+                          "image_size": {
+                            "type": "array",
+                            "prefixItems": [
+                              {
+                                "type": "number",
+                                "exclusiveMinimum": 0
+                              },
+                              {
+                                "type": "number",
+                                "exclusiveMinimum": 0
+                              }
+                            ],
+                            "items": false,
+                            "minItems": 2,
+                            "maxItems": 2
+                          },
+                          "method": {
+                            "enum": [
+                              "manual_synthetic",
+                              "native_text",
+                              "local_ocr",
+                              "vision",
+                              "manual"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "doc_id",
+                          "page",
+                          "bbox",
+                          "coordinate_space",
+                          "image_size",
+                          "method"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "ocr_confidence": {
+                        "type": [
+                          "string",
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "derived_from": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "raw_text",
+                      "alternatives",
+                      "resolution",
+                      "verification",
+                      "reviewer",
+                      "reviewed_at",
+                      "source"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "basis": {
+                "type": "array",
+                "items": {
+                  "oneOf": [
+                    {
+                      "const": "direct"
+                    },
+                    {
+                      "type": "string",
+                      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+                    }
+                  ]
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "id",
+              "label",
+              "kind",
+              "method",
+              "amount",
+              "rate",
+              "basis",
+              "evidence_ids"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "baseline",
+        "proposed"
+      ],
+      "additionalProperties": false
+    },
+    "payment_scenario": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": ".*\\S.*"
+            },
+            "start": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "pattern": "^-?(?:0|[1-9][0-9]{0,17})(?:\\.[0-9]{1,8})?$"
+                },
+                "raw_text": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "alternatives": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "resolution": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "verification": {
+                  "enum": [
+                    "unreviewed",
+                    "ambiguous",
+                    "ai_checked",
+                    "synthetic_checked"
+                  ]
+                },
+                "reviewer": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "reviewed_at": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "source": {
+                  "type": "object",
+                  "properties": {
+                    "doc_id": {
+                      "type": "string",
+                      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+                    },
+                    "page": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "bbox": {
+                      "type": "array",
+                      "prefixItems": [
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": "number"
+                        }
+                      ],
+                      "items": false,
+                      "minItems": 4,
+                      "maxItems": 4
+                    },
+                    "coordinate_space": {
+                      "const": "pixels"
+                    },
+                    "image_size": {
+                      "type": "array",
+                      "prefixItems": [
+                        {
+                          "type": "number",
+                          "exclusiveMinimum": 0
+                        },
+                        {
+                          "type": "number",
+                          "exclusiveMinimum": 0
+                        }
+                      ],
+                      "items": false,
+                      "minItems": 2,
+                      "maxItems": 2
+                    },
+                    "method": {
+                      "enum": [
+                        "manual_synthetic",
+                        "native_text",
+                        "local_ocr",
+                        "vision",
+                        "manual"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "doc_id",
+                    "page",
+                    "bbox",
+                    "coordinate_space",
+                    "image_size",
+                    "method"
+                  ],
+                  "additionalProperties": false
+                },
+                "ocr_confidence": {
+                  "type": [
+                    "string",
+                    "number",
+                    "null"
+                  ]
+                },
+                "derived_from": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "value",
+                "raw_text",
+                "alternatives",
+                "resolution",
+                "verification",
+                "reviewer",
+                "reviewed_at",
+                "source"
+              ],
+              "additionalProperties": false
+            },
+            "evidence_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "steps": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+                  },
+                  "label": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": ".*\\S.*"
+                  },
+                  "operation": {
+                    "enum": [
+                      "add",
+                      "subtract",
+                      "cap"
+                    ]
+                  },
+                  "amount": {
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "pattern": "^-?(?:0|[1-9][0-9]{0,17})(?:\\.[0-9]{1,8})?$"
+                      },
+                      "raw_text": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "alternatives": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "resolution": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "verification": {
+                        "enum": [
+                          "unreviewed",
+                          "ambiguous",
+                          "ai_checked",
+                          "synthetic_checked"
+                        ]
+                      },
+                      "reviewer": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "reviewed_at": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "format": "date-time"
+                      },
+                      "source": {
+                        "type": "object",
+                        "properties": {
+                          "doc_id": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+                          },
+                          "page": {
+                            "type": "integer",
+                            "minimum": 1
+                          },
+                          "bbox": {
+                            "type": "array",
+                            "prefixItems": [
+                              {
+                                "type": "number"
+                              },
+                              {
+                                "type": "number"
+                              },
+                              {
+                                "type": "number"
+                              },
+                              {
+                                "type": "number"
+                              }
+                            ],
+                            "items": false,
+                            "minItems": 4,
+                            "maxItems": 4
+                          },
+                          "coordinate_space": {
+                            "const": "pixels"
+                          },
+                          "image_size": {
+                            "type": "array",
+                            "prefixItems": [
+                              {
+                                "type": "number",
+                                "exclusiveMinimum": 0
+                              },
+                              {
+                                "type": "number",
+                                "exclusiveMinimum": 0
+                              }
+                            ],
+                            "items": false,
+                            "minItems": 2,
+                            "maxItems": 2
+                          },
+                          "method": {
+                            "enum": [
+                              "manual_synthetic",
+                              "native_text",
+                              "local_ocr",
+                              "vision",
+                              "manual"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "doc_id",
+                          "page",
+                          "bbox",
+                          "coordinate_space",
+                          "image_size",
+                          "method"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "ocr_confidence": {
+                        "type": [
+                          "string",
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "derived_from": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "raw_text",
+                      "alternatives",
+                      "resolution",
+                      "verification",
+                      "reviewer",
+                      "reviewed_at",
+                      "source"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "evidence_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+                    },
+                    "minItems": 1,
+                    "uniqueItems": true
+                  }
+                },
+                "required": [
+                  "id",
+                  "label",
+                  "operation",
+                  "amount",
+                  "evidence_ids"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "policy_evidence_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "label",
+            "start",
+            "evidence_ids",
+            "steps",
+            "policy_evidence_ids"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "synthetic",
+    "case_id",
+    "currency",
+    "rounding",
+    "financial_basis",
+    "baseline_label",
+    "proposed_label",
+    "author_role",
+    "price_context",
+    "documents",
+    "evidence",
+    "lines",
+    "groups"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "safeId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "doc_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+        },
+        "page": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "bbox": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "items": false,
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "coordinate_space": {
+          "const": "pixels"
+        },
+        "image_size": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            {
+              "type": "number",
+              "exclusiveMinimum": 0
+            }
+          ],
+          "items": false,
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "method": {
+          "enum": [
+            "manual_synthetic",
+            "native_text",
+            "local_ocr",
+            "vision",
+            "manual"
+          ]
+        }
+      },
+      "required": [
+        "doc_id",
+        "page",
+        "bbox",
+        "coordinate_space",
+        "image_size",
+        "method"
+      ],
+      "additionalProperties": false
+    },
+    "numericField": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^-?(?:0|[1-9][0-9]{0,17})(?:\\.[0-9]{1,8})?$"
+        },
+        "raw_text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "alternatives": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "resolution": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "verification": {
+          "enum": [
+            "unreviewed",
+            "ambiguous",
+            "ai_checked",
+            "synthetic_checked"
+          ]
+        },
+        "reviewer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reviewed_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "source": {
+          "type": "object",
+          "properties": {
+            "doc_id": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+            },
+            "page": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "bbox": {
+              "type": "array",
+              "prefixItems": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "items": false,
+              "minItems": 4,
+              "maxItems": 4
+            },
+            "coordinate_space": {
+              "const": "pixels"
+            },
+            "image_size": {
+              "type": "array",
+              "prefixItems": [
+                {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                }
+              ],
+              "items": false,
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "method": {
+              "enum": [
+                "manual_synthetic",
+                "native_text",
+                "local_ocr",
+                "vision",
+                "manual"
+              ]
+            }
+          },
+          "required": [
+            "doc_id",
+            "page",
+            "bbox",
+            "coordinate_space",
+            "image_size",
+            "method"
+          ],
+          "additionalProperties": false
+        },
+        "ocr_confidence": {
+          "type": [
+            "string",
+            "number",
+            "null"
+          ]
+        },
+        "derived_from": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "value",
+        "raw_text",
+        "alternatives",
+        "resolution",
+        "verification",
+        "reviewer",
+        "reviewed_at",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "document": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+        },
+        "role": {
+          "enum": [
+            "baseline",
+            "proposed",
+            "evidence",
+            "policy",
+            "operator"
+          ]
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "page_count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10000
+        },
+        "received_pages": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "uniqueItems": true
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "date": {
+          "type": "string",
+          "format": "date",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "kind": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "estimate_complete": {
+          "type": "boolean"
+        },
+        "synthetic": {
+          "type": "boolean"
+        },
+        "reported_direct_total": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "pattern": "^-?(?:0|[1-9][0-9]{0,17})(?:\\.[0-9]{1,8})?$"
+                },
+                "raw_text": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "alternatives": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "resolution": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "verification": {
+                  "enum": [
+                    "unreviewed",
+                    "ambiguous",
+                    "ai_checked",
+                    "synthetic_checked"
+                  ]
+                },
+                "reviewer": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "reviewed_at": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "source": {
+                  "type": "object",
+                  "properties": {
+                    "doc_id": {
+                      "type": "string",
+                      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+                    },
+                    "page": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "bbox": {
+                      "type": "array",
+                      "prefixItems": [
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": "number"
+                        }
+                      ],
+                      "items": false,
+                      "minItems": 4,
+                      "maxItems": 4
+                    },
+                    "coordinate_space": {
+                      "const": "pixels"
+                    },
+                    "image_size": {
+                      "type": "array",
+                      "prefixItems": [
+                        {
+                          "type": "number",
+                          "exclusiveMinimum": 0
+                        },
+                        {
+                          "type": "number",
+                          "exclusiveMinimum": 0
+                        }
+                      ],
+                      "items": false,
+                      "minItems": 2,
+                      "maxItems": 2
+                    },
+                    "method": {
+                      "enum": [
+                        "manual_synthetic",
+                        "native_text",
+                        "local_ocr",
+                        "vision",
+                        "manual"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "doc_id",
+                    "page",
+                    "bbox",
+                    "coordinate_space",
+                    "image_size",
+                    "method"
+                  ],
+                  "additionalProperties": false
+                },
+                "ocr_confidence": {
+                  "type": [
+                    "string",
+                    "number",
+                    "null"
+                  ]
+                },
+                "derived_from": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "value",
+                "raw_text",
+                "alternatives",
+                "resolution",
+                "verification",
+                "reviewer",
+                "reviewed_at",
+                "source"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "pages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "page": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "width": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "height": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "image_path": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "image_sha256": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "text_path": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "words_path": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "method": {
+                "enum": [
+                  "manual_synthetic",
+                  "native_text",
+                  "local_ocr",
+                  "vision",
+                  "manual"
+                ]
+              },
+              "coordinate_space": {
+                "const": "pixels"
+              },
+              "transform": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": ".*\\S.*"
+                      },
+                      "scale": {
+                        "type": "number",
+                        "exclusiveMinimum": 0
+                      },
+                      "original_space": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": ".*\\S.*"
+                      },
+                      "rotation": {
+                        "type": "number"
+                      }
+                    },
+                    "required": [
+                      "kind"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "note": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "page",
+              "width",
+              "height"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "original_name": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "mime_type": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "receipt_time": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "inspection_limits": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        }
+      },
+      "required": [
+        "id",
+        "role",
+        "path",
+        "sha256",
+        "page_count",
+        "received_pages",
+        "version",
+        "date",
+        "kind",
+        "estimate_complete",
+        "synthetic",
+        "reported_direct_total"
+      ],
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+        },
+        "doc_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+        },
+        "page": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        }
+      },
+      "required": [
+        "id",
+        "doc_id",
+        "page",
+        "description"
+      ],
+      "additionalProperties": false
+    },
+    "line": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+        },
+        "side": {
+          "enum": [
+            "baseline",
+            "proposed"
+          ]
+        },
+        "kind": {
+          "enum": [
+            "work",
+            "credit"
+          ]
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "specification": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "roof_location": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+        },
+        "quantity": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^-?(?:0|[1-9][0-9]{0,17})(?:\\.[0-9]{1,8})?$"
+            },
+            "raw_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "alternatives": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "resolution": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "verification": {
+              "enum": [
+                "unreviewed",
+                "ambiguous",
+                "ai_checked",
+                "synthetic_checked"
+              ]
+            },
+            "reviewer": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "reviewed_at": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "source": {
+              "type": "object",
+              "properties": {
+                "doc_id": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+                },
+                "page": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "bbox": {
+                  "type": "array",
+                  "prefixItems": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "items": false,
+                  "minItems": 4,
+                  "maxItems": 4
+                },
+                "coordinate_space": {
+                  "const": "pixels"
+                },
+                "image_size": {
+                  "type": "array",
+                  "prefixItems": [
+                    {
+                      "type": "number",
+                      "exclusiveMinimum": 0
+                    },
+                    {
+                      "type": "number",
+                      "exclusiveMinimum": 0
+                    }
+                  ],
+                  "items": false,
+                  "minItems": 2,
+                  "maxItems": 2
+                },
+                "method": {
+                  "enum": [
+                    "manual_synthetic",
+                    "native_text",
+                    "local_ocr",
+                    "vision",
+                    "manual"
+                  ]
+                }
+              },
+              "required": [
+                "doc_id",
+                "page",
+                "bbox",
+                "coordinate_space",
+                "image_size",
+                "method"
+              ],
+              "additionalProperties": false
+            },
+            "ocr_confidence": {
+              "type": [
+                "string",
+                "number",
+                "null"
+              ]
+            },
+            "derived_from": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "value",
+            "raw_text",
+            "alternatives",
+            "resolution",
+            "verification",
+            "reviewer",
+            "reviewed_at",
+            "source"
+          ],
+          "additionalProperties": false
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "unit_price": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^-?(?:0|[1-9][0-9]{0,17})(?:\\.[0-9]{1,8})?$"
+            },
+            "raw_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "alternatives": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "resolution": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "verification": {
+              "enum": [
+                "unreviewed",
+                "ambiguous",
+                "ai_checked",
+                "synthetic_checked"
+              ]
+            },
+            "reviewer": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "reviewed_at": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "source": {
+              "type": "object",
+              "properties": {
+                "doc_id": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+                },
+                "page": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "bbox": {
+                  "type": "array",
+                  "prefixItems": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "items": false,
+                  "minItems": 4,
+                  "maxItems": 4
+                },
+                "coordinate_space": {
+                  "const": "pixels"
+                },
+                "image_size": {
+                  "type": "array",
+                  "prefixItems": [
+                    {
+                      "type": "number",
+                      "exclusiveMinimum": 0
+                    },
+                    {
+                      "type": "number",
+                      "exclusiveMinimum": 0
+                    }
+                  ],
+                  "items": false,
+                  "minItems": 2,
+                  "maxItems": 2
+                },
+                "method": {
+                  "enum": [
+                    "manual_synthetic",
+                    "native_text",
+                    "local_ocr",
+                    "vision",
+                    "manual"
+                  ]
+                }
+              },
+              "required": [
+                "doc_id",
+                "page",
+                "bbox",
+                "coordinate_space",
+                "image_size",
+                "method"
+              ],
+              "additionalProperties": false
+            },
+            "ocr_confidence": {
+              "type": [
+                "string",
+                "number",
+                "null"
+              ]
+            },
+            "derived_from": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "value",
+            "raw_text",
+            "alternatives",
+            "resolution",
+            "verification",
+            "reviewer",
+            "reviewed_at",
+            "source"
+          ],
+          "additionalProperties": false
+        },
+        "reported_total": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^-?(?:0|[1-9][0-9]{0,17})(?:\\.[0-9]{1,8})?$"
+            },
+            "raw_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "alternatives": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "resolution": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "verification": {
+              "enum": [
+                "unreviewed",
+                "ambiguous",
+                "ai_checked",
+                "synthetic_checked"
+              ]
+            },
+            "reviewer": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "reviewed_at": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "source": {
+              "type": "object",
+              "properties": {
+                "doc_id": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+                },
+                "page": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "bbox": {
+                  "type": "array",
+                  "prefixItems": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "items": false,
+                  "minItems": 4,
+                  "maxItems": 4
+                },
+                "coordinate_space": {
+                  "const": "pixels"
+                },
+                "image_size": {
+                  "type": "array",
+                  "prefixItems": [
+                    {
+                      "type": "number",
+                      "exclusiveMinimum": 0
+                    },
+                    {
+                      "type": "number",
+                      "exclusiveMinimum": 0
+                    }
+                  ],
+                  "items": false,
+                  "minItems": 2,
+                  "maxItems": 2
+                },
+                "method": {
+                  "enum": [
+                    "manual_synthetic",
+                    "native_text",
+                    "local_ocr",
+                    "vision",
+                    "manual"
+                  ]
+                }
+              },
+              "required": [
+                "doc_id",
+                "page",
+                "bbox",
+                "coordinate_space",
+                "image_size",
+                "method"
+              ],
+              "additionalProperties": false
+            },
+            "ocr_confidence": {
+              "type": [
+                "string",
+                "number",
+                "null"
+              ]
+            },
+            "derived_from": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "value",
+            "raw_text",
+            "alternatives",
+            "resolution",
+            "verification",
+            "reviewer",
+            "reviewed_at",
+            "source"
+          ],
+          "additionalProperties": false
+        },
+        "financial_basis": {
+          "const": "direct_pre_tax"
+        },
+        "area_basis": {
+          "enum": [
+            "roof_surface",
+            "plan",
+            "not_area"
+          ]
+        },
+        "geometry": {
+          "type": "object",
+          "properties": {
+            "slope_included": {
+              "type": "boolean"
+            },
+            "waste_included": {
+              "type": "boolean"
+            },
+            "apply_slope": {
+              "type": "boolean"
+            },
+            "apply_waste": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "slope_included",
+            "waste_included",
+            "apply_slope",
+            "apply_waste"
+          ],
+          "additionalProperties": false
+        },
+        "work_components": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "quote_inclusions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "source": {
+          "type": "object",
+          "properties": {
+            "doc_id": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+            },
+            "page": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "bbox": {
+              "type": "array",
+              "prefixItems": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "items": false,
+              "minItems": 4,
+              "maxItems": 4
+            },
+            "coordinate_space": {
+              "const": "pixels"
+            },
+            "image_size": {
+              "type": "array",
+              "prefixItems": [
+                {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                }
+              ],
+              "items": false,
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "method": {
+              "enum": [
+                "manual_synthetic",
+                "native_text",
+                "local_ocr",
+                "vision",
+                "manual"
+              ]
+            }
+          },
+          "required": [
+            "doc_id",
+            "page",
+            "bbox",
+            "coordinate_space",
+            "image_size",
+            "method"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "id",
+        "side",
+        "description",
+        "specification",
+        "roof_location",
+        "quantity",
+        "unit",
+        "unit_price",
+        "reported_total",
+        "financial_basis",
+        "area_basis",
+        "geometry",
+        "work_components",
+        "quote_inclusions",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "group": {
+      "type": "object",
+      "properties": {
+        "claim_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "observation": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "necessity": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "reply": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "requested_action": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "category_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^(?:A-O|B-I)[0-9]{2}$"
+          },
+          "uniqueItems": true
+        },
+        "baseline": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+          },
+          "uniqueItems": true
+        },
+        "proposed": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+          },
+          "uniqueItems": true
+        },
+        "roof_location": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+        },
+        "change_type": {
+          "enum": [
+            "quantity_price",
+            "bundle",
+            "scope",
+            "specification_bundle"
+          ]
+        },
+        "mapping_rationale": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "source_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "scope_support": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "supported",
+                "needs_evidence",
+                "rejected"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+              },
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "status",
+            "source_ids"
+          ],
+          "additionalProperties": false
+        },
+        "coverage": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "unknown",
+                "accepted",
+                "disputed",
+                "excluded"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+              },
+              "uniqueItems": true
+            },
+            "reviewer": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "status",
+            "source_ids",
+            "reviewer"
+          ],
+          "additionalProperties": false
+        },
+        "counterargument": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "disposition": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "absence_verified": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "claim_id",
+        "baseline",
+        "proposed",
+        "roof_location",
+        "change_type",
+        "mapping_rationale",
+        "source_ids",
+        "scope_support",
+        "coverage",
+        "counterargument",
+        "disposition",
+        "absence_verified"
+      ],
+      "additionalProperties": false
+    },
+    "adjustment": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "kind": {
+          "enum": [
+            "tax",
+            "fee",
+            "overhead",
+            "profit",
+            "credit"
+          ]
+        },
+        "method": {
+          "enum": [
+            "amount",
+            "rate"
+          ]
+        },
+        "amount": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "pattern": "^-?(?:0|[1-9][0-9]{0,17})(?:\\.[0-9]{1,8})?$"
+                },
+                "raw_text": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "alternatives": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "resolution": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "verification": {
+                  "enum": [
+                    "unreviewed",
+                    "ambiguous",
+                    "ai_checked",
+                    "synthetic_checked"
+                  ]
+                },
+                "reviewer": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "reviewed_at": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "source": {
+                  "type": "object",
+                  "properties": {
+                    "doc_id": {
+                      "type": "string",
+                      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+                    },
+                    "page": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "bbox": {
+                      "type": "array",
+                      "prefixItems": [
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": "number"
+                        }
+                      ],
+                      "items": false,
+                      "minItems": 4,
+                      "maxItems": 4
+                    },
+                    "coordinate_space": {
+                      "const": "pixels"
+                    },
+                    "image_size": {
+                      "type": "array",
+                      "prefixItems": [
+                        {
+                          "type": "number",
+                          "exclusiveMinimum": 0
+                        },
+                        {
+                          "type": "number",
+                          "exclusiveMinimum": 0
+                        }
+                      ],
+                      "items": false,
+                      "minItems": 2,
+                      "maxItems": 2
+                    },
+                    "method": {
+                      "enum": [
+                        "manual_synthetic",
+                        "native_text",
+                        "local_ocr",
+                        "vision",
+                        "manual"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "doc_id",
+                    "page",
+                    "bbox",
+                    "coordinate_space",
+                    "image_size",
+                    "method"
+                  ],
+                  "additionalProperties": false
+                },
+                "ocr_confidence": {
+                  "type": [
+                    "string",
+                    "number",
+                    "null"
+                  ]
+                },
+                "derived_from": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "value",
+                "raw_text",
+                "alternatives",
+                "resolution",
+                "verification",
+                "reviewer",
+                "reviewed_at",
+                "source"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "rate": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "pattern": "^-?(?:0|[1-9][0-9]{0,17})(?:\\.[0-9]{1,8})?$"
+                },
+                "raw_text": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "alternatives": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "resolution": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "verification": {
+                  "enum": [
+                    "unreviewed",
+                    "ambiguous",
+                    "ai_checked",
+                    "synthetic_checked"
+                  ]
+                },
+                "reviewer": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "reviewed_at": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "source": {
+                  "type": "object",
+                  "properties": {
+                    "doc_id": {
+                      "type": "string",
+                      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+                    },
+                    "page": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "bbox": {
+                      "type": "array",
+                      "prefixItems": [
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": "number"
+                        }
+                      ],
+                      "items": false,
+                      "minItems": 4,
+                      "maxItems": 4
+                    },
+                    "coordinate_space": {
+                      "const": "pixels"
+                    },
+                    "image_size": {
+                      "type": "array",
+                      "prefixItems": [
+                        {
+                          "type": "number",
+                          "exclusiveMinimum": 0
+                        },
+                        {
+                          "type": "number",
+                          "exclusiveMinimum": 0
+                        }
+                      ],
+                      "items": false,
+                      "minItems": 2,
+                      "maxItems": 2
+                    },
+                    "method": {
+                      "enum": [
+                        "manual_synthetic",
+                        "native_text",
+                        "local_ocr",
+                        "vision",
+                        "manual"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "doc_id",
+                    "page",
+                    "bbox",
+                    "coordinate_space",
+                    "image_size",
+                    "method"
+                  ],
+                  "additionalProperties": false
+                },
+                "ocr_confidence": {
+                  "type": [
+                    "string",
+                    "number",
+                    "null"
+                  ]
+                },
+                "derived_from": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "value",
+                "raw_text",
+                "alternatives",
+                "resolution",
+                "verification",
+                "reviewer",
+                "reviewed_at",
+                "source"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "basis": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "const": "direct"
+              },
+              {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+              }
+            ]
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "id",
+        "label",
+        "kind",
+        "method",
+        "amount",
+        "rate",
+        "basis",
+        "evidence_ids"
+      ],
+      "additionalProperties": false
+    },
+    "paymentScenario": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "start": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^-?(?:0|[1-9][0-9]{0,17})(?:\\.[0-9]{1,8})?$"
+            },
+            "raw_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "alternatives": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "resolution": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "verification": {
+              "enum": [
+                "unreviewed",
+                "ambiguous",
+                "ai_checked",
+                "synthetic_checked"
+              ]
+            },
+            "reviewer": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "reviewed_at": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "source": {
+              "type": "object",
+              "properties": {
+                "doc_id": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+                },
+                "page": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "bbox": {
+                  "type": "array",
+                  "prefixItems": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "items": false,
+                  "minItems": 4,
+                  "maxItems": 4
+                },
+                "coordinate_space": {
+                  "const": "pixels"
+                },
+                "image_size": {
+                  "type": "array",
+                  "prefixItems": [
+                    {
+                      "type": "number",
+                      "exclusiveMinimum": 0
+                    },
+                    {
+                      "type": "number",
+                      "exclusiveMinimum": 0
+                    }
+                  ],
+                  "items": false,
+                  "minItems": 2,
+                  "maxItems": 2
+                },
+                "method": {
+                  "enum": [
+                    "manual_synthetic",
+                    "native_text",
+                    "local_ocr",
+                    "vision",
+                    "manual"
+                  ]
+                }
+              },
+              "required": [
+                "doc_id",
+                "page",
+                "bbox",
+                "coordinate_space",
+                "image_size",
+                "method"
+              ],
+              "additionalProperties": false
+            },
+            "ocr_confidence": {
+              "type": [
+                "string",
+                "number",
+                "null"
+              ]
+            },
+            "derived_from": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "value",
+            "raw_text",
+            "alternatives",
+            "resolution",
+            "verification",
+            "reviewer",
+            "reviewed_at",
+            "source"
+          ],
+          "additionalProperties": false
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": ".*\\S.*"
+              },
+              "operation": {
+                "enum": [
+                  "add",
+                  "subtract",
+                  "cap"
+                ]
+              },
+              "amount": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "pattern": "^-?(?:0|[1-9][0-9]{0,17})(?:\\.[0-9]{1,8})?$"
+                  },
+                  "raw_text": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "alternatives": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "resolution": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "verification": {
+                    "enum": [
+                      "unreviewed",
+                      "ambiguous",
+                      "ai_checked",
+                      "synthetic_checked"
+                    ]
+                  },
+                  "reviewer": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "reviewed_at": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "format": "date-time"
+                  },
+                  "source": {
+                    "type": "object",
+                    "properties": {
+                      "doc_id": {
+                        "type": "string",
+                        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+                      },
+                      "page": {
+                        "type": "integer",
+                        "minimum": 1
+                      },
+                      "bbox": {
+                        "type": "array",
+                        "prefixItems": [
+                          {
+                            "type": "number"
+                          },
+                          {
+                            "type": "number"
+                          },
+                          {
+                            "type": "number"
+                          },
+                          {
+                            "type": "number"
+                          }
+                        ],
+                        "items": false,
+                        "minItems": 4,
+                        "maxItems": 4
+                      },
+                      "coordinate_space": {
+                        "const": "pixels"
+                      },
+                      "image_size": {
+                        "type": "array",
+                        "prefixItems": [
+                          {
+                            "type": "number",
+                            "exclusiveMinimum": 0
+                          },
+                          {
+                            "type": "number",
+                            "exclusiveMinimum": 0
+                          }
+                        ],
+                        "items": false,
+                        "minItems": 2,
+                        "maxItems": 2
+                      },
+                      "method": {
+                        "enum": [
+                          "manual_synthetic",
+                          "native_text",
+                          "local_ocr",
+                          "vision",
+                          "manual"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "doc_id",
+                      "page",
+                      "bbox",
+                      "coordinate_space",
+                      "image_size",
+                      "method"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "ocr_confidence": {
+                    "type": [
+                      "string",
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "derived_from": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "value",
+                  "raw_text",
+                  "alternatives",
+                  "resolution",
+                  "verification",
+                  "reviewer",
+                  "reviewed_at",
+                  "source"
+                ],
+                "additionalProperties": false
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "id",
+              "label",
+              "operation",
+              "amount",
+              "evidence_ids"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "policy_evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "label",
+        "start",
+        "evidence_ids",
+        "steps",
+        "policy_evidence_ids"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Xactimate Reconciliation"
+  short_description: "Review roof estimates and build evidence-backed drafts"
+  default_prompt: "Use $xactimate-reconcile to compare these roof estimates and prepare a sourced reconciliation package."

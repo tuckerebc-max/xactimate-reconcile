@@ -1,0 +1,764 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "enum": [
+        "c-prototype/0.1"
+      ]
+    },
+    "synthetic": {
+      "type": "boolean"
+    },
+    "case_id": {
+      "type": "string"
+    },
+    "currency": {
+      "type": "string"
+    },
+    "rounding": {
+      "type": "string"
+    },
+    "financial_basis": {
+      "type": "string"
+    },
+    "baseline_label": {
+      "type": "string"
+    },
+    "proposed_label": {
+      "type": "string"
+    },
+    "author_role": {
+      "type": "string"
+    },
+    "price_context": {
+      "type": "object",
+      "properties": {
+        "list": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "month": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "location": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "list",
+        "month",
+        "location"
+      ],
+      "additionalProperties": false
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string"
+          },
+          "page_count": {
+            "type": "integer"
+          },
+          "received_pages": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "version": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "estimate_complete": {
+            "type": "boolean"
+          },
+          "synthetic": {
+            "type": "boolean"
+          },
+          "reported_direct_total": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "raw_text": {
+                "type": "string"
+              },
+              "alternatives": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "resolution": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "verification": {
+                "type": "string"
+              },
+              "reviewer": {
+                "type": "string"
+              },
+              "reviewed_at": {
+                "type": "string"
+              },
+              "source": {
+                "type": "object",
+                "properties": {
+                  "doc_id": {
+                    "type": "string"
+                  },
+                  "page": {
+                    "type": "integer"
+                  },
+                  "bbox": {
+                    "type": "array",
+                    "items": {
+                      "type": "number"
+                    }
+                  },
+                  "coordinate_space": {
+                    "type": "string"
+                  },
+                  "image_size": {
+                    "type": "array",
+                    "items": {
+                      "type": "number"
+                    }
+                  },
+                  "method": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "doc_id",
+                  "page",
+                  "bbox",
+                  "coordinate_space",
+                  "image_size",
+                  "method"
+                ],
+                "additionalProperties": false
+              },
+              "ocr_confidence": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "value",
+              "raw_text",
+              "alternatives",
+              "resolution",
+              "verification",
+              "reviewer",
+              "reviewed_at",
+              "source",
+              "ocr_confidence"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "id",
+          "role",
+          "path",
+          "sha256",
+          "page_count",
+          "received_pages",
+          "version",
+          "date",
+          "kind",
+          "estimate_complete",
+          "synthetic",
+          "reported_direct_total"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "doc_id": {
+            "type": "string"
+          },
+          "page": {
+            "type": "integer"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "doc_id",
+          "page",
+          "description"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "lines": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "side": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "specification": {
+            "type": "string"
+          },
+          "roof_location": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "raw_text": {
+                "type": "string"
+              },
+              "alternatives": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "resolution": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "verification": {
+                "type": "string"
+              },
+              "reviewer": {
+                "type": "string"
+              },
+              "reviewed_at": {
+                "type": "string"
+              },
+              "source": {
+                "type": "object",
+                "properties": {
+                  "doc_id": {
+                    "type": "string"
+                  },
+                  "page": {
+                    "type": "integer"
+                  },
+                  "bbox": {
+                    "type": "array",
+                    "items": {
+                      "type": "number"
+                    }
+                  },
+                  "coordinate_space": {
+                    "type": "string"
+                  },
+                  "image_size": {
+                    "type": "array",
+                    "items": {
+                      "type": "number"
+                    }
+                  },
+                  "method": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "doc_id",
+                  "page",
+                  "bbox",
+                  "coordinate_space",
+                  "image_size",
+                  "method"
+                ],
+                "additionalProperties": false
+              },
+              "ocr_confidence": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "value",
+              "raw_text",
+              "alternatives",
+              "resolution",
+              "verification",
+              "reviewer",
+              "reviewed_at",
+              "source",
+              "ocr_confidence"
+            ],
+            "additionalProperties": false
+          },
+          "unit": {
+            "type": "string"
+          },
+          "unit_price": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "raw_text": {
+                "type": "string"
+              },
+              "alternatives": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "resolution": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "verification": {
+                "type": "string"
+              },
+              "reviewer": {
+                "type": "string"
+              },
+              "reviewed_at": {
+                "type": "string"
+              },
+              "source": {
+                "type": "object",
+                "properties": {
+                  "doc_id": {
+                    "type": "string"
+                  },
+                  "page": {
+                    "type": "integer"
+                  },
+                  "bbox": {
+                    "type": "array",
+                    "items": {
+                      "type": "number"
+                    }
+                  },
+                  "coordinate_space": {
+                    "type": "string"
+                  },
+                  "image_size": {
+                    "type": "array",
+                    "items": {
+                      "type": "number"
+                    }
+                  },
+                  "method": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "doc_id",
+                  "page",
+                  "bbox",
+                  "coordinate_space",
+                  "image_size",
+                  "method"
+                ],
+                "additionalProperties": false
+              },
+              "ocr_confidence": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "value",
+              "raw_text",
+              "alternatives",
+              "resolution",
+              "verification",
+              "reviewer",
+              "reviewed_at",
+              "source",
+              "ocr_confidence"
+            ],
+            "additionalProperties": false
+          },
+          "reported_total": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "raw_text": {
+                "type": "string"
+              },
+              "alternatives": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "resolution": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "verification": {
+                "type": "string"
+              },
+              "reviewer": {
+                "type": "string"
+              },
+              "reviewed_at": {
+                "type": "string"
+              },
+              "source": {
+                "type": "object",
+                "properties": {
+                  "doc_id": {
+                    "type": "string"
+                  },
+                  "page": {
+                    "type": "integer"
+                  },
+                  "bbox": {
+                    "type": "array",
+                    "items": {
+                      "type": "number"
+                    }
+                  },
+                  "coordinate_space": {
+                    "type": "string"
+                  },
+                  "image_size": {
+                    "type": "array",
+                    "items": {
+                      "type": "number"
+                    }
+                  },
+                  "method": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "doc_id",
+                  "page",
+                  "bbox",
+                  "coordinate_space",
+                  "image_size",
+                  "method"
+                ],
+                "additionalProperties": false
+              },
+              "ocr_confidence": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "value",
+              "raw_text",
+              "alternatives",
+              "resolution",
+              "verification",
+              "reviewer",
+              "reviewed_at",
+              "source",
+              "ocr_confidence"
+            ],
+            "additionalProperties": false
+          },
+          "financial_basis": {
+            "type": "string"
+          },
+          "area_basis": {
+            "type": "string"
+          },
+          "geometry": {
+            "type": "object",
+            "properties": {
+              "slope_included": {
+                "type": "boolean"
+              },
+              "waste_included": {
+                "type": "boolean"
+              },
+              "apply_slope": {
+                "type": "boolean"
+              },
+              "apply_waste": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "slope_included",
+              "waste_included",
+              "apply_slope",
+              "apply_waste"
+            ],
+            "additionalProperties": false
+          },
+          "work_components": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "quote_inclusions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "source": {
+            "type": "object",
+            "properties": {
+              "doc_id": {
+                "type": "string"
+              },
+              "page": {
+                "type": "integer"
+              },
+              "bbox": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                }
+              },
+              "coordinate_space": {
+                "type": "string"
+              },
+              "image_size": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                }
+              },
+              "method": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "doc_id",
+              "page",
+              "bbox",
+              "coordinate_space",
+              "image_size",
+              "method"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "id",
+          "side",
+          "description",
+          "specification",
+          "roof_location",
+          "quantity",
+          "unit",
+          "unit_price",
+          "reported_total",
+          "financial_basis",
+          "area_basis",
+          "geometry",
+          "work_components",
+          "quote_inclusions",
+          "source"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "claim_id": {
+            "type": "string"
+          },
+          "baseline": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "proposed": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "roof_location": {
+            "type": "string"
+          },
+          "change_type": {
+            "type": "string"
+          },
+          "mapping_rationale": {
+            "type": "string"
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "scope_support": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "type": "string"
+              },
+              "source_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "status",
+              "source_ids"
+            ],
+            "additionalProperties": false
+          },
+          "coverage": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "type": "string"
+              },
+              "source_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "reviewer": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "status",
+              "source_ids",
+              "reviewer"
+            ],
+            "additionalProperties": false
+          },
+          "counterargument": {
+            "type": "string"
+          },
+          "disposition": {
+            "type": "string"
+          },
+          "absence_verified": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "claim_id",
+          "baseline",
+          "proposed",
+          "roof_location",
+          "change_type",
+          "mapping_rationale",
+          "source_ids",
+          "scope_support",
+          "coverage",
+          "counterargument",
+          "disposition",
+          "absence_verified"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "synthetic",
+    "case_id",
+    "currency",
+    "rounding",
+    "financial_basis",
+    "baseline_label",
+    "proposed_label",
+    "author_role",
+    "price_context",
+    "documents",
+    "evidence",
+    "lines",
+    "groups"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Synthetic direct-cost reconciliation input 0.1"
+}

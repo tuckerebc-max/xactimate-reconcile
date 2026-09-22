@@ -1,0 +1,614 @@
+test_blurry_digit_is_unknown (test_reconcile.ReconciliationTests.test_blurry_digit_is_unknown) ... FAIL
+test_carrier_correct_and_repair_feasible (test_reconcile.ReconciliationTests.test_carrier_correct_and_repair_feasible) ... FAIL
+test_contractor_too_high_reduction (test_reconcile.ReconciliationTests.test_contractor_too_high_reduction) ... FAIL
+test_declared_incomplete_estimate (test_reconcile.ReconciliationTests.test_declared_incomplete_estimate) ... FAIL
+test_double_slope (test_reconcile.ReconciliationTests.test_double_slope) ... FAIL
+test_double_waste (test_reconcile.ReconciliationTests.test_double_waste) ... FAIL
+test_duplicate_work (test_reconcile.ReconciliationTests.test_duplicate_work) ... FAIL
+test_financial_basis_mismatch (test_reconcile.ReconciliationTests.test_financial_basis_mismatch) ... FAIL
+test_footer_disagrees (test_reconcile.ReconciliationTests.test_footer_disagrees) ... FAIL
+test_half_up_line_rounding (test_reconcile.ReconciliationTests.test_half_up_line_rounding) ... FAIL
+test_high_ocr_confidence_cannot_replace_review (test_reconcile.ReconciliationTests.test_high_ocr_confidence_cannot_replace_review) ... FAIL
+test_incompatible_units (test_reconcile.ReconciliationTests.test_incompatible_units) ... FAIL
+test_input_is_not_mutated (test_reconcile.ReconciliationTests.test_input_is_not_mutated) ... FAIL
+test_insufficient_scope_evidence (test_reconcile.ReconciliationTests.test_insufficient_scope_evidence) ... FAIL
+test_line_reused_in_two_groups (test_reconcile.ReconciliationTests.test_line_reused_in_two_groups) ... FAIL
+test_many_to_one_group (test_reconcile.ReconciliationTests.test_many_to_one_group) ... FAIL
+test_missing_counterargument (test_reconcile.ReconciliationTests.test_missing_counterargument) ... FAIL
+test_missing_mapping_rationale (test_reconcile.ReconciliationTests.test_missing_mapping_rationale) ... FAIL
+test_missing_pages (test_reconcile.ReconciliationTests.test_missing_pages) ... FAIL
+test_missing_required_structure (test_reconcile.ReconciliationTests.test_missing_required_structure) ... FAIL
+test_nonfinite_float_exponent_and_boolean_rejected (test_reconcile.ReconciliationTests.test_nonfinite_float_exponent_and_boolean_rejected) ... 
+  test_nonfinite_float_exponent_and_boolean_rejected (test_reconcile.ReconciliationTests.test_nonfinite_float_exponent_and_boolean_rejected) (value='NaN') ... FAIL
+  test_nonfinite_float_exponent_and_boolean_rejected (test_reconcile.ReconciliationTests.test_nonfinite_float_exponent_and_boolean_rejected) (value='Infinity') ... FAIL
+  test_nonfinite_float_exponent_and_boolean_rejected (test_reconcile.ReconciliationTests.test_nonfinite_float_exponent_and_boolean_rejected) (value='1e3') ... FAIL
+  test_nonfinite_float_exponent_and_boolean_rejected (test_reconcile.ReconciliationTests.test_nonfinite_float_exponent_and_boolean_rejected) (value=12.0) ... FAIL
+  test_nonfinite_float_exponent_and_boolean_rejected (test_reconcile.ReconciliationTests.test_nonfinite_float_exponent_and_boolean_rejected) (value=True) ... FAIL
+  test_nonfinite_float_exponent_and_boolean_rejected (test_reconcile.ReconciliationTests.test_nonfinite_float_exponent_and_boolean_rejected) (value='-1') ... FAIL
+test_one_to_many_group (test_reconcile.ReconciliationTests.test_one_to_many_group) ... FAIL
+test_plan_area_not_roof_surface (test_reconcile.ReconciliationTests.test_plan_area_not_roof_surface) ... FAIL
+test_positive_negative_and_unchanged_hand_calculated (test_reconcile.ReconciliationTests.test_positive_negative_and_unchanged_hand_calculated) ... FAIL
+test_quote_includes_separately_billed_work (test_reconcile.ReconciliationTests.test_quote_includes_separately_billed_work) ... FAIL
+test_reference_crop_outside_image (test_reconcile.ReconciliationTests.test_reference_crop_outside_image) ... FAIL
+test_reference_page_out_of_range (test_reconcile.ReconciliationTests.test_reference_page_out_of_range) ... FAIL
+test_resolved_alternatives_retained (test_reconcile.ReconciliationTests.test_resolved_alternatives_retained) ... FAIL
+test_sf_sq_100_fold_error (test_reconcile.ReconciliationTests.test_sf_sq_100_fold_error) ... FAIL
+test_sf_sq_equivalence (test_reconcile.ReconciliationTests.test_sf_sq_equivalence) ... FAIL
+test_source_hash_mismatch (test_reconcile.ReconciliationTests.test_source_hash_mismatch) ... FAIL
+test_source_traversal_refused (test_reconcile.ReconciliationTests.test_source_traversal_refused) ... FAIL
+test_synthetic_only (test_reconcile.ReconciliationTests.test_synthetic_only) ... FAIL
+test_unit_price_line_total_disagree (test_reconcile.ReconciliationTests.test_unit_price_line_total_disagree) ... FAIL
+test_unknown_coverage_stays_unknown (test_reconcile.ReconciliationTests.test_unknown_coverage_stays_unknown) ... FAIL
+test_unknown_evidence_id (test_reconcile.ReconciliationTests.test_unknown_evidence_id) ... FAIL
+test_unknown_schema_version (test_reconcile.ReconciliationTests.test_unknown_schema_version) ... FAIL
+test_unmapped_line_preserved (test_reconcile.ReconciliationTests.test_unmapped_line_preserved) ... FAIL
+test_unresolved_alternatives_block (test_reconcile.ReconciliationTests.test_unresolved_alternatives_block) ... FAIL
+test_unsupported_coverage_blocked (test_reconcile.ReconciliationTests.test_unsupported_coverage_blocked) ... FAIL
+
+======================================================================
+FAIL: test_blurry_digit_is_unknown (test_reconcile.ReconciliationTests.test_blurry_digit_is_unknown)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 83, in test_blurry_digit_is_unknown
+    self.blocked('E_UNKNOWN')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_carrier_correct_and_repair_feasible (test_reconcile.ReconciliationTests.test_carrier_correct_and_repair_feasible)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 50, in test_carrier_correct_and_repair_feasible
+    self.assertEqual('draft', r['status'])
+AssertionError: 'draft' != 'not_implemented'
+- draft
++ not_implemented
+
+
+======================================================================
+FAIL: test_contractor_too_high_reduction (test_reconcile.ReconciliationTests.test_contractor_too_high_reduction)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 59, in test_contractor_too_high_reduction
+    self.assertEqual('draft', r['status'])
+AssertionError: 'draft' != 'not_implemented'
+- draft
++ not_implemented
+
+
+======================================================================
+FAIL: test_declared_incomplete_estimate (test_reconcile.ReconciliationTests.test_declared_incomplete_estimate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 105, in test_declared_incomplete_estimate
+    self.blocked('E_INCOMPLETE')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_double_slope (test_reconcile.ReconciliationTests.test_double_slope)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 182, in test_double_slope
+    self.blocked('E_DOUBLE_SLOPE')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_double_waste (test_reconcile.ReconciliationTests.test_double_waste)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 187, in test_double_waste
+    self.blocked('E_DOUBLE_WASTE')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_duplicate_work (test_reconcile.ReconciliationTests.test_duplicate_work)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 117, in test_duplicate_work
+    self.blocked('E_DUPLICATE_WORK')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_financial_basis_mismatch (test_reconcile.ReconciliationTests.test_financial_basis_mismatch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 191, in test_financial_basis_mismatch
+    self.blocked('E_BASIS')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_footer_disagrees (test_reconcile.ReconciliationTests.test_footer_disagrees)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 113, in test_footer_disagrees
+    self.blocked('E_ESTIMATE_TOTAL')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_half_up_line_rounding (test_reconcile.ReconciliationTests.test_half_up_line_rounding)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 204, in test_half_up_line_rounding
+    self.assertEqual('draft', r['status'])
+AssertionError: 'draft' != 'not_implemented'
+- draft
++ not_implemented
+
+
+======================================================================
+FAIL: test_high_ocr_confidence_cannot_replace_review (test_reconcile.ReconciliationTests.test_high_ocr_confidence_cannot_replace_review)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 88, in test_high_ocr_confidence_cannot_replace_review
+    self.blocked('E_REVIEW')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_incompatible_units (test_reconcile.ReconciliationTests.test_incompatible_units)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 78, in test_incompatible_units
+    self.blocked('E_UNIT')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_input_is_not_mutated (test_reconcile.ReconciliationTests.test_input_is_not_mutated)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 238, in test_input_is_not_mutated
+    self.assertEqual('draft', r['status'])
+AssertionError: 'draft' != 'not_implemented'
+- draft
++ not_implemented
+
+
+======================================================================
+FAIL: test_insufficient_scope_evidence (test_reconcile.ReconciliationTests.test_insufficient_scope_evidence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 162, in test_insufficient_scope_evidence
+    self.blocked('E_SCOPE')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_line_reused_in_two_groups (test_reconcile.ReconciliationTests.test_line_reused_in_two_groups)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 125, in test_line_reused_in_two_groups
+    self.blocked('E_LINE_REUSED')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_many_to_one_group (test_reconcile.ReconciliationTests.test_many_to_one_group)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 147, in test_many_to_one_group
+    self.assertEqual('draft', r['status'])
+AssertionError: 'draft' != 'not_implemented'
+- draft
++ not_implemented
+
+
+======================================================================
+FAIL: test_missing_counterargument (test_reconcile.ReconciliationTests.test_missing_counterargument)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 170, in test_missing_counterargument
+    self.blocked('E_ARGUMENT')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_missing_mapping_rationale (test_reconcile.ReconciliationTests.test_missing_mapping_rationale)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 174, in test_missing_mapping_rationale
+    self.blocked('E_MAPPING')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_missing_pages (test_reconcile.ReconciliationTests.test_missing_pages)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 101, in test_missing_pages
+    self.blocked('E_INCOMPLETE')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_missing_required_structure (test_reconcile.ReconciliationTests.test_missing_required_structure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 229, in test_missing_required_structure
+    self.blocked('E_SCHEMA')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_nonfinite_float_exponent_and_boolean_rejected (test_reconcile.ReconciliationTests.test_nonfinite_float_exponent_and_boolean_rejected) (value='NaN')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 197, in test_nonfinite_float_exponent_and_boolean_rejected
+    self.blocked('E_DECIMAL')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_nonfinite_float_exponent_and_boolean_rejected (test_reconcile.ReconciliationTests.test_nonfinite_float_exponent_and_boolean_rejected) (value='Infinity')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 197, in test_nonfinite_float_exponent_and_boolean_rejected
+    self.blocked('E_DECIMAL')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_nonfinite_float_exponent_and_boolean_rejected (test_reconcile.ReconciliationTests.test_nonfinite_float_exponent_and_boolean_rejected) (value='1e3')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 197, in test_nonfinite_float_exponent_and_boolean_rejected
+    self.blocked('E_DECIMAL')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_nonfinite_float_exponent_and_boolean_rejected (test_reconcile.ReconciliationTests.test_nonfinite_float_exponent_and_boolean_rejected) (value=12.0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 197, in test_nonfinite_float_exponent_and_boolean_rejected
+    self.blocked('E_DECIMAL')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_nonfinite_float_exponent_and_boolean_rejected (test_reconcile.ReconciliationTests.test_nonfinite_float_exponent_and_boolean_rejected) (value=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 197, in test_nonfinite_float_exponent_and_boolean_rejected
+    self.blocked('E_DECIMAL')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_nonfinite_float_exponent_and_boolean_rejected (test_reconcile.ReconciliationTests.test_nonfinite_float_exponent_and_boolean_rejected) (value='-1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 197, in test_nonfinite_float_exponent_and_boolean_rejected
+    self.blocked('E_DECIMAL')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_one_to_many_group (test_reconcile.ReconciliationTests.test_one_to_many_group)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 135, in test_one_to_many_group
+    self.assertEqual('draft', r['status'])
+AssertionError: 'draft' != 'not_implemented'
+- draft
++ not_implemented
+
+
+======================================================================
+FAIL: test_plan_area_not_roof_surface (test_reconcile.ReconciliationTests.test_plan_area_not_roof_surface)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 178, in test_plan_area_not_roof_surface
+    self.blocked('E_AREA_BASIS')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_positive_negative_and_unchanged_hand_calculated (test_reconcile.ReconciliationTests.test_positive_negative_and_unchanged_hand_calculated)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 40, in test_positive_negative_and_unchanged_hand_calculated
+    self.assertEqual('draft', r['status'])
+AssertionError: 'draft' != 'not_implemented'
+- draft
++ not_implemented
+
+
+======================================================================
+FAIL: test_quote_includes_separately_billed_work (test_reconcile.ReconciliationTests.test_quote_includes_separately_billed_work)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 121, in test_quote_includes_separately_billed_work
+    self.blocked('E_DUPLICATE_WORK')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_reference_crop_outside_image (test_reconcile.ReconciliationTests.test_reference_crop_outside_image)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 221, in test_reference_crop_outside_image
+    self.blocked('E_COORDINATES')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_reference_page_out_of_range (test_reconcile.ReconciliationTests.test_reference_page_out_of_range)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 217, in test_reference_page_out_of_range
+    self.blocked('E_SOURCE_REF')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_resolved_alternatives_retained (test_reconcile.ReconciliationTests.test_resolved_alternatives_retained)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 97, in test_resolved_alternatives_retained
+    self.assertEqual('draft', self.run_case()['status'])
+AssertionError: 'draft' != 'not_implemented'
+- draft
++ not_implemented
+
+
+======================================================================
+FAIL: test_sf_sq_100_fold_error (test_reconcile.ReconciliationTests.test_sf_sq_100_fold_error)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 73, in test_sf_sq_100_fold_error
+    self.blocked('E_LINE_TOTAL')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_sf_sq_equivalence (test_reconcile.ReconciliationTests.test_sf_sq_equivalence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 67, in test_sf_sq_equivalence
+    self.assertEqual('draft', r['status'])
+AssertionError: 'draft' != 'not_implemented'
+- draft
++ not_implemented
+
+
+======================================================================
+FAIL: test_source_hash_mismatch (test_reconcile.ReconciliationTests.test_source_hash_mismatch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 209, in test_source_hash_mismatch
+    self.blocked('E_SOURCE_HASH')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_source_traversal_refused (test_reconcile.ReconciliationTests.test_source_traversal_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 213, in test_source_traversal_refused
+    self.blocked('E_SOURCE_PATH')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_synthetic_only (test_reconcile.ReconciliationTests.test_synthetic_only)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 225, in test_synthetic_only
+    self.blocked('E_REAL_DATA')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_unit_price_line_total_disagree (test_reconcile.ReconciliationTests.test_unit_price_line_total_disagree)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 109, in test_unit_price_line_total_disagree
+    self.blocked('E_LINE_TOTAL')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_unknown_coverage_stays_unknown (test_reconcile.ReconciliationTests.test_unknown_coverage_stays_unknown)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 152, in test_unknown_coverage_stays_unknown
+    self.assertEqual('draft', r['status'])
+AssertionError: 'draft' != 'not_implemented'
+- draft
++ not_implemented
+
+
+======================================================================
+FAIL: test_unknown_evidence_id (test_reconcile.ReconciliationTests.test_unknown_evidence_id)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 166, in test_unknown_evidence_id
+    self.blocked('E_SOURCE_REF')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_unknown_schema_version (test_reconcile.ReconciliationTests.test_unknown_schema_version)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 233, in test_unknown_schema_version
+    self.blocked('E_SCHEMA')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_unmapped_line_preserved (test_reconcile.ReconciliationTests.test_unmapped_line_preserved)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 130, in test_unmapped_line_preserved
+    self.assertEqual('blocked', r['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_unresolved_alternatives_block (test_reconcile.ReconciliationTests.test_unresolved_alternatives_block)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 92, in test_unresolved_alternatives_block
+    self.blocked('E_AMBIGUOUS')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+======================================================================
+FAIL: test_unsupported_coverage_blocked (test_reconcile.ReconciliationTests.test_unsupported_coverage_blocked)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 158, in test_unsupported_coverage_blocked
+    self.blocked('E_COVERAGE')
+  File "/workspace/scratch/7f32acc96e88/Xactimate_C_Return/tests/test_reconcile.py", line 23, in blocked
+    self.assertEqual('blocked', result['status'])
+AssertionError: 'blocked' != 'not_implemented'
+- blocked
++ not_implemented
+
+
+----------------------------------------------------------------------
+Ran 40 tests in 0.019s
+
+FAILED (failures=45)
